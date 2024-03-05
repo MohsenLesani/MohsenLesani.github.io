@@ -1,2 +1,0 @@
-Later move abstract to companion
-Add "more" links to the papers
