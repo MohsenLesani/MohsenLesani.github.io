@@ -1,0 +1,597 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+  
+  <script>
+		window.onload = function() {
+			this.focus();
+		}
+	</script>
+  
+  <link href="TheStyles.css" rel="stylesheet" type="text/css"><title>POPL 2016 Artifact Evaluation</title></head><body style="background-color: rgb(232, 244, 245); color: rgb(0, 0, 0);" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<br>
+
+<table style="width: 100%;" id="table1" border="0" cellspacing="1">
+
+  <tbody>
+    <tr>
+      <td>&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 255); width: 700px;">
+      <table style="width: 100%;" id="table5" border="0">
+        <tbody>
+          <tr>
+            <td colspan="3" rowspan="1" style="vertical-align: top; background-color: rgb(211, 231, 231);"><big><big><span style="font-weight: bold;"><big><big><span class="TextStyle">&nbsp;<big><big>POPL 2016 Artifact</big></big></span></big></big><span class="TextStyle"></span></span></big></big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp; <br>
+            </td>
+            <td class="TextStyle"><br>
+Certified Causally Consistent Distributed Key-Value Stores<br>
+Mohsen Lesani, Christian J. Bell, Adam Chlipala<br>
+Submission #56<br>
+The artifact are available in three forms:<br>
+            (1) [<a href="consistency.tar.gz">Source code tarball</a>],<br>
+(2) <a href="https://github.com/mit-plv/chapar">GitHub repositoriy</a><br>
+(3) [<a href="POPL16-AE56.ova">Virtual machine appliance</a>] (in the folder ~/Desktop/consistency)<br>
+            <br>The two parts of the artifact are<br>
+
+            (1) Coq framework: In section 1, we present the location of the definitions and lemmas presented in the paper.<br>
+(2) Experiment setup: In section 2, we present the execution settings and scripts for the experiments.<br>
+            <br>
+<hr style="width: 100%; height: 2px;"><big><span style="font-weight: bold;">1. Coq Framework</span></big><br>
+            <br>
+The Coq definitions and proofs are located in the Coq folder. The code
+location of the definitions and lemmas presented in the paper are listed
+below.<br>
+<br>
+            <span style="font-weight: bold;">Semantics and the Proof
+Technique</span><br>
+            <div style="margin-left: 40px;">
+Section 2, Figure 3 (Program): <br>
+&nbsp;&nbsp; KVStore.v, Section ValSec<br>
+
+Section 2, Figure 4 (Key-value Store Algorithm Interface): <br>
+&nbsp;&nbsp; KVStore.v,
+Module Type AlgDef<br>
+
+Section 2, Figure 5 (Concrete Operational Semantics): <br>
+&nbsp;&nbsp; KVStore.v, Module
+ConcExec<br>
+
+Section 3, Figure 6 (Abstract Operational Semantics): <br>
+&nbsp;&nbsp; KVStore.v, Module
+AbsExec<br>
+
+Section 4, Figure 8 (Concrete Instrumented Operational Semantics):
+            <br>
+&nbsp;&nbsp; KVStore.v, Module InstConcExec<br>
+
+Section 4, Figure 10 (Correctness Condition WellRec): <br>
+&nbsp;&nbsp; KVStore.v, Module
+Type CauseObl<br>
+
+Section 4, Figure 11 (Causal relation): <br>
+&nbsp;&nbsp; KVStore.v, Definition
+cause_step and Inductive cause.<br>
+
+Section 4, Figure 12 (Sequential Operational Semantics): <br>
+&nbsp;&nbsp; KVStore.v,
+Module SeqExec<br>
+
+Section 4, Definition 2 (Causal Consistency) and Theorem 2 (Sufficiency
+of Well-reception): <br>
+&nbsp;&nbsp; KVStore.v, Theorem CausallyConsistent. <br>
+&nbsp;&nbsp; Note that
+(CauseObl: CauseObl AlgDef) is a parameter of the Module ExecToAbstExec.<br>
+
+Section 4, Lemma 1: <br>
+&nbsp;&nbsp; KVStore.v, Lemma FaultFreedom. <br>
+&nbsp;&nbsp; Note that (CauseObl:
+CauseObl AlgDef) is a parameter of the Module ExecToAbstExec.<br>
+            </div>
+
+            
+            <span style="font-weight: bold;"><br>
+Algorithms</span><br>
+            <div style="margin-left: 40px;">
+Section 5, Figure 13 (Algorithm 1): <br>
+&nbsp;&nbsp; KVSAlg1.v, Module Type KVSAlg1<br>
+
+Section 5, Theorem 3: <br>
+&nbsp;&nbsp; KVSAlg1.v, Module KVSAlg1CauseObl (SyntaxArg:
+SyntaxPar) &lt;: CauseObl KVSAlg1 SyntaxArg.<br>
+
+Secton 5, Corollary 1: <br>
+&nbsp;&nbsp; KVSAlg1.v, Lemma CausallyConsistent<br>
+
+Section 5, Lemma 2 (Clock Monotonicity): <br>
+&nbsp;&nbsp; KVSAlg1.v, Lemma cause_clock<br>
+
+Section 5, Lemma 3 (CauseCond): <br>
+&nbsp;&nbsp; KVSAlg1.v, Lemma cause_rec<br>
+
+Section 5, Figure 14 (Algorithm 2): <br>
+&nbsp;&nbsp; KVSAlg2.v, Module Type KVSAlg2<br>
+
+Section 5, Theorem 3: <br>
+&nbsp;&nbsp; KVSAlg1.v, Module KVSAlg2CauseObl (SyntaxArg:
+SyntaxPar) &lt;: CauseObl KVSAlg2 SyntaxArg.<br>
+
+Secton 5, Corollary 2: <br>
+&nbsp;&nbsp; KVSAlg2.v, Lemma CausallyConsistent<br>
+
+Secton 5, Lemma 4 (Update Dependency Transitivity):&nbsp; <br>
+&nbsp;&nbsp; KVSAlg2.v,
+Lemma cause_dep <br>
+
+Secton 5, Lemma 5: <br>
+&nbsp;&nbsp; KVSAlg2.v, Lemma cause_received_received<br>
+
+Secton 5, Lemma 6 (CauseCond): <br>
+&nbsp;&nbsp; KVSAlg2.v, Lemma cause_rec<br>
+
+Section 10, Figure 16 (Algorithm 3): <br>
+&nbsp;&nbsp; KVSAlg3.v, Module Type KVSAlg3<br>
+
+Section 10, Theorem 5: <br>
+&nbsp;&nbsp; KVSAlg3.v, Module KVSAlg3CauseObl (SyntaxArg:
+SyntaxPar) &lt;: CauseObl KVSAlg3 SyntaxArg.<br>
+
+Secton 5, Corollary 3: <br>
+&nbsp;&nbsp; KVSAlg3.v, Lemma CausallyConsistent<br>
+
+Section 5, Lemma 7 (Clock Monotonicity): <br>
+&nbsp;&nbsp; KVSAlg3.v, Lemma cause_clock<br>
+
+Section 5, Lemma 8 (Dep less than equal Rec): <br>
+&nbsp;&nbsp; KVSAlg3.v, Lemma
+dep_leq_rec<br>
+
+Section 5, Lemma 9 (CauseCond): <br>
+&nbsp;&nbsp; KVSAlg3.v, Lemma cause_rec<br>
+            </div>
+
+            <br>
+            <span style="font-weight: bold;">Clients</span><br>
+            <div style="margin-left: 40px;">
+Section 1, Program 1: <br>
+&nbsp;&nbsp; Examples/Clients.v, Definition prog_photo_upload<br>
+
+Section 1, Program 2: <br>
+&nbsp;&nbsp; Examples/Clients.v, Definition prog_lost_ring<br>
+Section 10, Program 3:<br>
+&nbsp;&nbsp; Examples/ListClient.v<br>
+
+Section 2, Theorem 1: <br>
+&nbsp;&nbsp; Examples/Clients.v, Lemma CauseConsistent_Prog1<br>
+
+Section 3, Definition 1 (Cause-content Program): <br>
+&nbsp;&nbsp; Definition
+CausallyContent<br>
+
+Section 6: <br>
+&nbsp;&nbsp; ReflectiveAbstractSemantics.v<br>
+            </div>
+
+            <br>
+            <br>
+
+            
+            <hr style="width: 100%; height: 2px;"><big><span style="font-weight: bold;">1. Experiment Setup<br>
+            <br>
+</span></big><span style="font-weight: bold;">
+Directory structure </span><br>
+&nbsp;&nbsp; coq (folder):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Coq verification framework<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KVStore.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The basic definitions,
+the semantics and accompanying lemma<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KVSAlg1.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The definition and
+proof of algorithm 1 in the paper<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KVSAlg1.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The definition and
+proof of algorithm 2 in the paper<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KVSAlg3.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The definition and
+proof of algorithm 3 in the appendix<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extract.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Coq file that
+extracts the algorithms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReflectiveAbstractSemantics.v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The client
+verification definitions and lemmas<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Examples (folder)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The verified client
+programs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lib (folder)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The general purpose
+Coq libraries<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; ml (folder):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The OCaml runtime to execute the
+algorithms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key-value store
+algorithm shared interface<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm1.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm2.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm3.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wrappers for the
+extracted algorithms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; benchgen.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Benchmark generation
+and storing program<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; benchprog.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Benchmark retrieval
+program<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; commonbench.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Common definitions for
+benchmarks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; common.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Common definitions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; configuration.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Execution
+configuration definitions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; readConfig.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Configuration
+retrieval program<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; runtime.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Execution runtime<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; launchStore1.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; launchStore2.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; launchStore3.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Launchers for the
+extracted algorithms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; util.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; General purpose OCaml
+functions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MLLib (folder)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The general purpose OCaml libraries<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; experiment.ml<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Small quick OCaml
+programming tests&nbsp;&nbsp; <br>
+            <br>
+&nbsp;&nbsp; .:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The execution scripts described in the
+section Run below <br>
+&nbsp;&nbsp; <br>
+            <span style="font-weight: bold;">Build</span><br>
+&nbsp;&nbsp; $ make<br>
+&nbsp;&nbsp; It both compiles the Coq files and the OCaml files<br>
+&nbsp;&nbsp; All the requirements are already installed in the VM.<br>
+            <br>
+&nbsp;&nbsp; $ make clean<br>
+&nbsp;&nbsp; Remove the make artifacts<br>
+            <br>
+
+&nbsp;&nbsp; Dependencies: (Already installed in the VM)<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp; Coq 8.4pl4<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp; OCaml 4.01.0<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp; OCamlbuild 4.01.0<br>
+
+            <br>
+            <span style="font-weight: bold;">Run</span><br>
+&nbsp;&nbsp; Overview:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We run with 4 nodes called the worker
+nodes and a node called the master node that keeps <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; track of the start
+and end of the runs. The scripts support running with both the current
+terminal <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blocked or detached. In the former, our VM should be active
+for the entire execution time. To <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avoid this, we use another node
+called the launcher node. Repeating and collecting the results <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the
+runs is delegated to the launcher node. Our VM can be closed and the
+execution <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; results can be retrieved later from the launcher node. The
+four workers, the master and the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; launcher can be different nodes.
+However, to simplify running, the scripts support assigning<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the VM
+itself to all of these roles. This is the default setting. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The settings of the nodes can be edited
+in the file Setting.txt. The following should be <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; noted if other
+machines are used as the running nodes. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) SSH access<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The VM should have password-less ssh
+access to the launcher node. The launcher node <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; should have
+password-less ssh access to the other nodes. This can be done by
+copying <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the public key of the accessing machine to the accessed machine
+by a command like:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ cat ~/.ssh/id_dsa.pub | ssh -l
+remoteuser remoteserver.com 'cat &gt;&gt; ~/.ssh/authorized_keys'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) Open ports<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The port numbers 9100, 9101, 9102, and
+9103 should be open on the worker nodes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1, 2, 3 and 4 respectively. The
+port number 9099 should be open on the master node.<br>
+            <br>
+&nbsp;&nbsp; A simple run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To start the run:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ ./batchrundetach<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To check the status of the run<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ ./printlauncherout<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To get the results once the run is
+finished.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ ./fetchresults<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The result are stored in the file
+RemoteAllResults.txt. See ./fetchresults below for the format <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the
+results.<br>
+&nbsp;&nbsp; <br>
+
+&nbsp;&nbsp; Settings and scripts<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; All of the following files are in the root folder.<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; Settings.txt<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; KeyRange:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; The range of keys in
+the generated benchmarks is from 0 to this number. <br>
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For our experiments,
+it is set to 50.<br>
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp; RepeatCount<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The number of times
+that each experiment is repeated. For our experiments, it is set to 5.<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LauncherNode<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The user name and the
+ip of the launcher node<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterNode<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The user name and the
+ip of the master node<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; WorkerNodes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; The user name and the
+ip of the worker nodes<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; ./batchrun<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; This is the place that the experiments
+are listed.<br>
+&nbsp; &nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each call to the script run is an
+experiment. The arguments are<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Argument 1: The number of nodes. This is
+4 for our purpose.<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Argument 2: The number of operations per
+server. This is 60000 in our experiments.<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Argument 3: The percent of puts. This
+ranges from 10 to 90 in our experiments.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This script can be called to execute
+without using the launcher node. The current terminal is blocked.<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; See ./batchrundetach below for detached
+execution of the experiments.<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; ./batchrundetach<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; To execute using the launcher node. The
+current terminal is detached.<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; ./printlauncherout<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; To see the output of the launcher even
+while the experiments are being run<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; ./printnodesout<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; To see the output of the worker nodes<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp; ./fetchresults<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To get the results.<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The fetched files are:<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RemoteAllResults.txt: The timing of
+the replicas<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RemoteAllOutputs.txt: The outputs of
+the replicas<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RemoteLauncherOutput.txt: The output of the launcher node<br>
+            <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The format of the
+RemoteAllResults.txt. <br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The following example
+output is for the algorithm 2 with 4 worker nodes and 40000 operations
+per<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node with
+10 percent puts. It shows two runs. Under&nbsp; each run,
+the time spend by each of the <br>
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes is shown. We compute the maximum of
+these four numbers to compute the <br>
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; total process
+time.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+---------------------------------------------<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Algorithm: 2<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Server count: 4<br>
+&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operation count: 40000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Put percent: 10<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run: 1<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run: 2<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.000000<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+---------------------------------------------<br>
+            <br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;  ./clearnodes<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To remove the output and result files
+and the running processes in all the nodes.<br>
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is used to start
+over.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+            <br>
+&nbsp;&nbsp; The experiments in the paper<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp; The goal of our experimental result section was to show that our verification effort can<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp; lead to executable code and also to compare the performance of the two algorithms.<br>
+
+&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp; As described in the paper, the experiments were done with four worker nodes cluster.<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Each worker node had an Intel(R) Xeon(R) 2.27GHz CPU with 2GB of RAM and ran <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Linux Ubuntu 14.04.2 with the kernel version 3.13.0-48-generic#80-Ubuntu. The nodes<br>
+&nbsp; &nbsp; &nbsp; &nbsp; were connected to a gigabit switch.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The keys were uniformly selected from 0 to 50 for the benchmarks.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each experiment was repeated
+5 times. (The reported numbers are the arithmetic mean of the five
+runs.)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each node processed 60,000 requests.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The put ratio ranged from 10% to 90%.<br>
+            <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here are the contents of the two configuration files Settings.txt and batchrun:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: user and ip should be filled with specific values.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Settings.txt:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KeyRange=<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RepeatCount=<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LauncherNode=<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterNode=<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WorkerNodes=<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;user&gt;@&lt;ip&gt;<br>
+            <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; batchrun:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 10<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 20<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 30<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 40<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 50<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 60<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 70<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 80<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . ./run 4 60000 90<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interpretation of results from the paper:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As expected, the throughput
+of both of the stores increases as the ratio of the get operation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; increases. The second
+algorithm shows a higher throughput than the first algorithm. The<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reason is twofold. Firstly,
+in the first algorithm, the clock function of a node keeps an<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; over-approximation of the dependencies of the node. This over-approximation incurs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extra dependencies on
+updates. On the other hand, the second algorithm does not require<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any extra dependencies. Therefore, in the first algorithm compared to the second,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the updates can have longer waiting times, and the update queues tend to be longer.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Therefore, the traversal of
+the update queue is more time consuming in the first algorithm <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; than the second. Secondly, the update payload that is sent and received by the first<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm contains the function clock. OCaml cannot marshal functions. However, as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the clock function has the
+finite domain of the participating nodes, it can be serialized to <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and deserialized from a
+list. Nonetheless, serialization and de-serialization on every<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sent and received message adds performance cost. On the other hand, the payload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the second algorithm consists of only data types that can be directly marshalled.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Therefore, the second algorithm has no extra marshalling cost.<br>
+            <br>
+            <br>
+
+            
+            <hr style="width: 100%; height: 2px;">Notice:<br>
+* The software provided is not provided or supported by the Fedora
+Project, and<br>
+* Official Fedora software is available through the Fedora Project
+website <a href="http://fedoraproject.org/">http://fedoraproject.org/</a>.<br>
+            <br>
+            </td>
+            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp; <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+<br>
+
+</body></html>

@@ -1,0 +1,38 @@
+.HeaderStyle {
+	font-family: Garamond;
+	font-size: 17px;
+	font-weight: bold;
+	color: #99CCFF;
+}
+
+.SubHeaderStyle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.TextStyle {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-align: justify;	
+}
+
+.SmallTextStyle {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: justify;	
+}
+
+a {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:hover {
+   text-decoration: underline;
+	color: #640000;
+}
+
+p, ul { margin: 0;
+}
+

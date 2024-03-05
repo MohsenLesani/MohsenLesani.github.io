@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+  
+  <script>
+		window.onload = function() {
+			this.focus();
+		}
+	</script>
+  
+  <link href="../TextStyle.css" rel="stylesheet" type="text/css"><title>Mohsen Lesani</title><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<br>
+
+<table style="width: 100%;" id="table1" border="0" cellspacing="1">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top; text-align: right;"><a href="../../index.html"><span class="TextStyle">Home</span></a></td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+<tr>
+      <td>&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 255); width: 690px;">
+      <div style="text-align: right;"> </div>
+      <table style="width: 100%;" id="table5" border="0">
+        <tbody class="TestStyle">
+          
+          <tr>
+            <td class="TextStyle" colspan="3" rowspan="1" style="vertical-align: top; text-align: left;"><br>
+
+            </td>
+            
+            
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; color: black;">
+            <p class="AbstractHeaderStyle">Positive Reviews<br>
+            </p>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          
+          
+          <tr>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%">&nbsp;</td>
+            <td class="TextStyle">
+            <p><span class="AbstractStyle">-------------------------------------------------------------<br>
+            <a href="../popl19">POPL 19</a><br>
+            -------------------------------------------------------------</span></p>
+            <p><span class="AbstractStyle"><br>
+            </span></p>
+            <p><span class="AbstractStyle">
+            This work strikes a sweet spot in a crowded and noisy design space in
+which many different approaches have been proposed to allow users to
+commit to a single consistency model for their entire application, or
+fine-tune or otherwise adjust or balance the consistency requirements
+of portions of their applications. Other work has proposed tools or
+programming models focused on one of the various flavors of consistency
+(strong, eventual, causal...) but few come close to providing an
+automatic solution that can so convincingly work out conflicting
+operations (requiring synchronization) or dependent operations
+(requiring causality) or independent operations (coordination-free) and
+then instantiate the appropriate protocols for each operation,
+resulting in an object that can be freely and correctly replicated.
+Further, the idea to reduce the coordination avoidance problem to a
+regular graph optimization problem is excellent, and key to the success
+of the approach.<br>
+            <br>
+This work seems well-poised to make a substantial impact in the design
+and implementation of distributed systems going forward, and I think it
+would make a great addition to POPL.<br>
+            <br>
+---------<br>
+            <br>
+- Well-coordination is an interesting criterion for correctness <br>
+            <br>
+- Impressive generality <br>
+            <br>
+- Automated and "correct-by-construction" approach<br>
+            <br>
+- The "multi-total-order broadcast" protocol seems useful and interesting on its own<br>
+            <br>
+-------------------------------------------------------------<br><a href="../cav20">
+            CAV 20</a><br>
+            -------------------------------------------------------------<br>
+            <br>
+- Principled design of replicated objects is a timely and important problem.<br>
+            <br>
+- The paper is very well written and a pleasure to read.<br>
+            <br>
+- The protocols are quite interesting and reveal new relationships
+between various classes of guarantees. In particular, the interaction
+between recency and convergence/integrity is an interesting issue,
+which has not been discussed in previous work at this level of rigour.<br>
+            <br>
+- The idea of inferring staleness bounds for object state components is novel.<br>
+            <br>
+---------<br>
+            <br>
+The key insight seems to be the connection between quantified stale data, local buffer size, and performance.<br>
+Specifying staleness of the data is natural and the paper shows it is
+also useful from a runtime perspective. In the context of eventual
+consistency, method recency offers the programmer more control to
+specify the low-level synchronization required, but in a light way, one
+that saves the programmer from understanding all the formal definitions
+of consistency.<br>
+...<br>
+I found novel and interesting the result that buffering pairs/tuples of
+method calls that commute (w.r.t. each other) increases performance all
+in preserving the required properties.<br>
+...<br>
+The connection with the fault-detector is also interesting.<br>
+            <br>
+---------<br>
+            <br>
++ Expressive power of recency-aware objects captured precisely<br>
+            <br>
++ The synthesized objects are heavily optimized to avoid unnecessary coordination at runtime<br>
+            <br>
+-------------------------------------------------------------<br><a href="../mapl20">
+            MAPL 20</a><br>
+            -------------------------------------------------------------<br>
+            <br>
+This paper tackles a challenging problem - synthesizing an efficient
+concurrent implementation from relational specification. ... Having an
+ML model to predict the best decomposition for a given platform is a
+natural and clean idea.<br>
+            <br>
+---------<br>
+            <br>
+This paper presents an elegant and useful approach to synthesizing
+concurrent data structures, a notoriously difficult process. While the
+author's technique obviously requires more work before it can be used
+"in production," the research value of the work is clear and the
+experimental analysis cleanly matches the claims of the paper, albeit
+in a somewhat limited fashion.<br>
+            <br>
+-------------------------------------------------------------<br><a href="../icfp20">
+            ICFP 20</a><br>
+            -------------------------------------------------------------<br>
+            <br>
+The paper represents the initial steps towards the large undertaking to
+develop a formally verified distributed system middleware. Given the
+complexity of the work, section 2 gives a great overview of the
+technique and its applicability through the implementation and
+verification of perfect links over stubborn links. I found the simpler
+temporal logic specifications in Fig 3 to be quite pleasant and a
+natural way to specify properties about distributed components. The
+examples are tricky but the text makes it easy to follow. Specification
+lowering as a method of composition is simple and elegant. <br>
+            <br>
+I also found the operational semantics to be novel in that it models
+partially synchronous network and both the communication between
+subcomponents at a particular node as well as communication between
+nodes over base link which can drop, reorder and duplicate messages.
+The typical operational semantics for distributed systems model the
+network as asynchronous which makes them unsuitable for proving
+consensus. Compared to the other works in this area where the proofs
+are through refinements between layers modeled as transition systems, I
+find TLC to be useful in lifting up the level of abstraction in proving
+distributed system middleware.<br>
+            <br>
+--------<br>
+            <br>
+First of all, I should say that I am glad someone is pursuing this line
+of research.&nbsp; It seems eminently worthwhile to investigate what it
+takes to refactor previous specification and verification efforts in
+distributed systems into a temporal component logic with sound
+composition principles.&nbsp; At the outset, it is not at all clear
+whether and how this might be accomplished.&nbsp; And at this point in
+the larger research program there are some definitive successes: a
+logic that is sound with respect to a plausible semantics has been
+defined and applied to components that I would say have intermediate
+complexity. One is always tempted to ask for more, of course,
+especially since more complex distributed systems such as Raft have
+already been verified, albeit in a different manner, as laid out by the
+author. But I feel that the design of the logic and its illustration
+has sufficient intrinsic merit and promise that it is worth publishing
+to initiate discussion and to see where the future work might lead.<br>
+            <br>
+-------------------------------------------------------------<br><a href="../icfp21">
+            ICFP 21</a><br>
+            -------------------------------------------------------------<br>
+            <br>
+This paper seems a real tour-de-force, representing a huge amount of
+creative technical development, and a substantial amount of
+engineering, and successful evaluation on real graphs.<br>
+            <br>
+-------------------------------------------------------------<br>
+            S&amp;P 21<br>
+            -------------------------------------------------------------<br>
+            <br>
+I am impressed by the rigor of the paper; every concept and process is
+formalized, and the system provides formal guarantees of
+noninterference and resilience.<br>
+            <br>
+-------------------------------------------------------------<br><a href="../podc21">
+            PODC 21</a><br>
+            -------------------------------------------------------------<br>
+            <br>
+The problem is timely and well motivated, and the result appears clean.<br>
+            <br>
+-------------------------------------------------------------<br>
+            <br>
+            </span></p>
+
+            <p><span class="AbstractStyle"><br>
+            </span></p>
+
+            </td>
+            <td width="5%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><span class="TextStyle"><span class="TextStyle"><span style="text-decoration: underline;"></span></span></span><span class="TextStyle"><span class="TextStyle"><a href="https://dl.acm.org/doi/10.1145/3465084.3467952"></a><br>
+
+            <a href="HamsazPres.pdf"><span style="text-decoration: underline;"></span></a> <br>
+
+            </span></span>
+
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+</body></html>

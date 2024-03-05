@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.HeaderStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 17px;
+	font-style: normal;
+    font-weight: bold;
+	color: #99CCFF;
+}
+
+.SubHeaderStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 14px;
+	font-style: normal;
+    font-weight: bold;
+}
+
+.TextStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 13px;
+    text-align: justify;
+	font-style: normal;
+    font-weight: normal;    
+}
+
+.SmallTextStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 12px;
+    text-align: justify;
+	font-style: normal;
+    font-weight: normal;    
+}
+
+a {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:hover {
+   text-decoration: underline;
+	color: #BDBFFA;
+}
+
+.AbstractHeaderStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 18px;
+	font-style: normal;
+    font-weight: bold;
+}
+
+.AuthorStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 16px;
+   font-style: normal;
+   font-weight: normal;
+}
+
+.AbstractStyle {
+   font-family: "Open Sans", Courier;
+   font-size: 19px;
+   font-style: italic;
+   font-weight: normal;
+   text-align: justify;
+}
+
+
+p, ul { 
+   padding: 0; 
+   margin: 0;
+   text-align: justify;
+}
+
+.TestStyle {
+	font-family: "Open Sans", Courier;
+	font-size: 15px;
+	font-style: italic;
+    font-weight: normal;
+}
+

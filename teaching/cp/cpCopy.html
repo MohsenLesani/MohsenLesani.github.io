@@ -1,0 +1,1438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html dir="ltr"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Compiler Project</title>
+  
+
+  
+  
+  <meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
+
+  
+  <meta name="created" content="0;0">
+
+  
+  <meta name="changed" content="20170313;185932962021360">
+
+  
+  <style type="text/css">
+
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+a:active {
+  color: black;
+}
+.fixed-center-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+.fixed-center-table td {
+  text-align: center;
+}
+col#middle-column {
+  width: 650px;
+}
+
+  </style>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body style="background: transparent none repeat scroll 0% 50%; color: rgb(0, 0, 0); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<div><meta http-equiv="content-type" content="text/html; charset=utf-8">Summer
+2022: In this course, the students form groups and can develop
+their own compiler projects in the areas of distributed systems,
+blockchains and
+cryptocurrencies, automatic program synthesis and programming
+languages. One choice is the following project. It is a well-designed
+project with template code, hints and test cases. The students can also
+define and do other projects in this area. For project ideas you can
+see the instructor's <a href="https://www.cs.ucr.edu/%7Elesani/">page</a>.<br>
+</div>
+<br>
+<h1 align="center">Compiler from Java to MIPS <br>
+
+</h1>
+
+
+<h3 style="text-align: center;">in Four Nifty Steps</h3>
+
+<div style="text-align: center;"><a href="image/winnie.jpg"><img style="border: 0px solid ; width: 601px; height: 244px;" alt="HundredHourWood" src="image/winnie.jpg" name="Image1"></a></div>
+
+<table class="fixed-center-table" border="0">
+
+  <thead> </thead><colgroup> <col> <col id="middle-column"> <col> </colgroup>
+  <tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td style="text-align: left; vertical-align: top;"> <br>
+      <hr style="width: 100%; height: 2px;">
+      <h2 class="western">Course
+Info<br>
+      </h2>
+      
+      
+
+      <p align="left">CS 179E: Project in Computer Science (Compilers)<br>
+Professor:<span class="Apple-converted-space"> </span><a href="http://www.cs.ucr.edu/%7Elesani/">Mohsen Lesani</a><span style="font-family: monospace;"></span><br>
+Professor office hours: Email for appointment, online or in person<span class="Apple-converted-space"></span><br>
+Discussions: Piazza website, Please check ilearn for the link<br>
+Prerequisites:&nbsp; CS 100 and CS 152 with grades of C or better; ENGR
+180W; 8 additional upper­division units in Computer Science<br>
+Units:&nbsp; 4<br>
+Suggested book: Andrew Appel with Jens Palsberg,<span class="Apple-converted-space">&nbsp;</span>Modern Compiler
+Implementation in Java, 2nd edition. Cambridge University Press, 2002.<br>
+      <br>
+
+In this course, the students form groups and can choose to develop
+their own compiler projects in the areas of distributed systems, blockchains and
+cryptocurrencies, automatic program synthesis and programming languages. See the instructor <a href="https://www.cs.ucr.edu/%7Elesani/"><span style="text-decoration: underline;">homepage</span></a>
+for example projects. The students can choose the following predefined
+and well-developed project. The project covers all the phases of the
+design and implementation of a modern compiler for object-oriented
+languages. The project is divided into four separate phases that can be
+done independently. The phases can be combined into a Java-to-MIPS
+compiler. All the required material including the test-case programs
+that are used for grading, ample description, implementation hints and
+documentation are available in this page.<br>
+</p>
+      <p align="left">The
+goal of the course is to design and implement the main phases of a
+modern compiler. The project consists of four phases. In these
+phases, you will be converting a subset of the Java language called
+MiniJava to simpler languages and eventually to complete MIPS machine
+code. The phases can be
+combined into a MiniJava-to-MIPS compiler.</p>
+
+      <p align="left">This project was first designed and
+implemented by <a href="http://web.cs.ucla.edu/%7Epalsberg/">Jens
+Palsberg</a>'s group. It is adopted and extended by <a href="http://www.cs.ucr.edu/%7Elesani/">Mohsen Lesani</a>. <br>
+</p>Evaluation:<br>
+&nbsp;&nbsp;&nbsp; Submissions:<br>
+
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Phase 1: 25%<br>
+
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Phase 2: 25%<br>
+
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Phase 3: 25%<br>
+
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Phase 4: 25%<br>
+      <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that the submission of each phase of the project should include a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document with the following secitons: (1) requirements and specifications,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) design, (3) testing and verification<br>
+      <br>
+
+&nbsp;&nbsp;&nbsp; Academic Integrity:<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You may talk about the problem with fellow students, the TA, and the <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instructor, consult books, papers, published material or the Web. However,<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you must reference all the sources that helped you. You should write <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; solutions in your own words and coding.<br>
+      <br>
+
+
+      
+      <hr style="width: 100%; height: 2px;">
+      <h2 class="western">Phases</h2>
+&nbsp;&nbsp; <a href="#Phase1">Phase 1: Type-checking</a><br>
+&nbsp;&nbsp; <a href="#Phase2">Phase 2: Intermediate Code Generation for Object-oriented Languages</a><br>
+&nbsp;&nbsp; <a href="#Phase3">Phase 3: Register Allocation</a><br>
+&nbsp;&nbsp; <a href="#Phase4">Phase 4: Activation Records and Instruction Selection</a><br>
+<br>
+
+      <hr style="width: 100%; height: 2px;">
+      <h2 class="western"><a name="Phase1"></a>Phase
+1: Type-checking<br>
+</h2>
+      
+      <h3><span style="font-weight: bold;">Introduction</span></h3>
+      <p><span style="font-weight: bold;"></span>MiniJava
+is a
+subset of java that includes the bare minimum of Java: integers,
+integer arrays, classes,
+subclasses, and printing integers to standard out. It does not permit
+any float types,
+strings, overloading and overriding methods, or any interfaces. It has
+a few other restrictions, but those
+are minor. Thus, the MiniJava statement <span style="font-family: monospace;">System.out.println(...);</span> can
+only print integers.
+The MiniJava expression <span style="font-family: monospace;">e.length</span>
+only applies to expressions of type <span style="font-family: monospace;">int[]</span>.</p>
+
+      <p>A sample
+MiniJava program is <span style="font-family: monospace;">Factorial.java</span>. <a href="Phase1/Factorial.java">Download</a></p>
+      <pre style="color: rgb(0, 0, 0); font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px;"><span style="font-weight: bold;">class</span> Factorial{<br>   <span style="font-weight: bold;">public</span> <span style="font-weight: bold;">static</span> <span style="font-weight: bold;">void</span> main(<span style="font-weight: bold;">String</span>[] a){<br>      System.out.println(new Fac().ComputeFac(10));<br>   }<br>}<br><br><span style="font-weight: bold;">class</span> Fac {<br>   <span style="font-weight: bold;">public int</span> ComputeFac(int num){<br>      <span style="font-weight: bold;">int</span> num_aux;<br>      <span style="font-weight: bold;">if</span> (num &lt; 1)<br>         num_aux = 1;<br>      <span style="font-weight: bold;">else</span><br>         num_aux = num * (this.ComputeFac(num-1));<br>      <span style="font-weight: bold;">return</span> num_aux;<br>   }<br>}</pre>
+      
+      <h3><span style="font-weight: bold;">Dependencies<br>
+      </span></h3>
+      <p>We
+need to have the following:<br>
+- JavaCC (Java Compiler Compiler) parser generator. Install <span style="font-family: monospace;">javacc</span>:<br>
+&nbsp;&nbsp; <span style="font-family: monospace;">$ sudo apt-get
+install javacc</span><br>
+&nbsp; Given a context free grammer, JavaCC generates a parser.<br>
+      <br>
+- JTB (Java Tree Builder) jar file <span style="font-family: monospace;">jtb.jar</span>: <a href="Phase1/jtb.jar">Download</a><br>
+&nbsp; JTB is a syntax tree builder to be used with JavaCC.&nbsp; Given
+a JavaCC grammar file, it automatically generates syntax tree and
+visitor classes and an annotated JavaCC grammer to build syntax trees.<br>
+      <br>
+- MiniJava Grammer for JavaCC <span style="font-family: monospace;">minijava.jj</span>:
+      <a href="Phase1/minijava.jj">Download</a><br>
+&nbsp; The context free grammer of MiniJava that is input to JTB and
+JavaCC.<br>
+&nbsp; Here is a more readable representation of the MiniJava grammar.<br>
+      <br>
+- Test cases <span style="font-family: monospace;">Phase1Tests.tar.gz</span>:
+      <a href="Phase1/phase1Tests.tar.gz">Download</a><br>
+&nbsp; The test cases that we test our type checker with.</p>
+      <h3><span style="font-weight: bold;">Generating AST<br>
+      </span></h3>
+      <p>We
+must first create a parser for the MiniJava language and generate a set
+of syntax tree classes and visitor classes. For an overview of JTB, JavaCC and the Visitor pattern, study the following slides. <a href="Phase1/ParsingAndVisitors.pdf">Download</a><br>
+</p>
+      <p>Complete the
+following steps.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; $ java -jar
+/path/to/jtb.jar /path/to/minijava.jj</span><br>
+      <br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; $ javacc
+jtb.out.jj</span><br>
+      <br>
+Once this is done, you will have a complete parser for MiniJava and a
+set of classes used for traversing the syntax tree. You will also have
+two different default visitors: DepthFirstVisitor and GJDepthFirst. You
+should extend these two visitors to type check a MiniJava program.</p>
+      <h3><span style="font-weight: bold;">Type-checking<br>
+</span></h3>
+      <p>The
+goal of phase 1 is to write a type checker for MiniJava. Given a
+program, the type checker checks at compile time that type mismatch
+does not happen at run time. It either approves or rejects the program.
+The set of rules that the type checker checks are represented as a type
+system. You can consult the book chapter 5 on semantic analysis and the
+following MiniJava type system. <a href="Phase1/MiniJavaTypeSystem.pdf">Download</a>
+      </p>
+
+
+      <ul>
+      </ul>
+      <h3><span style="font-weight: bold;">Submission</span></h3>
+      <p><span style="font-weight: bold;"></span>Your
+main file should be called<span class="Apple-converted-space">&nbsp;</span><span style="font-family: monospace;" class="western">Typecheck.java</span>,
+and if<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.java</tt><span class="Apple-converted-space">&nbsp;</span>contains
+a program to be
+type checked, then:</p>
+      <p><tt class="western">java Typecheck &lt; P.java</tt></p>
+      <p>should
+print either<span class="Apple-converted-space"> </span><span style="font-family: monospace;">Program
+type checked successfully</span><span class="Apple-converted-space"> </span>or<span class="Apple-converted-space"> </span><span style="font-family: monospace;">Type error</span>.</p>
+      <span style="font-weight: bold;"></span>
+      <p> Untar
+the following tarball and
+read the instructions in the ReadMe.txt
+file. <br>
+Your
+submission&nbsp;must&nbsp;work with the testing
+script when run on the department servers.&nbsp; Make
+sure you test your final tarball before submitting.</p>
+      <p><span><span style="font-family: monospace;">Phase1Tester.tar.gz</span></span><span>
+      <a href="Phase1/Phase1Tester.tar.gz">Download</a></span></p>
+      <hr style="width: 100%; height: 2px;">
+      <h2><a name="Phase2"></a>Phase 2: Intermediate Code Generation for Object-oriented Languages<br>
+</h2>
+      <h3>Introduction</h3>
+      <p>In this phase, we translate programs in the MiniJava language
+to
+programs in the Vapor language. Vapor is a low level assembly-like
+language. Vapor programs are described as a set of functions and data
+segments. In contrast to architecutal assembly languages that support a
+finite number of registers, Vapor functions can use an unbounded number
+of variables. The main challenge in the translation from MiniJava to
+Vapor is mapping objects to memory and object-oriented method calls to
+function calls. Consult the book chapter 7 on Translation to
+Intermediate Code and chapter 14 on Object-Oriented Languages.</p>
+      <h3>Dependencies</h3>
+      <p>We
+need to have the following items. We had the first three in phase 1.<br>
+      </p>
+      <p>-
+JavaCC (Java Compiler Compiler) parser generator. Install <span style="font-family: monospace;">javacc</span>:<br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; $ sudo apt-get
+install javacc<br>
+      </span>&nbsp; Given a context free grammer, <span style="color: rgb(37, 37, 37); font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span><span style="color: rgb(37, 37, 37); font-family: sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span><span style="color: rgb(37, 37, 37); font-family: sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>JavaCC
+generates a parser.<br>
+      <br>
+- JTB (Java Tree Builder) jar file <span style="font-family: monospace;">jtb.jar</span>: <a href="Phase1/jtb.jar">Download</a><br>
+&nbsp; JTB is a syntax tree builder to be used with JavaCC.&nbsp; Given
+a JavaCC grammar file, it automatically generates syntax tree and
+visitor classes and an annotated JavaCC grammer to build syntax trees.<br>
+      <br>
+      <span style="color: rgb(0, 0, 0); font-family: Arial,sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>-
+MiniJava Grammer for JavaCC <span style="font-family: monospace;">minijava.jj</span>:
+      <a href="Phase1/minijava.jj">Download</a><br>
+&nbsp; The context free grammer of MiniJava that is input to JTB and
+JavaCC.<br>
+&nbsp; Here is a more readable representation of the <a href="Phase1/minijava.html">MiniJava
+grammar</a>.</p>
+      <p><span style="color: rgb(0, 0, 0); font-family: Arial,sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>-
+Vapor Interpretor <span style="font-family: monospace;">vapor.jar</span>:
+      <a href="Phase2/vapor.jar">Download</a><br>
+      <br>
+- Test cases<br>
+&nbsp; Sample input programs <span style="font-family: monospace;">Phase2Tests.tar.gz</span>:
+      <a href="Phase2/Phase2Tests.tar.gz">Download</a><br>
+&nbsp; Sample output programs <span style="font-family: monospace;">Phase3Tests.tar.gz</span>:
+      <a href="Phase3/Phase3Tests.tar.gz">Download</a> </p>
+      <h3><span style="font-weight: bold;">Vapor Language Specification</span></h3>
+      <p><span style="font-weight: bold;"></span> Vapor program is a
+list of
+functions and data segments. For example:</p>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">&nbsp; const</span> Table</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; 2</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; 3</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; 5</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; 7</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> LoadTableData(offset)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; addr = <span style="font-weight: bold;">Add</span>(:Table offset)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">ret</span> addr</span><br style="font-family: monospace;">
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">&nbsp; func</span> DoSomething(a b)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">PrintInt</span>(a)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; addr = <span style="font-weight: bold;">call</span> :LoadTableData(b)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; val = [addr+4]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">ret</span> val</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;"></span></span><br>
+      <span style="font-weight: bold;">Identifiers.</span><br>
+Identifiers are used for two things: variables and labels. Identifiers
+consist of a sequence of letters, digits, dots (<span style="font-family: monospace;">.</span>)&nbsp;<span style="font-family: monospace;"></span>, and
+underscores (<span style="font-family: monospace;">_</span>)&nbsp;<span style="font-family: monospace;"></span>, but the first character
+cannot be a digit or a dot.<br>
+      <br>
+Variables are always local to a function; variable names must be unique
+within a function.<br>
+      <br>
+There are three types of labels: data labels, function labels and code
+labels. All label names must be unique across the entire program.<br>
+      <br>
+      <span style="font-weight: bold;">Data Segments.</span><br>
+Vapor has two types of global data segments. A <span style="font-family: monospace;">const</span> segment is for read-only
+data (like virtual function tables). A <span style="font-family: monospace;">var</span> segment is for global
+mutable data.<br>
+      <br>
+Each section starts with a data label and is followed by static data
+values. For example:<br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">&nbsp; const</span> MinutesPerHour</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; 60</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">&nbsp; var</span> MyClass.FunctionTable</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; :MyClass.Start</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp;
+:MyClass.Finish</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; -1</span><br style="font-family: monospace;">
+      <br>
+Each entry in a data segment is four bytes long. The entire first
+segment is four bytes long and contains the 2's complement
+representation of the number 60. It's a constant data segment and so
+memory write operations will fail at runtime.<br>
+      <br>
+The second segment is twelve byte long and consists of the address of
+the <span style="font-family: monospace;">MyClass.Start</span>
+function, followed by the address of the <span style="font-family: monospace;">MyClass.Finish</span>
+function, followed by the 2's complement representation of the number
+-1. This is a variable data segment and can be written to at runtime.<br>
+      <br>
+The two data labels, <span style="font-family: monospace;">MinutesPerHour</span>
+and <span style="font-family: monospace;">MyClass.FunctionTable</span>,
+can be used in other places in the program.<br>
+      <br>
+All values (integers and addresses) are four bytes long.<br>
+      <br>
+      <span style="font-weight: bold;">Functions.</span><br>
+The syntax for a function definition is:<br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">&nbsp; func</span> FunctionLabel(params...)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; &nbsp; body...</span><br style="font-family: monospace;">
+      <br>
+Each line of the body of a function is one of:<br>
+- code label: <span style="font-family: monospace;">Label:</span><br>
+- assignment: <span style="font-family: monospace;">Location = Value</span><br>
+- branch: <span style="font-family: monospace;"><span style="font-weight: bold;">if</span> Value <span style="font-weight: bold;">goto</span> CodeAddress</span><br>
+- goto: <span style="font-family: monospace;"><span style="font-weight: bold;">goto</span> CodeAddress</span><br>
+- function call: <span style="font-family: monospace;"><span style="font-weight: bold;">call</span> FunctionAddress (Args...)</span><br>
+- function return: <span style="font-family: monospace;"><span style="font-weight: bold;">ret</span> Value</span><br>
+- call to built-in operation: <span style="font-family: monospace;">OpName
+(Args...)</span><br>
+      <br>
+      <span style="font-weight: bold;">Assignment.</span><br>
+There are three distinct types of assignment. The first is variable
+assignment:<br>
+      <br>
+      <span style="font-family: monospace;">Var = Value</span><br>
+Here, <span style="font-family: monospace;">Value</span> is either an
+integer literal, a string literal, a variable name, or a label
+reference <span style="font-family: monospace;">:Label</span>.<br>
+      <br>
+For example:<br>
+      <span style="font-family: monospace;">a =
+12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>Store the integer literal 12 into variable <span style="font-family: monospace;">a</span>.<br>
+      <span style="font-family: monospace;">a =
+"abc"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Store
+the string <span style="font-family: monospace;">abc</span> into
+variable <span style="font-family: monospace;">a.</span><br>
+      <span style="font-family: monospace;">a =
+sum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>Copy the value in variable <span style="font-family: monospace;">sum</span> into variable <span style="font-family: monospace;">a</span>.<br>
+      <span style="font-family: monospace;">a =
+:Factorial&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Store the address of
+the label <span style="font-family: monospace;">Factorial</span> into
+variable <span style="font-family: monospace;">a</span>.<br>
+      <br>
+For your homework, strings are only allowed as arguments to the<span class="Apple-converted-space">&nbsp;</span><tt>Error</tt><span class="Apple-converted-space">&nbsp;</span>built-in that we consider
+below.<br>
+      <br>
+The next two types of assignment are memory load and memory store.
+Memory operations always operate on 4-byte quantities and memory
+addresses must be 4-byte aligned.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; Var = MemoryReference</span><br>
+      <span style="font-family: monospace;">&nbsp; MemoryReference =
+Value</span><br>
+      <br>
+A memory reference consists of a base address, which is either a label
+reference or a register, followed by an integer offset (either positive
+or negative).<br>
+      <span style="font-family: monospace;">[:MyArray+4]</span> refers
+to the address 4 bytes past the <span style="font-family: monospace;">MyArray</span>
+label.<br>
+[x-4] refers to the address 4 bytes before the address stored in
+variable <span style="font-family: monospace;">x</span>.<br>
+      <br>
+Some memory load and store examples:<br>
+      <span style="font-family: monospace;">&nbsp; x =
+[:FunctionTable+8]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; [:GlobalCounter] = 15</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; [array-4] = length</span><br style="font-family: monospace;">
+      <br>
+      <span style="font-weight: bold;">Branch</span><br>
+There are two variants of the branch instruction:<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">if</span> Value <span style="font-weight: bold;">goto</span> :CodeLabel</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">if0</span> Value <span style="font-weight: bold;">goto</span> :CodeLabel</span><br style="font-family: monospace;">
+      <br>
+The <span style="font-family: monospace;">if</span> jumps to <span style="font-family: monospace;">CodeLabel</span> if <span style="font-family: monospace;">Value</span> is non-zero and falls
+through to the next instruction otherwise. The <span style="font-family: monospace;">if0</span> does the opposite, jumping
+to the specified label if <span style="font-family: monospace;">Value</span>
+is zero.<br>
+      <br>
+      <span style="font-weight: bold;">Goto</span><br>
+The <span style="font-family: monospace; font-weight: bold;">goto</span>
+instruction is an unconditional jump to the specified target.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">goto</span> :CodeLabel<br>
+      <br>
+      </span>In addition to jumping to fixed labels, the <span style="font-family: monospace;">goto</span> instruction can also jump
+to a computed address read in from a variable.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">goto</span> Var</span><br>
+      <p>For
+this phase,<span class="Apple-converted-space">&nbsp;</span><tt>goto</tt><span class="Apple-converted-space">&nbsp;</span>can only refer to code
+labels.</p>
+      <span style="font-weight: bold;"> Function Call</span><br>
+      <span style="font-family: monospace;">Var = <span style="font-weight: bold;">call</span> :FunctionLabel
+(Args...)</span><br>
+      <br>
+The assignment <span style="font-family: monospace;">Var =</span> is
+optional. The arguements list <span style="font-family: monospace;">Args...</span>
+is a whitespace-separated list of value entries (either integer
+literals, variables, or label references). The return value of the
+function is stored in the <span style="font-family: monospace;">Var</span>
+variable.<br>
+      <br>
+Like <span style="font-family: monospace; font-weight: bold;">goto</span>,
+      <span style="font-family: monospace; font-weight: bold;">call</span>
+can also use a function address loaded from a variable:<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; Var = <span style="font-weight: bold;">call</span> Var (Args...)</span><br>
+      <br><span style="font-weight: bold;">
+Function Return</span><br>
+The <span style="font-family: monospace;">ret</span> instruction
+returns from a function. The return value is optional.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span> Value</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br style="font-family: monospace;">
+      <br>
+      <span style="font-weight: bold;">Built-In Operations</span><br>
+In addition to the core language, the Vapor interpreter also supports a
+set of built-in operations for arithmetic, memory
+allocation, and displaying output.<br>
+      <br>
+Basic arithmetic: <span style="font-family: monospace; font-weight: bold;">Add, Sub, Mul, Div,
+Rem, MulS, DivS, RemS, ShiftL,
+ShiftR, ShiftLA</span>. The "-S" variants operate on signed integers.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; a = <span style="font-weight: bold;">Add</span>(a b)</span><br>
+      <br>
+Comparison: <span style="font-family: monospace; font-weight: bold;">Eq,
+Ne, Lt, Le, LtS, LeS</span>. The "-S" variants operate on signed
+integers.<br>
+      <br>
+Bitwise boolean operators: <span style="font-family: monospace;"><span style="font-weight: bold;">And, Or, Not</span></span>.<br>
+      <br>
+      <span style="font-family: monospace; font-weight: bold;">HeapAlloc</span>
+and <span style="font-family: monospace; font-weight: bold;">HeapAllocZ</span>
+take an integer - the number of bytes of
+memory to allocate - and returns the address of newly-allocated memory.
+The "-Z" variant also initalizes the memory to all zero.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; a = <span style="font-weight: bold;">HeapAlloc</span>(20)</span><br>
+      <br>
+Output: <span style="font-family: monospace;">PrintInt</span> and <span style="font-family: monospace;">PrintIntS</span> print out unsigned
+and signed integers,
+respectively. <span style="font-family: monospace;">PrintString </span>prints
+out strings. These do not return a
+value.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintInt</span>(13)</span><br>
+      <span style="font-family: monospace;">&nbsp; s = "Hello"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintString(</span>s)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><br>
+Error</span> is for abnormal program termination (for errors like null
+pointer
+deferences, etc). It takes a string message to display to the user.<br>
+      <br>
+      <span style="font-family: monospace;">DebugPrint</span> is only
+for debugging. It accepts any number of values and
+prints out the interpreter's internal representation of the value. This
+can be useful for getting information about pointers.<span style="font-family: &quot;Times New Roman&quot;;"><span style="font-weight: bold;"></span></span>
+      <p>Though
+the full specification defines many built-in operations, for your
+homework you are only allowed to use the following:</p>
+      <ul>
+        <li>Basic Arithmetic: <tt style="font-weight: bold;">Add</tt><span style="font-weight: bold;">,</span><span style="font-weight: bold;" class="Apple-converted-space">&nbsp;</span><tt style="font-weight: bold;">Sub</tt><span style="font-weight: bold;">,</span><span style="font-weight: bold;" class="Apple-converted-space">&nbsp;</span><tt style="font-weight: bold;">MulS</tt></li>
+        <li>Comparison: <tt style="font-weight: bold;">Eq</tt><span style="font-weight: bold;">,</span><span style="font-weight: bold;" class="Apple-converted-space">&nbsp;</span><tt style="font-weight: bold;">Lt</tt><span style="font-weight: bold;">,</span><span style="font-weight: bold;" class="Apple-converted-space">&nbsp;</span><tt style="font-weight: bold;">LtS</tt></li>
+        <li>Displaying Output: <tt style="font-weight: bold;">PrintIntS</tt></li>
+        <li>Memory Allocation: <tt style="font-weight: bold;">HeapAllocZ</tt></li>
+        <li>Error: <tt style="font-weight: bold;">Error</tt></li>
+      </ul>
+      <h3><span style="font-weight: bold;">Translator</span></h3>
+Given a MiniJava program as input, the translator should output an
+equivalent Vapor program.<br>
+      <p>Consider
+the factorial MiniJava program. <span style="font-family: monospace;">Factorial.java
+      </span><a href="Phase1/Factorial.java">Download</a></p>
+      <span style="font-family: monospace;"></span>
+      <pre style="color: rgb(0, 0, 0); font-style: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px;"><span style="font-weight: bold;">class</span> Factorial{<br>   <span style="font-weight: bold;">public</span> <span style="font-weight: bold;">static</span> <span style="font-weight: bold;">void</span> main(<span style="font-weight: bold;">String</span>[] a){<br>      System.out.println(new Fac().ComputeFac(10));<br>   }<br>}<br><br><span style="font-weight: bold;">class</span> Fac {<br>   <span style="font-weight: bold;">public int</span> ComputeFac(int num){<br>      <span style="font-weight: bold;">int</span> num_aux;<br>      <span style="font-weight: bold;">if</span> (num &lt; 1)<br>         num_aux = 1;<br>      <span style="font-weight: bold;">else</span><br>         num_aux = num * (this.ComputeFac(num-1));<br>      <span style="font-weight: bold;">return</span> num_aux;<br>   }<br>}</pre>
+The translator should traslate it to a Vapor program like the
+following. <span style="font-family: monospace;">Factorial.vapor</span>
+      <a href="Phase2/Factorial.vapor">Dowload</a><br>
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">const</span> vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; :Fac.ComputeFac</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Main()</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.0 = <span style="font-weight: bold;">HeapAllocZ</span>(4)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; [t.0] = :vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if t.0 <span style="font-weight: bold;">goto</span> :null1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">Error</span>("null pointer")</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; null1:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.1 = [t.0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.1 = [t.1+0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.2 = <span style="font-weight: bold;">call</span> t.1(t.0 10)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintIntS</span>(t.2)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Fac.ComputeFac(this num)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.0 = <span style="font-weight: bold;">LtS</span>(num 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if0 t.0 <span style="font-weight: bold;">goto</span> :if1_else</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; num_aux
+= 1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">goto</span> :if1_end</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if1_else:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.1 =
+[this]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.1 =
+[t.1+0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.2 =
+Sub(num 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.3 = <span style="font-weight: bold;">call</span> t.1(this t.2)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; num_aux
+= MulS(num t.3)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if1_end:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; ret num_aux<br>
+      <br>
+      </span>A Vapor program <span style="font-family: monospace;">p.vapor</span>
+can be run using the Vapor interpreter <span style="font-family: monospace;">vapor.jar</span> as follows:<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; $ java -jar
+vapor.jar run p.vapor</span><br>
+      <span style="font-weight: bold;"></span>
+      <h3>Hints</h3>
+During the translation, for each class, we construct the two objects
+class record and class v-table that keep information about the location
+of the fields and methods. These object are incrementally built at the
+beginning and used during the translation.<br>
+      <br>
+A class record maps field names to their offsets. Fields are assigned
+offsets in the order that they are visited. The class record of a
+subclass has a reference to the class record of the superclass and the
+offsets of the former start from the size of the latter. When a field
+access is translated to a memory operation, the class record is used to
+determine the offset of the object memory that the memory operation
+should access.<br>
+      <br>
+The class v-table maps method names of the class to their assigned
+offsets. The v-table of a subclass is a copy of the v-table of
+superclass that is extended for new methods of the subclass. It is also
+good to keep a list of method names in the order of their offsets that
+is used when the v-table is written.<br>
+      <br>
+From type-checking, we get the classes in an order where every subclass
+comes after its superclass. The list is traversed in order and the
+class record and v-table for each class is created as extensions of
+those of its superclass.<br>
+      <br>
+Translation is done recursively using visitors. To generate the
+translation, a printer class is used where indentation can be increased
+and decreased on the entry and exit from scopes.<br>
+      <br>
+Identifiers can be declared with different types in different scopes.
+Thus, a symbol table that maps identifiers to types is kept during the
+translation. The type of an identifier is either class, method, field
+or local variable. The symbol table keeps a stack of scopes. For
+example at the beginning of a class, a new scope is pushed and the
+implicit field "this", the fields and the methods of the class are
+added to the scope. The main class is handled separately to generate
+the "Main()" function.<br>
+      <br>
+In the translation of each class, its v-table is translated to a const
+data segment.<br>
+      <br>
+In the translation of each (non-static) method, the implicit this
+parameter is explicitly added to the parameters of the translated
+function.<br>
+      <br>
+In the translation of statements, we create unique temporal variables
+using a sequence number. Similarly, we can generate unique labels.<br>
+      <br>
+In the translation of an identifier either in an expression or as the
+left hand side of an assignment, its type is retrieved from the symbol
+table. If it is a field, the class type for "this" can be retrieved
+from the symbol table, the class record can be retrieved from the class
+type and the index of the field can be retrieved from the class
+record. If the retrieved index of the field is i, the offset for the
+memory access is statically computed as i * 4 + 4. This is because, a
+word is four bytes and the first location of an object stores a
+reference to the v-table.<br>
+      <br>
+In the translation of an array access or assignment, the index is
+multiplied (using the MulS instruction) by 4 and then it is added
+(using the Add instruction) to the base address. This is because words
+are 4 bytes. Then, another 4 is added to it because the first word
+stores the size of the array. Note that before these instructions, the
+out-of-bounds condition should be checked. The size of the array is read
+from the base address of the array and compared to the index. The array
+length instruction is simply translated to an access to the array base
+address.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+s = [b]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where b is the base address</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ok = LtS(i, s)&nbsp;&nbsp; where i is the index</span><br style="font-family: monospace;"><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ok goto :l'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Error("Array index out of bounds")<br>
+&nbsp; l': ok = LtS(-1, i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ok goto :l<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Error("Array index out of bounds")<br style="font-family: monospace;">
+</span>
+      <span style="font-family: monospace;">&nbsp;&nbsp; l: o = MulS(i
+4)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+d = Add(b, o)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+r = [d+4]</span><br>
+      <br>
+In the translation of the if statement, we label the beginning of the
+else statement and the end and use the instruction if0 to goto to the
+else label if the condition fails. We goto to the end label at the end
+of the then statement. The while statement can be similarly translated
+by labeling the start and the end.<br>
+      <br>
+In the translation of a method call, if the value of the receiver is
+zero, a null pointer error is reported. The class type and then the v-table of
+the receiver object can be retrieved from the symbol table. The offset of the method can be retrieved from the v-table.<br>
+&nbsp;&nbsp; <br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; vt =
+[rc]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where rc is the receiver</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; f = [vt +
+d]&nbsp;&nbsp; where d = o * 4, </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+o is the offset of the method retrieved from the v-table</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; r = call f(rc
+arg1 arg2)</span><br>
+      <br>
+In the translation of an object allocation, the class type and then
+the class record can be retrieved from the symbol table. The allocation
+size is 4 times the record size plus 4. This is because a word is four
+bytes and the first word is used to store a reference to the v-table of
+the object.<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; r =
+HeapAllocZ(s)&nbsp;&nbsp; where s = rs * 4 + 4&nbsp; and&nbsp; rs is
+the record size</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; [r] =
+:ClassVTableName</span><br style="font-family: monospace;">
+      <br>
+In the translation of array allocation, the size is multiplied (using
+the MulS instruction) by 4 and added (using the Add instruction) by 4.
+This is because a word is 4 bytes and the first word stores the array
+size. The resulting size is passed to the HeapAllocZ instruction.<br>
+      <br>
+The and expression can be translated to two if0 instructions that check
+if each of the operands is zero, assign zero to the result and goto the
+end label. Before the end label, one is assigned to the result. The not
+expression can be similarly translated.<br>
+      <br>
+Less than, addition, subtraction and multiplication operations are
+directly mapped to LtS, Add, Sub, and MulS instructions.<br>
+&nbsp;&nbsp; <br>
+True and false literals are translated to 1 and 0 and integer literals
+are directly translated.<br>
+      <h3><span style="font-weight: bold;">Submission</span><br>
+      </h3>
+      <p>Your
+main file should be called<span class="Apple-converted-space">&nbsp;</span><tt class="western">J2V.java</tt>, and if<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.java</tt><span class="Apple-converted-space">&nbsp;</span>contains a syntactically
+correct MiniJava program, then</p>
+      <p><tt class="western">java J2V &lt; P.java &gt; P.vapor</tt></p>
+      <p>creates
+a Vapor program<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vapor</tt><span class="Apple-converted-space">&nbsp;</span>with
+the same behavior as<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.java</tt>.</p>
+      <p><span>Untar
+the following </span><span>tarball</span><span>
+and
+read the instructions in the <span style="font-family: monospace;">ReadMe.txt</span>
+file. </span><span>Your
+submission<span class="Apple-converted-space">&nbsp;</span></span><em style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">must</em><span><span class="Apple-converted-space">&nbsp;</span>work with the testing
+script when run on the department servers.&nbsp;</span><span></span><span>
+      </span><span>Make
+sure you test your final tarball before submitting.</span></p>
+      <p><span><span style="font-family: monospace;">Phase2Tester.tar.gz</span></span><span>
+      <a href="Phase2/Phase2Tester.tar.gz">Download</a></span></p>
+      <hr style="width: 100%; height: 2px;">
+      
+      <h2 class="western"><a name="Phase3"></a>Phase
+3: Register Allocation</h2>
+
+      <h3>Introduction</h3>
+In
+this phase, we translate the Vapor language to the Vapor-M language. In
+contrast to Vapor that provides local variables, Vapor-M provides
+registers and stacks. The local variables should be mapped to registers
+and run-time stack elements. Consult the book chapter 6 on Activation
+Records, chapter 10 on Liveness Analysis and the following paper on
+register allocation.<br>
+      <br>
+Massimiliano Poletto and Vivek Sarkar,<span class="Apple-converted-space">&nbsp;</span>Linear Scan Register
+Allocation, ACM<span class="Apple-converted-space">&nbsp;</span>TOPLAS<span class="Apple-converted-space">&nbsp;</span>21(5):895-913, 1999.<br>
+      <h3>Dependencies</h3>
+      <p>We
+need to have the following items. We had the first item in phase 2.</p>
+      <p>-
+Vapor Interpretor <span style="font-family: monospace;">vapor.jar</span>:
+      <a href="Phase2/vapor.jar">Download</a><br>
+      </p>
+      <p>-
+Vapor Parser <span style="font-family: monospace;">vapor-parser.jar</span>:
+      <a href="Phase3/vapor-parser.jar">Download</a><br>
+&nbsp; The source code <span style="font-family: monospace;">vapor-parser-source.tar.gz</span>
+      <a href="Phase3/vapor-parser-source.tar.gz">Download</a> and <br>
+&nbsp; the java doc <span style="font-family: monospace;">vapor-parser-javadoc.tar.gz</span>
+      <a href="Phase3/vapor-parser-javadoc.tar.gz">Download</a> for
+this parser are also available.<br>
+      </p>
+      <p>-
+Test cases<br>
+&nbsp; Sample input programs <span style="font-family: monospace;">Phase3Tests.tar.gz</span>:
+      <a href="Phase3/Phase3Tests.tar.gz">Download</a><br>
+&nbsp; Sample output programs <span style="font-family: monospace;">Phase4Tests.tar.gz</span>:
+      <a href="Phase4/Phase4Tests.tar.gz">Download</a><br>
+      </p>
+      <h3>Vapor-M Language Specification</h3>
+A Vapor-M program is largely the
+same as a Vapor program except that instead of local variables,
+registers and stack memory are used.<br>
+      <br>
+Instead of local variables we have 23 registers: <span style="font-family: monospace;">$s0..$s7, $t0..$t8, $a0..$a3, $v0, $v1</span>.<br>
+Registers are global to all functions (whereas local variables were
+local to a function activation).<br>
+To follow MIPS calling conventions, we use the registers as follows:<br>
+      <span style="font-family: monospace;">$s0..$s7</span>: general
+use callee-saved<br>
+      <span style="font-family: monospace;">$t0..$t8</span>: general
+use caller-saved<br>
+      <span style="font-family: monospace;">$a0..$a3</span>: reserved
+for argument passing<br>
+      <span style="font-family: monospace;">$v0</span>: returning a
+result from a call<br>
+      <span style="font-family: monospace;">$v0, $v1</span>: can also
+be used as temporary registers for loading values from the stack<br>
+      <br>
+The register <span style="font-family: monospace;">$t9</span> is
+reserved for the next assignment.<br>
+      <br>
+Each function has three stack arrays called <span style="font-family: monospace; font-weight: bold;">in</span>, <span style="font-family: monospace; font-weight: bold;">out</span>, and <span style="font-family: monospace; font-weight: bold;">locals</span>. The <span style="font-family: monospace; font-weight: bold;">in</span> and <span style="font-family: monospace; font-weight: bold;">out</span> arrays
+are for passing arguments between functions. The <span style="font-family: monospace; font-weight: bold;">in</span> array
+refers to the <span style="font-family: monospace; font-weight: bold;">out</span>
+array of the caller. The <span style="font-family: monospace; font-weight: bold;">local</span>
+array is for function-local storage that can be used for spilled
+registers. The sizes of these arrays are declared at the top of every
+function (instead of a parameter list).<br>
+      <br>
+Each element of each array is a 4-byte word. The indexes into the array
+is the word-offset (not the byte offset). Array references can be used
+wherever memory references can be used. So <span style="font-family: monospace;"><span style="font-weight: bold;">in</span>[1]</span>
+refers to the second element of the <span style="font-family: monospace; font-weight: bold;">in</span> stack
+array.<br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Run [<span style="font-weight: bold;">in</span> 2, <span style="font-weight: bold;">out</span> 0, <span style="font-weight: bold;">local</span> 4]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = <span style="font-weight: bold;">in</span>[1]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">local</span>[3] = $t1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintString</span>($t1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $v0 = 1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br>
+      <h3><span style="font-weight: bold;">Translation</span></h3>
+      <p> </p>
+Consider
+the factorial Vapor program <span style="font-family: monospace;">Factorial.vapor.
+      </span><a href="Phase2/Factorial.vapor">Download</a><br>
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">const</span> vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; :Fac.ComputeFac</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Main()</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.0 = <span style="font-weight: bold;">HeapAllocZ</span>(4)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; [t.0] = :vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if t.0 <span style="font-weight: bold;">goto</span> :null1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">Error</span>("null pointer")</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; null1:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.1 = [t.0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.1 = [t.1+0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.2 = <span style="font-weight: bold;">call</span> t.1(t.0 10)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintIntS</span>(t.2)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Fac.ComputeFac(this num)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; t.0 = <span style="font-weight: bold;">LtS</span>(num 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if0 t.0 <span style="font-weight: bold;">goto</span> :if1_else</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; num_aux
+= 1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">goto</span> :if1_end</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if1_else:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.1 =
+[this]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.1 =
+[t.1+0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.2 =
+Sub(num 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; t.3 = <span style="font-weight: bold;">call</span> t.1(this t.2)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; num_aux
+= MulS(num t.3)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if1_end:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; ret num_aux</span><br>
+      <br>
+The translator should traslate it to a Vapor-M program like the
+following. <span style="font-family: monospace;">Factorial.vaporm.</span>
+      <span style="font-family: monospace;"></span><a href="Phase3/Factorial.vaporm">Download</a><br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">const</span> vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; :Fac.ComputeFac</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Main [<span style="font-weight: bold;">in</span> 0, <span style="font-weight: bold;">out</span> 0, <span style="font-weight: bold;">local</span> 0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t0 = <span style="font-weight: bold;">HeapAllocZ</span>(4)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; [$t0] = :vmt_Fac</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; if $t0 <span style="font-weight: bold;">goto</span> :null1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">Error</span>("null pointer")</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">null1:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = [$t0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = [$t1]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $a0 = $t0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $a1 = 10</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">call</span> $t1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = $v0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">PrintIntS</span>($t1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">func</span> Fac.ComputeFac [<span style="font-weight: bold;">in</span> 0, <span style="font-weight: bold;">out</span> 0, <span style="font-weight: bold;">local</span> 1]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">local</span>[0] = $s0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t0 = $a0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $s0 = $a1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = LtS($s0 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">if0</span> $t1 <span style="font-weight: bold;">goto</span> :if1_else</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = 1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">goto</span> :if1_end</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">if1_else:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t2 = [$t0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t2 = [$t2]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t3 = <span style="font-weight: bold;">Sub</span>($s0 1)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $a0 = $t0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $a1 = $t3</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">call</span> $t2</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t3 = $v0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $t1 = <span style="font-weight: bold;">MulS</span>($s0 $t3)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">if1_end:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $v0 = $t1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; $s0 = <span style="font-weight: bold;">local</span>[0]</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">ret</span></span><br>
+      <br>
+The jar file <span style="font-family: monospace;">vapor-parser.jar</span>
+includes both the parser and syntax tree classes for the Vapor
+language. Compile your program against it using the <span style="font-family: monospace;">-classpath</span> option. A Vapor
+program can be parsed to Vapor syntax tree using the Vapor parser <span style="font-family: monospace;">vapor-parser.jar </span>as follows. A
+Vapor program will never contain the following AST nodes:
+VVarRef.Register, VMemRef.Stack.<br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.util.ProblemException;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span>
+cs132.vapor.parser.VaporParser;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.vapor.ast.VaporProgram;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.vapor.ast.VBuiltIn.Op;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.InputStreamReader;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.IOException;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.PrintStream;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"></span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">public</span> <span style="font-weight: bold;">static</span> VaporProgram
+parseVapor(InputStream in, PrintStream err) <span style="font-weight: bold;">throws</span> IOException {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; Op[] ops = {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Op.Add,
+Op.Sub, Op.MulS, Op.Eq, Op.Lt, Op.LtS,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+Op.PrintIntS, Op.HeapAllocZ, Op.Error,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; };</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">boolean</span> allowLocals = true;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; String[] registers =
+null;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">boolean</span> allowStack = false;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; VaporProgram tree;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">try</span> {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; tree =
+VaporParser.run(new InputStreamReader(in), 1, 1,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+java.util.Arrays.asList(ops),</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+allowLocals, registers, allowStack);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; }</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">catch</span> (ProblemException ex) {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+err.println(ex.getMessage());</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; return
+null;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; }</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">return</span> tree;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">}</span><br>
+      <br>
+A Vapor-M program <span style="font-family: monospace;">p.vaporm</span>
+can be run using the Vapor interpreter <span style="font-family: monospace;">vapor.jar</span> as follows:<br>
+      <br>
+      <span style="font-family: monospace;">&nbsp; $ java -jar
+vapor.jar run -mips p.vaporm</span><br>
+      <h3>Hints</h3>
+The data segments are simply translated to const segments.<br>
+      <br>
+Register allocation is applied to each function separately.<br>
+      <br>
+      <span style="font-family: monospace;">$a0..$a3</span>: reserved
+for argument passing<br>
+      <span style="font-family: monospace;">$s0..$s7</span>: general
+use callee-saved<br>
+      <span style="font-family: monospace;">$t0..$t8</span>: general
+use caller-saved&nbsp;&nbsp; <br>
+      <span style="font-family: monospace;">$v0</span>: returning a
+result from a call<br>
+      <br>
+The $t variables are temporary caller saved registers, while the $s
+registers are callee saved. Each function saves the $s registers that
+it will use at the beginning of the function and saves the $t registers
+that it will need before calling another function.<br>
+      <br>
+Each frame for a function has three parts<br>
+&nbsp;&nbsp; In <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The arguments of the call that are
+spilled to the stack.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This section is sometimes considered to
+be part of the caller stack.<br>
+&nbsp;&nbsp; Local<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The local variables (that are spilled to
+the stack)&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The backup for the caller saved registers used
+by the function<br>&nbsp;&nbsp; Out<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The backup for arguments passed by
+registers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arguments that are spilled on the stack<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The size of these sections is the
+maximum number of arguments of called <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; functions.<br>
+      <br>
+For each function, the data flow analysis results in the def, use, in,
+and out sets of variables for each instruction. The set of active
+variables at each instruction is the union of the def and in sets for
+the instruction. The live intervals (used by the linear scan algorithm)
+can be calculated using the active sets by a top-down scan of the
+instructions. <br>
+      <br>
+The first parameters are mapped to the argument registers. The
+parameters that do not fit in the argument registers are spilled to the
+(in) stack. The argument registers that are not used for arguments are
+added to the pool of registers used for register allocation. The pool always
+includes $s and $t registers.<br>
+      <br>
+We use the linear scan algorithm for register allocation. See the
+algorithm in the paper. The algorithm returns a mapping from variables
+to locations and the number of variables spilled to the stack. A location
+is either a register, a (local) stack offset or an (in) stack offset.<br>
+Note that for each parameter that is mapped to an argument register, an
+interval starts from the first instruction. These intervals are marked
+as fixed so that they are not spilled by the algorithm to the stack.
+Once these intervals reach their end points, their argument registers
+can be put back to the pool to be reused. <br>
+      <br>
+Using the allocation map resulted from the register allocation
+algorithm and the out sets resulted from the liveness analysis, the
+sets of registers that are used after an instruction can be calculated.
+This set is later used to determine the registers that should be saved
+before a function call.<br>
+      <br>
+On entry to a function<br>
+&nbsp;&nbsp; Saving the used saved registers $s<br>
+      <br>
+On exit from a function<br>
+&nbsp;&nbsp; Assigning the return value to $v0<br>
+&nbsp;&nbsp; Restoring the saved registers $s<br>
+      <br>
+Before a function call<br>
+&nbsp;&nbsp; Saving temporal registers $t that will be used after the
+call<br>
+&nbsp;&nbsp; Saving the argument registers $a<br>
+&nbsp;&nbsp; Copying the arguments to the argument registers and the
+stack<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that if arguments of the caller should be
+passed to callee, they should <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be read from the stack as otherwise $a
+registers would be both read and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; written.<br>
+      <br>
+After a function call<br>
+&nbsp;&nbsp; Restoring temporal registers<br>
+&nbsp;&nbsp; Restoring argument registers<br>
+      <br>
+Some instructions accept only registers as operands. The registers $v0
+and $v1 can also be used as temporary registers for loading values from
+the stack.<br>
+      <br>
+An implementation-specific note is that during the parsing, unique
+integer values are assigned to variables that we use to refer to variables
+instead of names.<br>
+      <h3><span style="font-weight: bold;">Submission</span></h3>
+      <p>Your
+main file should be called<span class="Apple-converted-space">&nbsp;</span><tt class="western">V2VM.java</tt>, and if<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vapor</tt><span class="Apple-converted-space">&nbsp;</span>contains a syntactically
+correct Vapor program, then</p>
+      <p><tt class="western">java V2VM &lt; P.vapor &gt; P.vaporm</tt></p>
+creates
+a Vapor-M program<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vaporm</tt><span class="Apple-converted-space">&nbsp;</span>with
+the same behavior as<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vapor</tt>
+      <p><span style="font-weight: bold;"></span><span>Untar
+the following </span><span>tarball</span><span>
+and
+read the instructions in the <span style="font-family: monospace;">ReadMe.txt</span>
+file. </span><span>Your
+submission<span class="Apple-converted-space">&nbsp;</span></span><em style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">must</em><span><span class="Apple-converted-space">&nbsp;</span>work with the testing
+script when run on the department servers.&nbsp;</span><span></span><span>
+      </span><span>Make
+sure you test your final tarball before submitting.</span></p>
+      <p><span><span style="font-family: monospace;">Phase3Tester.tar.gz</span></span><span>
+      <a href="Phase3/Phase3Tester.tar.gz">Download</a></span></p>
+      <hr style="width: 100%; height: 2px;">
+      <h2 class="western"><a name="Phase4"></a>Phase
+4: Activation Records and Instruction Selection<br>
+</h2>
+      <h3>Introduction</h3>
+In this phase, the Vapor-M registers and stacks should be mapped to
+MIPS registers and runtime stack. In addition, the Vapor-M instuctions
+should be mapped to MIPS instructions.<br>
+      <h3>Dependencies</h3>
+      <p>We
+need to have the following items. We had the first item in phase 3.</p>
+      <p>-
+Vapor Parser <span style="font-family: monospace;">vapor-parser.jar</span>:
+      <a href="Phase3/vapor-parser.jar">Download</a><br>
+&nbsp; The source code <span style="font-family: monospace;">vapor-parser-source.tar.gz</span>
+      <a href="Phase3/vapor-parser-source.tar.gz">Download</a> and <br>
+&nbsp; the java doc <span style="font-family: monospace;">vapor-parser-javadoc.tar.gz</span>
+      <a href="Phase3/vapor-parser-javadoc.tar.gz">Download</a> for
+this parser are also available.<br>
+      </p>
+      <p>-
+Test cases<br>
+&nbsp; Sample input programs <span style="font-family: monospace;">Phase4Tests.tar.gz</span>:
+      <a href="Phase4/Phase4Tests.tar.gz">Download</a><br>
+&nbsp; Sample output programs <span style="font-family: monospace;">Phase5Tests.tar.gz</span>:
+      <a href="Phase4/Phase5Tests.tar.gz">Download</a><br>
+      </p>
+- MIPS Interpreter <span style="font-family: monospace;">mars.jar</span>
+      <a href="Phase4/mars.jar">Download</a> from the <a href="http://courses.missouristate.edu/KenVollmar/MARS/"><span style="text-decoration: underline;">MARS</span></a> project<br>
+      <h3>Translation</h3>
+The translator should traslate a Vapor-M program like <span style="font-family: monospace;">Factorial.vaporm</span> (<span style="font-family: monospace;"></span><a href="Phase3/Factorial.vaporm">Download)</a> to a MIPS program like <span style="font-family: monospace;">Factorial.s </span>(<a href="Phase4/Factorial.s">Download</a>)<span style="text-decoration: underline;"></span><br>
+      <br>
+The jar file <span style="font-family: monospace;">vapor-parser.jar</span>
+includes both the parser and syntax tree classes for the Vapor-M
+language. Compile your program against it using the <span style="font-family: monospace;">-classpath</span> option. A Vapor-M
+program can be parsed to Vapor-M syntax tree using the Vapor parser <span style="font-family: monospace;">vapor-parser.jar </span>as follows. A
+Vapor-M program will never contain the following AST node:
+VVarRef.Local.<br>
+      <br>
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.util.ProblemException;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span>
+cs132.vapor.parser.VaporParser;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.vapor.ast.VaporProgram;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> cs132.vapor.ast.VBuiltIn.Op;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.InputStreamReader;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.IOException;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">import</span> java.io.PrintStream;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;"></span><br style="font-family: monospace;">
+      <span style="font-family: monospace;"><span style="font-weight: bold;">public</span> <span style="font-weight: bold;">static</span> VaporProgram
+parseVapor(InputStream in, PrintStream err) <span style="font-weight: bold;">throws</span> IOException {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; Op[] ops = {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Op.Add,
+Op.Sub, Op.MulS, Op.Eq, Op.Lt, Op.LtS,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+Op.PrintIntS, Op.HeapAllocZ, Op.Error,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; };<br>
+      <br>
+&nbsp; boolean allowLocals = false;<br>
+&nbsp; String[] registers = {<br>
+&nbsp;&nbsp;&nbsp; "v0", "v1",<br>
+&nbsp;&nbsp;&nbsp; "a0", "a1", "a2", "a3",<br>
+&nbsp;&nbsp;&nbsp; "t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7",<br>
+&nbsp;&nbsp;&nbsp; "s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7",<br>
+&nbsp;&nbsp;&nbsp; "t8",<br>
+&nbsp; };<br>
+&nbsp; boolean allowStack = true;<br>
+      <br style="font-family: monospace;">
+      </span><span style="font-family: &quot;Andale Mono&quot;,&quot;Lucida Typewriter&quot;,&quot;Lucida Console&quot;,&quot;Bitstream Vera Sans Mono&quot;;"><span style="font-weight: bold;"></span></span><span style="font-family: monospace;">&nbsp; VaporProgram tree;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">try</span> {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; tree =
+VaporParser.run(new InputStreamReader(in), 1, 1,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+java.util.Arrays.asList(ops),</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+allowLocals, registers, allowStack);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; }</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">catch</span> (ProblemException ex) {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+err.println(ex.getMessage());</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; return
+null;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; }</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; <span style="font-weight: bold;">return</span> tree;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">}</span><br>
+      <br>
+A MIPS program <span style="font-family: monospace;">P.s</span> can be
+run as<br>
+      <br>
+&nbsp; <span style="font-family: monospace;">$ java -jar mars.jar nc
+P.s</span><br>
+      <br>
+Running without any arguments will bring up the simulator GUI, which
+will let you step forward and backward through your program.<br>
+      <h3>Hints</h3>
+MIPS snippet<br>
+      <span style="font-family: monospace;">&nbsp;&nbsp; .data</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+var1: .word 5</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+table:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Label1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Label2</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; .text</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jal Main</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 10&nbsp;&nbsp; # syscall: exit</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_print:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 1&nbsp;&nbsp; # syscall: print integer</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+la $a0 _newline&nbsp;&nbsp; # address of string in memory</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 4&nbsp;&nbsp; # syscall: print string</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jr $ra</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_error:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 4&nbsp;&nbsp; # syscall: print string</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 10&nbsp; # syscall: exit</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_heapAlloc:</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+li $v0 9&nbsp;&nbsp; # syscall: sbrk</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+syscall&nbsp;&nbsp;&nbsp; # address in $v0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jr $ra</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.data</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.align 0</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_newline: .asciiz "\n"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+_str0: .asciiz "null pointer\n"</span><br>
+      <br>
+Common instructions<br>
+&nbsp;&nbsp; li reg, value&nbsp;&nbsp; # load immediate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; load immediate value into destination
+register<br>
+&nbsp;&nbsp; la reg, label&nbsp;&nbsp; # load address<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; load address of the label to the register<br>
+&nbsp;&nbsp; lw $t2, ($t0)&nbsp;&nbsp; # load word<br>
+&nbsp;&nbsp; lw $t2, 4($t0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; load word at $t0 to $t2<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; load word at (St0 + 4) to $t2<br>
+&nbsp;&nbsp; sw reg, label&nbsp;&nbsp; # store word<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; store word reg to location label<br>
+&nbsp;&nbsp; move reg1, reg2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy the value of reg1 to reg2<br>
+&nbsp;&nbsp; jal label&nbsp;&nbsp; # jump and link<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy program counter (return address) to
+register $ra<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to program statement at label<br>
+&nbsp;&nbsp; jalr reg&nbsp;&nbsp; # jump to reg and link<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy program counter (return address) to
+register $ra<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to program statement at the address
+in reg<br>
+&nbsp;&nbsp; j label&nbsp;&nbsp; #&nbsp; jump<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to label<br>
+&nbsp;&nbsp; jr reg&nbsp;&nbsp; # jump register<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to return address in reg<br>
+&nbsp;&nbsp; addi $t2, $t3, 5&nbsp;&nbsp; # add immediate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t2 = $t3 + 5<br>
+&nbsp;&nbsp; add $t0, $t1, $t2&nbsp;&nbsp; # add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t0 = $t1 + $t2 add as signed (2's
+complement) integers<br>
+&nbsp;&nbsp; sub $t2, $t3, $t4&nbsp;&nbsp; # subtract <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t2 = $t3 - $t4<br>
+&nbsp;&nbsp; addiu $t, $s, imm<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adds $s and a sign-extended immediate
+value and stores the result in $t<br>
+&nbsp;&nbsp; addu $t1, $t6, $t7&nbsp;&nbsp; # add as unsigned integers <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t1 = $t6 + $t7<br>
+&nbsp;&nbsp; subu reg1, reg2, reg3&nbsp;&nbsp; # subtract as unsigned
+integers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reg1 = reg2 - reg3<br>
+&nbsp;&nbsp; mult&nbsp; reg1, reg2&nbsp;&nbsp; #&nbsp; multiply<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; multiply 32-bit quantities in reg1 and
+reg2, and store 64-bit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result in special registers Lo and Hi:
+(Hi, Lo) = reg1 * reg2<br>
+&nbsp;&nbsp; slt $d, $s, $t&nbsp;&nbsp; # set on less than<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If $s is less than $t, $d is set to one.
+It gets zero otherwise.<br>
+&nbsp;&nbsp; beqz reg, label&nbsp;&nbsp; # branch if equal to zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; branch to label if the value reg is zero<br>
+&nbsp;&nbsp; bnez reg, label&nbsp;&nbsp; # branch if not equal to zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; branch to label if the value reg is not
+zero<br>
+      <br>
+The stack grows from higher addresses down to lower
+addresses.&nbsp;&nbsp; <br>
+      <br>
+      <span style="font-family: monospace;">Higher address</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">$fp -&gt;&nbsp;&nbsp; | In / Caller Out</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><span style="font-family: monospace;"></span><br style="font-family: monospace;">
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| ra</span><br style="font-family: monospace;">
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| fp</span><br style="font-family: monospace;">
+
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><span style="font-family: monospace;"></span><br>
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| Local</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">$sp -&gt;&nbsp;&nbsp; | Out</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| ra</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| fp</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+----------------------</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Callee frame</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">Lower address</span><br style="font-family: monospace;">
+      <br>
+Note that each word is 4 bytes and literals below should be multiplied
+by 4.<br>
+      <br>
+On entry to a function<br>
+&nbsp;&nbsp; Save $fp to location $sp - 2<br>
+&nbsp;&nbsp; Move $fp to $sp<br>
+&nbsp;&nbsp; Pushing the frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decrease $sp by size = Local + Out + 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 for Return address<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 for frame pointer<br>
+&nbsp;&nbsp; Saving the return register at $fp - 1 (if the function
+calls any other function)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that $fp now holds the old $sp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+On exit from a function<br>
+&nbsp;&nbsp; Restoring the return register $ra (if the function calls
+any other function)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from $fp - 1<br>
+&nbsp;&nbsp; Restore $fp from $fp - 2<br>
+&nbsp;&nbsp; Popping the frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decreasing $sp by size = Local + Out + 2<br>
+&nbsp;&nbsp; Jumping to the return register<br>
+      <br>
+      <p>The register $t9 can be used to load values for instructions
+that
+accept only registers.</p>
+
+      <h3><span style="font-weight: bold;">Submission </span><span></span></h3>
+      <p>Your
+main file should be called<span class="Apple-converted-space">&nbsp;</span><tt class="western">VM2M.java</tt>, and if<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vaporm</tt><span class="Apple-converted-space">&nbsp;</span>contains a syntactically
+correct Vapor-M program, then</p>
+      <p><tt class="western">java VM2M &lt; P.vaporm &gt; P.s</tt></p>
+      <p>creates
+a MIPS program<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.s</tt><span class="Apple-converted-space">&nbsp;</span>with
+the same behavior as<span class="Apple-converted-space">&nbsp;</span><tt class="western">P.vaporm</tt>.</p>
+      <p><span style="font-weight: bold;"></span><span>Untar
+the following </span><span>tarball</span><span>
+and
+read the instructions in the <span style="font-family: monospace;">ReadMe.txt</span>
+file. </span><span>Your
+submission<span class="Apple-converted-space">&nbsp;</span></span><em style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">must</em><span><span class="Apple-converted-space">&nbsp;</span>work with the testing
+script when run on the department servers.&nbsp;</span><span></span><span>
+      </span><span>Make
+sure you test your final tarball before submitting.</span></p>
+      <p><span><span style="font-family: monospace;">Phase4Tester.tar.gz</span></span><span>
+      <a href="Phase4/Phase4Tester.tar.gz">Download</a></span></p>
+      <hr style="width: 100%; height: 2px;"> </td>
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+
+</body></html>
