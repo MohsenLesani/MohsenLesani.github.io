@@ -25,7 +25,22 @@ To see press html, ctrl+alt+o.
 - item second
 </div>
 -->
- 
+
+
+<!-- To write in green color -->
+<!--
+<div class="emph">
+Text
+</div>
+-->
+
+<!-- To write with fancy font -->
+<!--
+<div class="fancy">
+Text
+</div>
+-->
+
 **************************************************
 # Home
 
@@ -38,9 +53,9 @@ To see press html, ctrl+alt+o.
 
 Contact: mlesani AT ucsc.edu
 
-<span style="color:green">
+<div class="emph">
 I have positions for motivated students. I will be glad to hear about your interests and accomplishments.
-</span>
+</div>
 
 I am an associate professor at the Computer Science and Engineering Department of the University of California, Santa Cruz. I was a postdoc at MIT, obtained my PhD from UCLA, my MS in artificial intelligence from Sharif University of Technology and my BS in software engineering from University of Tehran. My research interests are reliability and security of software systems especially concurrent and distributed systems. Our recent focus is on secure replicated systems and distributed machine learning. I received the NSF CAREER award in 2020 and DARPA YFA award in 2022. My research has been recognized as SIGPLAN Research Highlight in 2019, received the distinguished paper award at OOPSLA 2018 and has been supported by multiple NSF grants.
 
@@ -72,17 +87,17 @@ Here are some of our current and past projects:
 **************************************************
 # Papers
 
-- Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters
-- ICDE '25 (IEEE International Conference on Data Engineering)
-- Tejas Mane, Xiao Li, Mohsen Lesani, Mohammad Sadoghi
-- [More](companion/icde25/)
-
-<!-- -->
-
 - Hambazi: Spatial Coordination Synthesis for Augmented Reality
 - OOPSLA '25 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
 - Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani
 - [More](companion/oopsla25/)
+
+<!-- -->
+
+- Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters
+- ICDE '25 (IEEE International Conference on Data Engineering)
+- Tejas Mane, Xiao Li, Mohammad Sadoghi, Mohsen Lesani
+- [More](companion/icde25/)
 
 <!-- -->
 
