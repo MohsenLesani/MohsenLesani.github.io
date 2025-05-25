@@ -57,7 +57,8 @@ Here are some of our current and past projects:
 - Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters
 - ICDE '25 (IEEE International Conference on Data Engineering)
 - Tejas Mane, Xiao Li, Mohammad Sadoghi, Mohsen Lesani
-- [More](companion/icde25/)
+- \[[Paper](companion/icde25/ICDE25.pdf)\]
+   [More](companion/icde25/)
 
 <!-- -->
 
