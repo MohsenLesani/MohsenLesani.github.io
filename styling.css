@@ -34,6 +34,10 @@ body {
   margin: 1em 0;
 }
 
+.right p {
+   text-align: right
+}
+
 /*.TextStyle {
    font-family: "Open Sans", Courier;
    font-size: 15px;

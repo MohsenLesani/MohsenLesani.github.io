@@ -1,46 +1,6 @@
 **************************************************
  | [Home](#Home) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | 
 
-<!-- ---------------------------------------------------------------------- -->
-<!-- Markdown notes -->
-
-<!-- 
-To see press html, ctrl+alt+o.
--->
-
-<!-- To write numbered lists -->
-<!--
-1. first item
-   1. first item first
-   2. first item second
-2. second item
--->
-
-<!-- To write bullet lists: --> 
-<!--
-<div class="blist">
-- item
- - inner item
- - inner item second
-- item second
-</div>
--->
-
-
-<!-- To write in green color -->
-<!--
-<div class="emph">
-Text
-</div>
--->
-
-<!-- To write with fancy font -->
-<!--
-<div class="fancy">
-Text
-</div>
--->
-
 **************************************************
 # Home
 
@@ -456,3 +416,51 @@ We work together at the Safe and Secure Software (S3) lab.
 
 **************************************************
 
+<!-- ---------------------------------------------------------------------- -->
+<!-- Markdown notes -->
+
+<!-- 
+To see press html, ctrl+alt+o.
+-->
+
+<!-- To write numbered lists -->
+<!--
+1. first item
+   1. first item first
+   2. first item second
+2. second item
+-->
+
+<!-- To write bullet lists: --> 
+<!--
+<div class="blist">
+- item
+ - inner item
+ - inner item second
+- item second
+</div>
+-->
+
+
+<!-- To write in green color -->
+<!--
+<div class="emph">
+Text
+</div>
+-->
+
+<!-- To write with fancy font -->
+<!--
+<div class="fancy">
+Text
+</div>
+-->
+
+<!-- To right-align -->
+<!--
+<div class="right">
+Text
+</div>
+-->
+
+<!-- ---------------------------------------------------------------------- -->
