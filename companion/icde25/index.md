@@ -1,5 +1,5 @@
 <div class="right"> 
- | [Home](../../index.html) | | [Projects](../../index.html#projects) | [Papers](../../index.html#papers) |
+ | [Home](../../index.html) | [Projects](../../index.html#projects) | [Papers](../../index.html#papers) |
 </div>
 
 **************************************************
