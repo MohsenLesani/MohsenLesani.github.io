@@ -5,7 +5,8 @@
 html * {
 /*   font-size: 100%; */
    font-size: 15px;
-   /*overflow-y: scroll;*/
+   /*  The following hides outside bullets.   */
+   /*overflow-y: scroll;*/  
    -webkit-text-size-adjust: 100%;
    -ms-text-size-adjust: 100%; 
 }
@@ -89,9 +90,6 @@ p {
   margin: 1em 0;
 }
 
-img {
-  max-width: 50%;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
@@ -314,10 +312,18 @@ dd:last-child {
   margin-bottom: 0;
 }
 
-img {
+/*  Prevent scaling */
+img {   
+/*   margin: auto;  */
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  /* The template had the following.  */
+/*   max-width: 100%;  */
+  max-width: 33%;
+/*   max-width: 30%; */
+/*   height: auto; */
+/*   width: auto; */
 }
 
 figure {
