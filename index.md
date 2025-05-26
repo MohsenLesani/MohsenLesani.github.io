@@ -1,8 +1,7 @@
 **************************************************
- | [Home](#Home) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | 
+ | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | 
 
 **************************************************
-# Home
 
 ![](images/Mohsen.jpg)
 
