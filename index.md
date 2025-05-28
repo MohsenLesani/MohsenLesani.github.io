@@ -24,23 +24,35 @@ I am an associate professor at the Computer Science and Engineering Department o
 Here are some of our current and past projects:
 
 <div class="blist">
-- Secure distributed systems \
-   [S&P'22](companion/sp22/),  [DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
+- Resilient distributed systems \
+   Given resiliency requirements for an online service (confidentiality, integrity and availability policies), how can we automatically partition, place and replicate it to ensure resiliency? \
+   [S&P'22](companion/sp22/)
+- Heterogeneous and reconfigurable distributed systems \
+   How can we replicate online services on untrusted, heterogeneous, and dynamic hosts? \ 
+   [DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
 - Automatic analysis and synthesis of replicated objects \
+   Given a data type or a database and its integrity properties, how can we automatically decide the optimum hybrid consistency, and synthesize a custom replicated store that guarantees convergence and integrity? How can we accelerate hybrid consistency on message passing, RDMA and FPGA networks? \
    [POPL'19](companion/popl19/),  [CAV'20](companion/cav20/),  [PLDI'22](companion/pldi22/),  [OOPSLA'25](companion/oopsla25/)
 - Verification of distributed systems \
+   How can we modularly build a certified stack of distributed components? \
    [POPL'16](companion/popl16/),  [ICFP'20](companion/icfp20/)
 - Data analytics \
+   Given high-level analytics queries in domain specific languages, how can we automatically optimize and synthesize efficient parallel and distributed workflows? \
    [ICFP'21](companion/icfp21/)
 - Blockchain transactions \
+   How can we securely and efficiently execute transactions across multiple blockchains? \
    [ICBC'20](companion/icbc20/),  [PODC'21](companion/podc21/),  [CSF'23](companion/csf23/)
 - Machine learning for performance models \
+   Can we learn performance characteristics of data structures and leverage it to synthesize efficient data structures? \
    [MAPL'20](companion/mapl20/)
 - Domain-specific languages and type systems \
+   Can the safety guarantees of type systems carry over to safety of lab-on-a-chip assays? \
    [OOPSLA'18](companion/oopsla18/),  [CACM'21](companion/cacm21/CACM21.pdf)
 - Automatic fence insertion for concurrent systems \
+   Given high-level ordering requirements, can we optimize and automate the subtle task of fence placement for concurrent data structures? \
    [OOPSLA'15](companion/oopsla15/),  [PODC'17](companion/podc17/),  [DISC'19](companion/disc19/)
 - Concurrency programming models, testing and verification \
+   How can we design and implement intuitive, efficient and correct concurrent programming models, and data structures? \
    [PPoPP'11](downloads/Papers/PPoPP11.pdf),  [CONCUR'12](companion/concur12/index.html),  [DISC'13](companion/disc13/index.html),  [DISC'14](companion/disc14/),  [CAV'14](companion/cav14/),  [NFM'19](companion/nfm19/),  [OOPSLA'22](companion/oopsla22/)
 </div>
    
