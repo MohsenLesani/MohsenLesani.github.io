@@ -430,7 +430,7 @@ We work together at the Safe and Secure Software (S3) lab.
 <div class="blist">
 - I am from the beautiful city of Kerman where the Prince's Garden [1](images/PrinceGarden.jpg), [2](images/PrinceGarden2.jpg) is located.
 - My [PhD hooding](https://drive.google.com/file/d/1vQg0X31CxArZsDSt-X2sL2VJDcyuQ-0I/view?usp=sharing) at UCLA.
-- I tried acting and played John J. Astor in Titanic the musical. Can you find me in the [cast](http://www.hooligantheatre.org/uploads/1/0/1/9/10190395/2389345_orig.jpg)?
+- I tried acting and played John J. Astor in Titanic the musical. Can you find me in the [cast](images/Titanic.jpg)?
 - We won the best costume award in a [Halloween](images/Costume.jpg) party at MIT.
 - I try to keep the [positive feedbacks](companion/reviews/) that we get.
 - The [names](names.html) of our papers.
