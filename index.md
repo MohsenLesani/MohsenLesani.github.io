@@ -1,5 +1,6 @@
+<a name="home"></a>
 <div class="navbar">
-  | [Home](index.html) |
+  | [Home](#home) |
   [Projects](#projects) |
   [Papers](#papers) |
   [Teaching](#teaching) |
@@ -7,12 +8,12 @@
   [Team](#team) |
   [Other](#other) |
 </div>
-
+<!-- To pad for the nav bar -->
+ \
+ 
 <!-- ********************************************** -->
 <!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
 <!-- ********************************************** -->
-
- \
 
 ![](images/Mohsen.jpg)
 

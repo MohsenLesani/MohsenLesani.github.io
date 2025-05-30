@@ -110,6 +110,7 @@ a {
   color: black;
 /*   text-decoration: none; */
   text-decoration: underline;
+  scroll-margin-top: var(--navbar-height);  
 }
 
 a:visited {
