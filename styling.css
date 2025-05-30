@@ -2,13 +2,40 @@
  * I add this to html files generated with pandoc.
  */
 
+.navbar {
+   position: fixed;
+   left: 0;
+   top: 0;
+/*   text-align: center; */
+/*    width: 100%; */
+/*    left: 50%; */
+/*    transform: translateX(-50%); */
+/*    height: 100vh; */
+/*    justify-content: center; */
+/*    align-items: center; */
+/*    display: flex; */
+   background-color: #F8F8F8;
+/*    background-color: #F5F5F5; */
+   overflow: hidden;
+   padding-left: 1.2em;
+   padding-right: 1.2em;
+/*    display: inline-block; */
+  /* Add more styling as needed */
+}
+
+/*
+.navbar a {
+   display: inline-block;
+}
+*/
+
 html * {
 /*   font-size: 100%; */
    font-size: 15px;
    /*  The following hides outside bullets.   */
    /*overflow-y: scroll;*/  
    -webkit-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%; 
+   -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -21,6 +48,8 @@ body {
    margin: auto;
    max-width: 42em;
    background: #fefefe;
+/*    padding-top: var(--navbar-height); */
+/*    margin-top: 50px; */
 }
 
 .fancy p {
@@ -487,3 +516,5 @@ table td {
     page-break-after: avoid;
   }
 }
+
+

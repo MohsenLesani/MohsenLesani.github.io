@@ -1,7 +1,19 @@
+<div class="navbar">
+  [Home](index.html) \
+  [Projects](#projects) \
+  [Papers](#papers) \
+  [Teaching](#teaching) \
+  [Service](#service) \
+  [Team](#team) \
+  [Other](#other)
+</div>
+
+<!--
 **************************************************
  | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | 
+-->
 
-**************************************************
+<!-- ************************************************** -->
 
 ![](images/Mohsen.jpg)
 
