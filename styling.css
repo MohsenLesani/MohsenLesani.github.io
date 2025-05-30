@@ -76,7 +76,7 @@ body {
    margin: auto;
    max-width: 42em;
    background: #fefefe;
-   padding-top: var(--navbar-height);
+/*    padding-top: var(--navbar-height); */
 /*    margin-top: 50px; */
 /*    overflow: hidden; /* Important: prevents body scroll */ */
 }
