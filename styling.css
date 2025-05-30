@@ -2,26 +2,53 @@
  * I add this to html files generated with pandoc.
  */
 
+/*.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}*/
+
+:root {
+  --navbar-height: 4em;
+}
+
 .navbar {
    position: fixed;
-   left: 0;
+/*    position: sticky; */
+/*    left: 0; */
    top: 0;
+   height: var(--navbar-height);
+/*    right: 0; */
+/*    height: 60px; */
 /*   text-align: center; */
 /*    width: 100%; */
 /*    left: 50%; */
 /*    transform: translateX(-50%); */
 /*    height: 100vh; */
 /*    justify-content: center; */
-/*    align-items: center; */
-/*    display: flex; */
+   align-items: center;
+   display: flex;
    background-color: #F8F8F8;
 /*    background-color: #F5F5F5; */
-   overflow: hidden;
+/*    overflow: hidden; */
    padding-left: 1.2em;
    padding-right: 1.2em;
 /*    display: inline-block; */
   /* Add more styling as needed */
+   padding: 0 20px;
+   z-index: 1000;
+/*    flex-shrink: 0; */
 }
+
+/* Offset content so it's not hidden behind navbar */
+/* .content { */
+/*   padding-top: 60px; */
+/*    margin-top: 60px; */
+/*    flex: 1; */
+/*    overflow-y: auto; */
+/*    padding: 20px;    */
+/*    padding-top: var(--navbar-height); */
+/* } */
 
 /*
 .navbar a {
@@ -39,6 +66,7 @@ html * {
 }
 
 body {
+/*    height: 100%; */
    color: #000;
 /*   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; */
    font-family: "Open Sans", sans-serif, Courier;
@@ -48,8 +76,9 @@ body {
    margin: auto;
    max-width: 42em;
    background: #fefefe;
-/*    padding-top: var(--navbar-height); */
+   padding-top: var(--navbar-height);
 /*    margin-top: 50px; */
+/*    overflow: hidden; /* Important: prevents body scroll */ */
 }
 
 .fancy p {
@@ -141,6 +170,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 125%;
   margin-top: 1em;
   font-weight: normal;
+  scroll-margin-top: var(--navbar-height);
+/*   scroll-margin-top: var(--navbar-height); */
 }
 
 h4, h5, h6 {

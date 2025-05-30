@@ -1,19 +1,16 @@
 <div class="navbar">
-  [Home](index.html) \
-  [Projects](#projects) \
-  [Papers](#papers) \
-  [Teaching](#teaching) \
-  [Service](#service) \
-  [Team](#team) \
+  [Home](index.html) |
+  [Projects](#projects) |
+  [Papers](#papers) |
+  [Teaching](#teaching) |
+  [Service](#service) |
+  [Team](#team) |
   [Other](#other)
 </div>
 
-<!--
-**************************************************
- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | 
--->
-
-<!-- ************************************************** -->
+<!-- ********************************************** -->
+<!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
+<!-- ********************************************** -->
 
 ![](images/Mohsen.jpg)
 
@@ -30,7 +27,7 @@ I have positions for motivated students. I will be glad to hear about your inter
 
 I am an associate professor at the Computer Science and Engineering Department of the University of California, Santa Cruz. I was a postdoc at MIT, obtained my PhD from UCLA, my MS in artificial intelligence from Sharif University of Technology and my BS in software engineering from University of Tehran. My research interests are reliability and security of software systems especially concurrent and distributed systems. Our recent focus is on secure replicated systems and distributed machine learning. I received the NSF CAREER award in 2020 and DARPA YFA award in 2022. My research has been recognized as SIGPLAN Research Highlight in 2019, received the distinguished paper award at OOPSLA 2018 and has been supported by multiple NSF grants.
 
-**************************************************
+**********************************************
 # Projects
 
 Here are some of our current and past projects:
@@ -68,7 +65,7 @@ Here are some of our current and past projects:
    [PPoPP'11](downloads/Papers/PPoPP11.pdf),  [CONCUR'12](companion/concur12/index.html),  [DISC'13](companion/disc13/index.html),  [DISC'14](companion/disc14/),  [CAV'14](companion/cav14/),  [NFM'19](companion/nfm19/),  [OOPSLA'22](companion/oopsla22/)
 </div>
    
-**************************************************
+**********************************************
 # Papers
 
 <div class="blist">
@@ -359,7 +356,7 @@ Ali Akhavan Bitaghsir, Amir Moghimi, Mohsen Lesani, Mohammad Mehdi Keramati, Maj
 [The rest of papers](restofpapers.html)
 
 
- **************************************************
+ **********************************************
 # Teaching
 
 <div class="blist">
@@ -378,7 +375,7 @@ Ali Akhavan Bitaghsir, Amir Moghimi, Mohsen Lesani, Mohammad Mehdi Keramati, Maj
 </div>
 
 
-**************************************************
+**********************************************
 # Service
 
 <div class="blist">
@@ -405,7 +402,7 @@ POPL '20, PC (ACM SIGPLAN Symposium on Principles of Programming Languages, Prog
 
 </div>
 
-**************************************************
+**********************************************
 # Team
 
 We work together at the Safe and Secure Software (S3) lab.
@@ -436,7 +433,7 @@ We work together at the Safe and Secure Software (S3) lab.
 - Tejas Mane, PhD student
 - Primary publications: [ICDE '25](companion/icde25/)
 
-**************************************************
+**********************************************
 # Other
 
 <div class="blist">
@@ -448,7 +445,7 @@ We work together at the Safe and Secure Software (S3) lab.
 - The [names](names.html) of our papers.
 </div>
 
-**************************************************
+**********************************************
 
 <!-- ---------------------------------------------------------------------- -->
 <!-- Markdown notes -->
