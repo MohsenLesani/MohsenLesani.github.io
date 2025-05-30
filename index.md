@@ -1,11 +1,11 @@
 <div class="navbar">
-  [Home](index.html) |
+  | [Home](index.html) |
   [Projects](#projects) |
   [Papers](#papers) |
   [Teaching](#teaching) |
   [Service](#service) |
   [Team](#team) |
-  [Other](#other)
+  [Other](#other) |
 </div>
 
 <!-- ********************************************** -->
