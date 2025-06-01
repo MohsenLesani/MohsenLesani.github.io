@@ -11,6 +11,6 @@ Augmented reality (AR) seamlessly overlays virtual objects onto the real world, 
 
 - \[[Paper](OOPSLA25.pdf)\]
 - \[[Appendix](Appendix.pdf)\]
-- \[[BibTex](Paper.bib)\]
+- \[[BibTex](paper.bib)\]
 
 **************************************************
