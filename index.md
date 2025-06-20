@@ -36,10 +36,10 @@ I am an associate professor at the Computer Science and Engineering Department o
 Here are some of our current and past projects:
 
 <div class="blist">
-- **Resilient distributed systems** \
+- **Resilient and secure distributed systems** \
    Given resiliency requirements for an online service (confidentiality, integrity and availability policies), how can we automatically partition, place and replicate it to ensure resiliency? \
    [S&P'22](companion/sp22/)
-- **Heterogeneous and reconfigurable distributed systems** \
+- **Heterogeneous and reconfigurable secure distributed systems** \
    How can we replicate online services on untrusted, heterogeneous, and dynamic hosts? \ 
    [DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
 - **Automatic analysis and synthesis of replicated objects** \
@@ -51,7 +51,7 @@ Here are some of our current and past projects:
 - **Data analytics** \
    Given high-level analytics queries in domain specific languages, how can we automatically optimize and synthesize efficient parallel and distributed workflows? \
    [ICFP'21](companion/icfp21/)
-- **Blockchain transactions** \
+- **Secure exchange** \
    How can we securely and efficiently execute transactions across multiple blockchains? \
    [ICBC'20](companion/icbc20/),  [PODC'21](companion/podc21/),  [CSF'23](companion/csf23/)
 - **Machine learning for performance models** \
