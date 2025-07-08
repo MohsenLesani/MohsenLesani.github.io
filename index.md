@@ -37,7 +37,7 @@ Here are some of our current and past projects:
 
 <div class="blist">
 - **Resilient and secure distributed systems** \
-   Given resiliency requirements (confidentiality, integrity and availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency? \
+   Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency? \
    [S&P'22](companion/sp22/)
 - **Heterogeneous and reconfigurable secure distributed systems** \
    How can we replicate online services on untrusted, heterogeneous, and dynamic hosts? \ 
