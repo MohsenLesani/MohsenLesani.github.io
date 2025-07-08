@@ -61,7 +61,7 @@ Here are some of our current and past projects:
    Can the safety guarantees of type systems carry over to safety of lab-on-a-chip assays? \
    [OOPSLA'18](companion/oopsla18/),  [CACM'21](companion/cacm21/CACM21.pdf)
 - **Automatic fence insertion for concurrent systems** \
-   Given high-level ordering requirements, can we optimize and automate the subtle task of fence placement for concurrent data structures? \
+   Given high-level required orders between instructions of the concurrent program in each thread, can we optimize and automate the subtle task of fence placement? \
    [OOPSLA'15](companion/oopsla15/),  [PODC'17](companion/podc17/),  [DISC'19](companion/disc19/)
 - **Concurrency programming models, testing and verification** \
    How can we design and implement intuitive, efficient and correct concurrent programming models, and data structures? \
