@@ -230,7 +230,7 @@ h3:before {
 
 
 blockquote {
-  color: #666666;
+  color: #0d154a;
   margin: 0;
   padding-left: 3em;
   border-left: 0.5em #EEE solid;
@@ -249,11 +249,14 @@ hr {
   color: #303C6C;
 }
 
+
 pre, code, kbd, samp {
   color: #000;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
-  font-size: 0.98em;
+  font-size: 0.9em;
+/*   font-size: inherit; */
+  background-color: #f7f7f7;
 }
 
 pre {
@@ -261,6 +264,84 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Target pre and code blocks with sourceCode class, any language */
+pre.sourceCode[class*="sourceCode"],
+pre.sourceCode[class*="sourceCode"] code,
+code.sourceCode[class*="sourceCode"] {
+  color: #000;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 0.95em;
+/*   font-size: inherit; */
+  background-color: #f7f7f7;
+}
+
+/* Make syntax highlighting spans inherit font-size */
+pre.sourceCode[class*="sourceCode"] span,
+code.sourceCode[class*="sourceCode"] span {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.sourceCode {
+  position: relative; /* so the button can be placed inside */
+/*   display: inline-block; */
+}
+.sourceCode .copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  user-select: none;
+}
+.sourceCode .copy-btn:hover {
+  opacity: 1;
+}
+
+.copy-btn {
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;   /* slightly wider than the icon */
+  height: 2em;    /* match one line of text */
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+/*   background-color: #f9f9f9; */
+  cursor: pointer;
+}
+.copy-btn svg {
+  display: block;                /* remove inline spacing around SVG */
+  width: 0.85em;      /* icon matches line height */
+  height: 0.85em;
+}
+
+/*
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #eee;
+  border: none;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #ddd;
+}*/
 
 b, strong {
   font-weight: bold;

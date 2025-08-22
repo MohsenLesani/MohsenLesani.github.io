@@ -79,7 +79,6 @@ Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani \
    [BibTex](companion/oopsla25/paper.bib),
    [More](companion/oopsla25/index.html)
 
-
 <!--  -->
 
 - Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters \
