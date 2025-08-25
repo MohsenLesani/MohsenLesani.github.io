@@ -1,4 +1,4 @@
-w<a name="home"></a>
+<a name="home"></a>
 <div class="navbar">
   | [Home](#home) |
   [Projects](#projects) |
@@ -575,17 +575,9 @@ Text
 
 <!-- To right-align -->
 <!--
-<p class="right">
+<div class="right"> 
 Text
-</p>
+</div>
 -->
-
-<!-- To justify text -->
-<!--
-<p class="justify">
-Text
-</p>
--->
-
 
 <!-- ---------------------------------------------------------------------- -->
