@@ -25,20 +25,21 @@
   <script src=styling.js></script>
 </head>
 <body>
-<a name="home"></a>
+w<a name="home"></a>
 <div class="navbar">
 <p>| <a href="#home">Home</a> | <a href="#projects">Projects</a> | <a
 href="#papers">Papers</a> | <a href="#teaching">Teaching</a> | <a
 href="#service">Service</a> | <a href="#team">Team</a> | <a
 href="#other">Other</a> |</p>
 </div>
-<!-- To pad for the nav bar -->
+<!-- To pad for the nav bar, add a new line -->
 <p><br />
 </p>
 <!-- ********************************************** -->
 <!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
 <!-- ********************************************** -->
 <p><img src="images/Mohsen.jpg" /></p>
+<ul class="airlist">
 <ul>
 <li>Mohsen Lesani</li>
 <li><a
@@ -50,11 +51,12 @@ Science and Engineering Department</a></li>
 <li><a href="https://www.ucsc.edu/">University of California, Santa
 Cruz</a></li>
 </ul>
+</ul>
 <p>Contact: mlesani AT ucsc.edu</p>
-<div class="emph">
-<p>I have positions for motivated students. I will be glad to hear about
-your interests and accomplishments.</p>
-</div>
+<p class="emph">
+I have positions for motivated students. I will be glad to hear about
+your interests and accomplishments.
+</p>
 <p>I am an associate professor at the Computer Science and Engineering
 Department of the University of California, Santa Cruz. I was a postdoc
 at MIT, obtained my PhD from UCLA, my MS in artificial intelligence from
@@ -69,433 +71,523 @@ supported by multiple NSF grants.</p>
 <hr />
 <h1 id="projects">Projects</h1>
 <p>Here are some of our current and past projects:</p>
-<div class="blist">
 <ul>
-<li><strong>Resilient and secure distributed systems</strong><br />
-Given resiliency requirements (confidentiality, integrity and especially
-availability policies) for an online service, how can we automatically
-partition, place and replicate it to ensure resiliency?<br />
-<a href="companion/sp22/">S&amp;P’22</a></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Resilient and secure distributed systems</strong></li>
+<li>Given resiliency requirements (confidentiality, integrity and
+especially availability policies) for an online service, how can we
+automatically partition, place and replicate it to ensure
+resiliency?</li>
+<li><a href="companion/sp22/">S&amp;P’22</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
 <li><strong>Heterogeneous and reconfigurable secure distributed
-systems</strong><br />
-How can we replicate online services on untrusted, heterogeneous, and
-dynamic hosts?   <a href="companion/disc23/">DISC’23</a>,  <a
+systems</strong></li>
+<li>How can we replicate online services on untrusted, heterogeneous,
+and dynamic hosts?</li>
+<li><a href="companion/disc23/">DISC’23</a>,  <a
 href="companion/disc24/">DISC’24</a>,  <a
-href="companion/icde25/">ICDE’25</a></li>
+href="companion/icde25/">ICDE’25</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Heterogeneous and reconfigurable secure distributed
+systems</strong></li>
+<li>How can we replicate online services on untrusted, heterogeneous,
+and dynamic hosts?</li>
+<li><a href="companion/disc23/">DISC’23</a>,  <a
+href="companion/disc24/">DISC’24</a>,  <a
+href="companion/icde25/">ICDE’25</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
 <li><strong>Automatic analysis and synthesis of replicated
-objects</strong><br />
-Given a data type or a database and its integrity properties, how can we
-automatically decide the optimum hybrid consistency, and synthesize a
-custom replicated store that guarantees convergence and integrity? How
-can we accelerate hybrid consistency on message passing, RDMA and FPGA
-networks?<br />
-<a href="companion/popl19/">POPL’19</a>,  <a
+objects</strong></li>
+<li>Given a data type or a database and its integrity properties, how
+can we automatically decide the optimum hybrid consistency, and
+synthesize a custom replicated store that guarantees convergence and
+integrity? How can we accelerate hybrid consistency on message passing,
+RDMA and FPGA networks?</li>
+<li><a href="companion/popl19/">POPL’19</a>,  <a
 href="companion/cav20/">CAV’20</a>,  <a
 href="companion/pldi22/">PLDI’22</a>,  <a
-href="companion/oopsla25/">OOPSLA’25</a></li>
-<li><strong>Verification of distributed systems</strong><br />
-How can we modularly build a certified stack of distributed
-components?<br />
-<a href="companion/popl16/">POPL’16</a>,  <a
-href="companion/icfp20/">ICFP’20</a></li>
-<li><strong>Data analytics</strong><br />
-Given high-level analytics queries in domain specific languages, how can
-we automatically optimize and synthesize efficient parallel and
-distributed workflows?<br />
-<a href="companion/icfp21/">ICFP’21</a></li>
-<li><strong>Secure exchange</strong><br />
-How can we securely and efficiently execute transactions across multiple
-blockchains?<br />
-<a href="companion/icbc20/">ICBC’20</a>,  <a
+href="companion/oopsla25/">OOPSLA’25</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Verification of distributed systems</strong></li>
+<li>How can we modularly build a certified stack of distributed
+components?</li>
+<li><a href="companion/popl16/">POPL’16</a>,  <a
+href="companion/icfp20/">ICFP’20</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Data analytics</strong></li>
+<li>Given high-level analytics queries in domain specific languages, how
+can we automatically optimize and synthesize efficient parallel and
+distributed workflows?</li>
+<li><a href="companion/icfp21/">ICFP’21</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Secure exchange</strong></li>
+<li>How can we securely and efficiently execute transactions across
+multiple blockchains?</li>
+<li><a href="companion/icbc20/">ICBC’20</a>,  <a
 href="companion/podc21/">PODC’21</a>,  <a
-href="companion/csf23/">CSF’23</a></li>
-<li><strong>Machine learning for performance models</strong><br />
-Can we learn performance characteristics of data structures and leverage
-it to synthesize efficient data structures?<br />
-<a href="companion/mapl20/">MAPL’20</a></li>
-<li><strong>Domain-specific languages and type systems</strong><br />
-Can the safety guarantees of type systems carry over to safety of
-lab-on-a-chip assays?<br />
-<a href="companion/oopsla18/">OOPSLA’18</a>,  <a
-href="companion/cacm21/CACM21.pdf">CACM’21</a></li>
+href="companion/csf23/">CSF’23</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Machine learning for performance models</strong></li>
+<li>Can we learn performance characteristics of data structures and
+leverage it to synthesize efficient data structures?</li>
+<li><a href="companion/mapl20/">MAPL’20</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
+<li><strong>Domain-specific languages and type systems</strong></li>
+<li>Can the safety guarantees of type systems carry over to safety of
+lab-on-a-chip assays?</li>
+<li><a href="companion/oopsla18/">OOPSLA’18</a>,  <a
+href="companion/cacm21/CACM21.pdf">CACM’21</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
 <li><strong>Automatic fence insertion for concurrent
-systems</strong><br />
-Given high-level required orders between instructions of the concurrent
-program in each thread, can we optimize and automate the subtle task of
-fence placement?<br />
-<a href="companion/oopsla15/">OOPSLA’15</a>,  <a
+systems</strong></li>
+<li>Given high-level required orders between instructions of the
+concurrent program in each thread, can we optimize and automate the
+subtle task of fence placement?</li>
+<li><a href="companion/oopsla15/">OOPSLA’15</a>,  <a
 href="companion/podc17/">PODC’17</a>,  <a
-href="companion/disc19/">DISC’19</a></li>
+href="companion/disc19/">DISC’19</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
+<ul>
 <li><strong>Concurrency programming models, testing and
-verification</strong><br />
-How can we design and implement intuitive, efficient and correct
-concurrent programming models, and data structures?<br />
-<a href="downloads/Papers/PPoPP11.pdf">PPoPP’11</a>,  <a
+verification</strong></li>
+<li>How can we design and implement intuitive, efficient and correct
+concurrent programming models, and data structures?</li>
+<li><a href="downloads/Papers/PPoPP11.pdf">PPoPP’11</a>,  <a
 href="companion/concur12/index.html">CONCUR’12</a>,  <a
 href="companion/disc13/index.html">DISC’13</a>,  <a
 href="companion/disc14/">DISC’14</a>,  <a
 href="companion/cav14/">CAV’14</a>,  <a
 href="companion/nfm19/">NFM’19</a>,  <a
-href="companion/oopsla22/">OOPSLA’22</a></li>
+href="companion/oopsla22/">OOPSLA’22</a>
+</ul></li>
+</ul></li>
 </ul>
-</div>
 <hr />
 <h1 id="papers">Papers</h1>
-<div class="blist">
 <ul>
-<li>Hambazi: Spatial Coordination Synthesis for Augmented Reality<br />
-OOPSLA ’25 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)<br />
-Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani<br />
-<a href="companion/oopsla25/OOPSLA25.pdf">Paper</a>, <a
+<li><ul class="airlist">
+<ul>
+<li>Hambazi: Spatial Coordination Synthesis for Augmented Reality</li>
+<li>OOPSLA ’25 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)</li>
+<li>Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani</li>
+<li><a href="companion/oopsla25/OOPSLA25.pdf">Paper</a>, <a
 href="companion/oopsla25/paper.bib">BibTex</a>, <a
-href="companion/oopsla25/index.html">More</a></li>
-</ul>
-<!--  -->
+href="companion/oopsla25/index.html">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Hamava: Fault-tolerant Reconfigurable Geo-Replication on
-Heterogeneous Clusters<br />
-ICDE ’25 (IEEE International Conference on Data Engineering)<br />
-Tejas Mane, Xiao Li, Mohammad Sadoghi, Mohsen Lesani<br />
-<a href="companion/icde25/ICDE25.pdf">Paper</a>, <a
+Heterogeneous Clusters</li>
+<li>ICDE ’25 (IEEE International Conference on Data Engineering)</li>
+<li>Tejas Mane, Xiao Li, Mohammad Sadoghi, Mohsen Lesani</li>
+<li><a href="companion/icde25/ICDE25.pdf">Paper</a>, <a
 href="companion/icde25/paper.bib">BibTex</a>, <a
-href="companion/icde25/index.html">More</a></li>
-</ul>
-<!--  -->
+href="companion/icde25/index.html">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>TensorRight: Automated Verification of Tensor Graph Rewrites<br />
-POPL ’25 (ACM SIGPLAN Symposium on Principles of Programming
-Languages)<br />
-J. Arora, S. Lu, D. Jain, T. Xu, F Houshmand, P. M. Phothilimthana, M.
-Lesani, P. Narayanan, K. S. Murthy, R. Bodik, A. Sabne, C Mendis<br />
-<a href="companion/popl25/POPL25.pdf">Paper</a>, <a
-href="companion/popl25/paper.bib">BibTex</a></li>
-</ul>
-<!--  -->
+<li>TensorRight: Automated Verification of Tensor Graph Rewrites</li>
+<li>POPL ’25 (ACM SIGPLAN Symposium on Principles of Programming
+Languages)</li>
+<li>J. Arora, S. Lu, D. Jain, T. Xu, F Houshmand, P. M. Phothilimthana,
+M. Lesani, P. Narayanan, K. S. Murthy, R. Bodik, A. Sabne, C Mendis</li>
+<li><a href="companion/popl25/POPL25.pdf">Paper</a>, <a
+href="companion/popl25/paper.bib">BibTex</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>BA: Reconfigurable Heterogeneous Quorum Systems (short paper)<br />
-DISC ’24 (The International Symposium on Distributed Computing)<br />
-Xiao Li, Mohsen Lesani<br />
-<a href="companion/disc24/DISC24Full.pdf">Paper</a>, <a
-href="companion/disc24/">More</a></li>
-</ul>
-<!-- -->
+<li>BA: Reconfigurable Heterogeneous Quorum Systems (short paper)</li>
+<li>DISC ’24 (The International Symposium on Distributed Computing)</li>
+<li>Xiao Li, Mohsen Lesani</li>
+<li><a href="companion/disc24/DISC24Full.pdf">Paper</a>, <a
+href="companion/disc24/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Vulnerability Flow Type Systems<br />
-LangSec ’24 (Language-theoretic Security and Applications Workshop at
-the IEEE Security &amp; Privacy Symposium 2024)<br />
-Mohsen Lesani<br />
-<a href="companion/langsec24/LangSec24.pdf">Paper</a>, <a
-href="companion/langsec24/">More</a></li>
-</ul>
-<!-- -->
+<li>Vulnerability Flow Type Systems</li>
+<li>LangSec ’24 (Language-theoretic Security and Applications Workshop
+at the IEEE Security &amp; Privacy Symposium 2024)</li>
+<li>Mohsen Lesani</li>
+<li><a href="companion/langsec24/LangSec24.pdf">Paper</a>, <a
+href="companion/langsec24/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Quorum Subsumption for Heterogeneous Quorum Systems<br />
-DISC ’23 (The International Symposium on Distributed Computing)<br />
-Xiao Li, Eric Chan, Mohsen Lesani<br />
-<a href="companion/disc23/DISC23.pdf">Paper</a>, <a
-href="companion/disc23/">More</a></li>
-</ul>
-<!-- -->
+<li>Quorum Subsumption for Heterogeneous Quorum Systems</li>
+<li>DISC ’23 (The International Symposium on Distributed Computing)</li>
+<li>Xiao Li, Eric Chan, Mohsen Lesani</li>
+<li><a href="companion/disc23/DISC23.pdf">Paper</a>, <a
+href="companion/disc23/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Cross-chain Swaps with Preferences<br />
-CSF ’23 (IEEE Computer Security Foundations Symposium)<br />
-Eric Chan, Marek Chrobak, Mohsen Lesani<br />
-<a href="companion/csf23/CSF23.pdf">Paper</a>, <a
-href="companion/csf23/">More</a></li>
-</ul>
-<!-- -->
+<li>Cross-chain Swaps with Preferences</li>
+<li>CSF ’23 (IEEE Computer Security Foundations Symposium)</li>
+<li>Eric Chan, Marek Chrobak, Mohsen Lesani</li>
+<li><a href="companion/csf23/CSF23.pdf">Paper</a>, <a
+href="companion/csf23/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Hamband: RDMA Replicated Data Types<br />
-PLDI ’22 (ACM SIGPLAN Conference on Programming Language Design and
-Implementation)<br />
-Farzin Houshmand, Javad Saberlatibari, Mohsen Lesani<br />
-<a href="companion/pldi22/PLDI22.pdf">Paper</a>, <a
-href="companion/pldi22/">More</a></li>
-</ul>
-<!-- -->
+<li>Hamband: RDMA Replicated Data Types</li>
+<li>PLDI ’22 (ACM SIGPLAN Conference on Programming Language Design and
+Implementation)</li>
+<li>Farzin Houshmand, Javad Saberlatibari, Mohsen Lesani</li>
+<li><a href="companion/pldi22/PLDI22.pdf">Paper</a>, <a
+href="companion/pldi22/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>C4: Verified Transactional Objects<br />
-OOPSLA ’22 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)<br />
-M. Lesani, L. Xia, A. Kaseorg, C. Bell, A. Chlipala, B. Pierce, S.
-Zdancewic<br />
-<a href="companion/oopsla22/OOPSLA22.pdf">Paper</a>, <a
-href="companion/oopsla22/">More</a></li>
-</ul>
-<!-- -->
+<li>C4: Verified Transactional Objects</li>
+<li>OOPSLA ’22 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)</li>
+<li>M. Lesani, L. Xia, A. Kaseorg, C. Bell, A. Chlipala, B. Pierce, S.
+Zdancewic</li>
+<li><a href="companion/oopsla22/OOPSLA22.pdf">Paper</a>, <a
+href="companion/oopsla22/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Hamraz: Resilient Partitioning and Replication<br />
-S&amp;P ’22 (IEEE Symposium on Security and Privacy)<br />
-Xiao Li, Farzin Houshmand, Mohsen Lesani<br />
-<a href="companion/sp22/SP22.pdf">Paper</a>, <a
-href="companion/sp22/">More</a></li>
-</ul>
-<!-- -->
+<li>Hamraz: Resilient Partitioning and Replication</li>
+<li>S&amp;P ’22 (IEEE Symposium on Security and Privacy)</li>
+<li>Xiao Li, Farzin Houshmand, Mohsen Lesani</li>
+<li><a href="companion/sp22/SP22.pdf">Paper</a>, <a
+href="companion/sp22/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Grafs: Declarative Graph Analytics<br />
-ICFP ’21 (ACM SIGPLAN International Conference on Functional
-Programming)<br />
-Farzin Houshmand, Mohsen Lesani, Keval Vora<br />
-<a href="companion/icfp21/ICFP21.pdf">Paper</a>, <a
-href="companion/icfp21/">More</a></li>
-</ul>
-<!-- -->
+<li>Grafs: Declarative Graph Analytics</li>
+<li>ICFP ’21 (ACM SIGPLAN International Conference on Functional
+Programming)</li>
+<li>Farzin Houshmand, Mohsen Lesani, Keval Vora</li>
+<li><a href="companion/icfp21/ICFP21.pdf">Paper</a>, <a
+href="companion/icfp21/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Brief Announcement: Brokering with Hashed Timelock Contracts is
-NP-Hard<br />
-PODC ’21 (ACM Symposium on Principles of Distributed Computing)<br />
-Eric Chan, Mohsen Lesani<br />
-<a href="companion/podc21/PODC21.pdf">Paper</a>, <a
-href="companion/podc21/">More</a></li>
-</ul>
-<!-- -->
+NP-Hard</li>
+<li>PODC ’21 (ACM Symposium on Principles of Distributed Computing)</li>
+<li>Eric Chan, Mohsen Lesani</li>
+<li><a href="companion/podc21/PODC21.pdf">Paper</a>, <a
+href="companion/podc21/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>BioScript: programming safe chemistry on
-laboratories-on-a-chip<br />
-CACM ’21 (Communications of the ACM 64, 2, February 2021)   Jason Ott,
-Tyson Loveless, Chris Curtis, Mohsen Lesani, and Philip Brisk.
-2021.<br />
-<a href="companion/cacm21/CACM21.pdf">Paper</a></li>
-</ul>
-<!-- -->
+<li>BioScript: programming safe chemistry on laboratories-on-a-chip</li>
+<li>CACM ’21 (Communications of the ACM 64, 2, February 2021)</li>
+<li>Jason Ott, Tyson Loveless, Chris Curtis, Mohsen Lesani, and Philip
+Brisk. 2021.</li>
+<li><a href="companion/cacm21/CACM21.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>TLC: Temporal Logic of Distributed Components<br />
-ICFP ’20 (ACM SIGPLAN International Conference on Functional
-Programming)<br />
-Jeremiah Griffin, Mohsen Lesani, Narges Shadab, Xizhe Yin<br />
-<a href="companion/icfp20/ICFP20.pdf">Paper</a>, <a
-href="companion/icfp20/">More</a></li>
-</ul>
-<!-- -->
+<li>TLC: Temporal Logic of Distributed Components</li>
+<li>ICFP ’20 (ACM SIGPLAN International Conference on Functional
+Programming)</li>
+<li>Jeremiah Griffin, Mohsen Lesani, Narges Shadab, Xizhe Yin</li>
+<li><a href="companion/icfp20/ICFP20.pdf">Paper</a>, <a
+href="companion/icfp20/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Hampa: Solver-aided Recency-Aware Replication<br />
-CAV ’20 (International Conference on Computer-Aided Verification)<br />
-Xiao Li, Farzin Houshmand, Mohsen Lesani<br />
-<a href="companion/cav20/CAV20.pdf">Paper</a>, <a
-href="companion/cav20/">More</a></li>
-</ul>
-<!-- -->
+<li>Hampa: Solver-aided Recency-Aware Replication</li>
+<li>CAV ’20 (International Conference on Computer-Aided
+Verification)</li>
+<li>Xiao Li, Farzin Houshmand, Mohsen Lesani</li>
+<li><a href="companion/cav20/CAV20.pdf">Paper</a>, <a
+href="companion/cav20/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>UBITect: A Precise and Scalable Method to Detect
-Use-Before-Initialization bugs in Linux Kernel<br />
-ESEC/FSE ’20 (The ACM Joint European Software Engineering Conference and
-Symposium on the Foundations of Software Engineering)<br />
-Y. Zhai, Y. Hao, H. Zhang, D. Wang, C. Song, Z. Qian, M. Lesani, S.
-Krishnamurthy, P. Yu<br />
-<a href="companion/fse20/FSE20.pdf">Paper</a>, <a
-href="companion/fse20/">More</a></li>
-</ul>
-<!-- -->
+Use-Before-Initialization bugs in Linux Kernel</li>
+<li>ESEC/FSE ’20 (The ACM Joint European Software Engineering Conference
+and Symposium on the Foundations of Software Engineering)</li>
+<li>Y. Zhai, Y. Hao, H. Zhang, D. Wang, C. Song, Z. Qian, M. Lesani, S.
+Krishnamurthy, P. Yu</li>
+<li><a href="companion/fse20/FSE20.pdf">Paper</a>, <a
+href="companion/fse20/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Cross-Chain Transactions<br />
-ICBC ’20 (IEEE International Conference on Blockchain and
-Cryptocurrency)<br />
-Narges Shadab, Farzin Houshmand, Mohsen Lesani<br />
-<a href="companion/icbc20/ICBC20.pdf">Paper</a>, <a
-href="companion/icbc20/">More</a></li>
-</ul>
-<!-- -->
+<li>Cross-Chain Transactions</li>
+<li>ICBC ’20 (IEEE International Conference on Blockchain and
+Cryptocurrency)</li>
+<li>Narges Shadab, Farzin Houshmand, Mohsen Lesani</li>
+<li><a href="companion/icbc20/ICBC20.pdf">Paper</a>, <a
+href="companion/icbc20/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Learning Quantitative Representation Synthesis<br />
-MAPL ’20 (ACM SIGPLAN Machine Learning and Programming Languages
-Workshop)<br />
-Mayur Patil, Farzin Houshmand, Mohsen Lesani<br />
-<a href="companion/mapl20/MAPL20.pdf">Paper</a>, <a
-href="companion/mapl20/">More</a></li>
-</ul>
-<!-- -->
+<li>Learning Quantitative Representation Synthesis</li>
+<li>MAPL ’20 (ACM SIGPLAN Machine Learning and Programming Languages
+Workshop)</li>
+<li>Mayur Patil, Farzin Houshmand, Mohsen Lesani</li>
+<li><a href="companion/mapl20/MAPL20.pdf">Paper</a>, <a
+href="companion/mapl20/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Hamsaz: Replication Coordination Analysis and Synthesis<br />
-POPL ’19 (ACM SIGPLAN Symposium on Principles of Programming
-Languages)<br />
-Farzin Houshmand, Mohsen Lesani<br />
-<a href="companion/popl19/POPL19.pdf">Paper</a>, <a
-href="companion/popl19/">More</a></li>
-</ul>
-<!-- -->
+<li>Hamsaz: Replication Coordination Analysis and Synthesis</li>
+<li>POPL ’19 (ACM SIGPLAN Symposium on Principles of Programming
+Languages)</li>
+<li>Farzin Houshmand, Mohsen Lesani</li>
+<li><a href="companion/popl19/POPL19.pdf">Paper</a>, <a
+href="companion/popl19/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Polynomial-time Fence Insertion For Structured Programs<br />
-DISC ’19 (The International Symposium on Distributed Computing)<br />
-Mohammad Taheri, Arash Pourdamghani, Mohsen Lesani<br />
-<a href="companion/disc19/DISC19.pdf">Paper</a>, <a
-href="companion/disc19/">More</a></li>
-</ul>
-<!-- -->
+<li>Polynomial-time Fence Insertion For Structured Programs</li>
+<li>DISC ’19 (The International Symposium on Distributed Computing)</li>
+<li>Mohammad Taheri, Arash Pourdamghani, Mohsen Lesani</li>
+<li><a href="companion/disc19/DISC19.pdf">Paper</a>, <a
+href="companion/disc19/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Transaction Protocol Verification with Labeled Synchronization
-Logic<br />
-NFM ’19 (NASA Formal Methods Symposium)<br />
-Mohsen Lesani<br />
-<a href="companion/nfm19/FullPaper.pdf">Paper</a>, <a
-href="companion/nfm19/">More</a></li>
-</ul>
-<!-- -->
+Logic</li>
+<li>NFM ’19 (NASA Formal Methods Symposium)</li>
+<li>Mohsen Lesani</li>
+<li><a href="companion/nfm19/FullPaper.pdf">Paper</a>, <a
+href="companion/nfm19/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>BioScript: Programming Safe Chemistry of
-Laboratories-on-a-Chip<br />
-OOPSLA ’18 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)<br />
-Distinguished paper award<br />
-SIGPLAN Research Highlight 2019<br />
-Invited to Communications of ACM<br />
-Jason Ott, Chris Curtis, Tyson Loveless, Mohsen Lesani, Philip
-Brisk<br />
-<a href="companion/oopsla18/OOPSLA18.pdf">Paper</a>, <a
-href="companion/oopsla18/">More</a></li>
-</ul>
-<!-- -->
+<li>BioScript: Programming Safe Chemistry of Laboratories-on-a-Chip</li>
+<li>OOPSLA ’18 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)</li>
+<li>Distinguished paper award</li>
+<li>SIGPLAN Research Highlight 2019</li>
+<li>Invited to Communications of ACM</li>
+<li>Jason Ott, Chris Curtis, Tyson Loveless, Mohsen Lesani, Philip
+Brisk</li>
+<li><a href="companion/oopsla18/OOPSLA18.pdf">Paper</a>, <a
+href="companion/oopsla18/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Brief Announcement: Fence Insertion for Straight-line Programs is in
-P<br />
-PODC ’17 (ACM Symposium on Principles of Distributed Computing)<br />
-Mohsen Lesani<br />
-<a href="companion/podc17/PODC17.pdf">Paper</a>, <a
-href="companion/podc17/">More</a></li>
-</ul>
-<!-- -->
+P</li>
+<li>PODC ’17 (ACM Symposium on Principles of Distributed Computing)</li>
+<li>Mohsen Lesani</li>
+<li><a href="companion/podc17/PODC17.pdf">Paper</a>, <a
+href="companion/podc17/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Chapar: Certified Causally Consistent Distributed Key-Value
-Stores<br />
-POPL ’16 (ACM SIGPLAN Symposium on Principles of Programming
-Languages)<br />
-Mohsen Lesani, Christian J. Bell, Adam Chlipala<br />
-<a href="companion/popl16/POPL16.pdf">Paper</a>, <a
-href="companion/popl16/">More</a></li>
-</ul>
-<!-- -->
+Stores</li>
+<li>POPL ’16 (ACM SIGPLAN Symposium on Principles of Programming
+Languages)</li>
+<li>Mohsen Lesani, Christian J. Bell, Adam Chlipala</li>
+<li><a href="companion/popl16/POPL16.pdf">Paper</a>, <a
+href="companion/popl16/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Declarative Fence Insertion<br />
-OOPSLA ’15 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)<br />
-John Bender, Mohsen Lesani, Jens Palsberg<br />
-<a href="companion/oopsla15/OOPSLA15.pdf">Paper</a>, <a
-href="companion/oopsla15/">More</a></li>
-</ul>
-<!-- -->
+<li>Declarative Fence Insertion</li>
+<li>OOPSLA ’15 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)</li>
+<li>John Bender, Mohsen Lesani, Jens Palsberg</li>
+<li><a href="companion/oopsla15/OOPSLA15.pdf">Paper</a>, <a
+href="companion/oopsla15/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>AtomChase: Directed Search towards Atomicity Violations<br />
-ISSRE ’15 (IEEE International Symposium on Software Reliability
-Engineering)<br />
-Mahdi Eslamimehr, Mohsen Lesani<br />
-Best paper award<br />
-<a href="companion/issre15/">More</a></li>
-</ul>
-<!-- -->
+<li>AtomChase: Directed Search towards Atomicity Violations</li>
+<li>ISSRE ’15 (IEEE International Symposium on Software Reliability
+Engineering)</li>
+<li>Mahdi Eslamimehr, Mohsen Lesani</li>
+<li>Best paper award</li>
+<li><a href="companion/issre15/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Decomposing Opacity<br />
-DISC ’14 (International Symposium on DIStributed Computing), WTTM
-’13<br />
-Mohsen Lesani, Jens Palsberg<br />
-<a href="companion/disc14/DISC14.pdf">Paper</a>, <a
-href="companion/disc14/">More</a></li>
-</ul>
-<!-- -->
+<li>Decomposing Opacity</li>
+<li>DISC ’14 (International Symposium on DIStributed Computing), WTTM
+’13</li>
+<li>Mohsen Lesani, Jens Palsberg</li>
+<li><a href="companion/disc14/DISC14.pdf">Paper</a>, <a
+href="companion/disc14/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Automatic Atomicity Verification for Clients of Concurrent Data
-Structures<br />
-CAV ’14 (International Conference on Computer Aided Verification)<br />
-Mohsen Lesani, Todd Millstein, Jens Palsberg<br />
-<a href="companion/cav14/CAV14.pdf">Paper</a>, <a
-href="companion/cav14/">More</a></li>
-</ul>
-<!-- -->
+Structures</li>
+<li>CAV ’14 (International Conference on Computer Aided
+Verification)</li>
+<li>Mohsen Lesani, Todd Millstein, Jens Palsberg</li>
+<li><a href="companion/cav14/CAV14.pdf">Paper</a>, <a
+href="companion/cav14/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>On the Correctness of Transactional Memory Algorithms<br />
-PhD Dissertation<br />
-Mohsen Lesani<br />
-<a href="companion/dissertation/Dissertation.pdf">Dissertation</a>, <a
-href="companion/dissertation/">More</a></li>
-</ul>
-<!-- -->
+<li>On the Correctness of Transactional Memory Algorithms</li>
+<li>PhD Dissertation</li>
+<li>Mohsen Lesani</li>
+<li><a href="companion/dissertation/Dissertation.pdf">Dissertation</a>,
+<a href="companion/dissertation/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>MrCrypt: Static Analysis for Secure Cloud Computations<br />
-OOPSLA ’13 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)<br />
-Sai Deep Tetali, Mohsen Lesani, Rupak Majumdar, Todd Millstein<br />
-<a href="companion/oopsla13/Oopsla13.pdf">Paper</a>, <a
-href="companion/oopsla13/index.html">More</a></li>
-</ul>
-<!-- -->
+<li>MrCrypt: Static Analysis for Secure Cloud Computations</li>
+<li>OOPSLA ’13 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)</li>
+<li>Sai Deep Tetali, Mohsen Lesani, Rupak Majumdar, Todd Millstein</li>
+<li><a href="companion/oopsla13/Oopsla13.pdf">Paper</a>, <a
+href="companion/oopsla13/index.html">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Proving Non-opacity<br />
-DISC ’13 (International Symposium on DIStributed Computing),
-Transact’13<br />
-Mohsen Lesani, Jens Palsberg<br />
-<a href="companion/disc13/DISC13.pdf">Paper</a>, <a
-href="companion/disc13/index.html">More</a></li>
-</ul>
-<!-- -->
+<li>Proving Non-opacity</li>
+<li>DISC ’13 (International Symposium on DIStributed Computing),
+Transact’13</li>
+<li>Mohsen Lesani, Jens Palsberg</li>
+<li><a href="companion/disc13/DISC13.pdf">Paper</a>, <a
+href="companion/disc13/index.html">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>A Framework for Formally Verifying Software Transactional Memory
-Algorithms<br />
-CONCUR ’12  (International Conference on Concurrency Theory)<br />
-Mohsen Lesani, Victor Luchangco, Mark Moir<br />
-<a href="companion/concur12/CONCUR12.pdf">Paper</a>, <a
-href="companion/concur12/index.html">More</a></li>
-</ul>
-<!-- -->
+Algorithms</li>
+<li>CONCUR ’12  (International Conference on Concurrency Theory)</li>
+<li>Mohsen Lesani, Victor Luchangco, Mark Moir</li>
+<li><a href="companion/concur12/CONCUR12.pdf">Paper</a>, <a
+href="companion/concur12/index.html">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Communicating Memory Transactions<br />
-PPoPP ’11 (ACM Principles and Practice of Parallel Programming)<br />
-Mohsen Lesani, Jens Palsberg<br />
-<a href="downloads/Papers/PPoPP11.pdf">Paper</a></li>
-</ul>
-<!-- -->
+<li>Communicating Memory Transactions</li>
+<li>PPoPP ’11 (ACM Principles and Practice of Parallel Programming)</li>
+<li>Mohsen Lesani, Jens Palsberg</li>
+<li><a href="downloads/Papers/PPoPP11.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Semantics-preserving Sharing Actors<br />
-AGERE ’13 (ACM Workshop on Programming based on Actors, Agents, and
-Decentralized Control)<br />
-Mohsen Lesani, Antonio Lain<br />
-<a href="companion/agere13/Paper.pdf">Paper</a>, <a
-href="companion/agere13/">More</a></li>
-</ul>
-<!-- -->
+<li>Semantics-preserving Sharing Actors</li>
+<li>AGERE ’13 (ACM Workshop on Programming based on Actors, Agents, and
+Decentralized Control)</li>
+<li>Mohsen Lesani, Antonio Lain</li>
+<li><a href="companion/agere13/Paper.pdf">Paper</a>, <a
+href="companion/agere13/">More</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Specifying Transactional Memories with Nontransactional
-Operations<br />
-WTTM ’13  (Workshop on the Theory of Transactional Memory)<br />
-Mohsen Lesani, Victor Luchangco, Mark Moir<br />
-<a href="companion/wttm13_2/Paper.pdf">Paper</a></li>
-</ul>
-<!-- -->
+Operations</li>
+<li>WTTM ’13  (Workshop on the Theory of Transactional Memory)</li>
+<li>Mohsen Lesani, Victor Luchangco, Mark Moir</li>
+<li><a href="companion/wttm13_2/Paper.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Putting Opacity in its Place<br />
-WTTM ’12  (Workshop on the Theory of Transactional Memory)<br />
-Mohsen Lesani, Victor Luchangco, Mark Moir<br />
-<a href="downloads/Papers/WTTM12.pdf">Paper</a></li>
-</ul>
-<!-- -->
+<li>Putting Opacity in its Place</li>
+<li>WTTM ’12  (Workshop on the Theory of Transactional Memory)</li>
+<li>Mohsen Lesani, Victor Luchangco, Mark Moir</li>
+<li><a href="downloads/Papers/WTTM12.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Fuzzy Trust Aggregation And Personalized Trust Inference In Virtual
-Social Networks<br />
-Journal of Computational Intelligence 25/2, 2009<br />
-Mohsen Lesani, Niloufar Montazeri<br />
-<a href="downloads/Papers/JCI09.pdf">Paper</a></li>
-</ul>
-<!-- -->
+Social Networks</li>
+<li>Journal of Computational Intelligence 25/2, 2009</li>
+<li>Mohsen Lesani, Niloufar Montazeri</li>
+<li><a href="downloads/Papers/JCI09.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
-<li>Aria Language, Towards Agent Orientation Paradigm<br />
-ICSOFT ’08 (International Joint conference on Software
-Technologies)<br />
-Mohsen Lesani, Niloufar Montazeri<br />
-<a href="downloads/Papers/ICSOFT08.pdf">Paper</a></li>
-</ul>
-<!-- -->
+<li>Aria Language, Towards Agent Orientation Paradigm</li>
+<li>ICSOFT ’08 (International Joint conference on Software
+Technologies)</li>
+<li>Mohsen Lesani, Niloufar Montazeri</li>
+<li><a href="downloads/Papers/ICSOFT08.pdf">Paper</a>
+</ul></li>
+</ul></li>
+<li><ul class="airlist">
 <ul>
 <li>Successful Cooperation between Heterogeneous Fuzzy Q-Learning
-Agents<br />
-SMC ’04 (IEEE International Conference on Systems, Man, and
-Cybernetics)<br />
-Ali Akhavan Bitaghsir, Amir Moghimi, Mohsen Lesani, Mohammad Mehdi
-Keramati, Majid Nili Ahmadabadi, Babak Nadjar Arabi<br />
-<a href="downloads/Papers/SMC04.pdf">Paper</a></li>
+Agents</li>
+<li>SMC ’04 (IEEE International Conference on Systems, Man, and
+Cybernetics)</li>
+<li>Ali Akhavan Bitaghsir, Amir Moghimi, Mohsen Lesani, Mohammad Mehdi
+Keramati, Majid Nili Ahmadabadi, Babak Nadjar Arabi</li>
+<li><a href="downloads/Papers/SMC04.pdf">Paper</a>
+</ul></li>
+</ul></li>
 </ul>
-</div>
 <p><a href="restofpapers.html">The rest of papers</a></p>
 <hr />
 <h1 id="teaching">Teaching</h1>
-<div class="blist">
 <ul>
 <li>UCSC
 <ul>
@@ -517,10 +609,8 @@ W’22</li>
 <li>CS 260: Seminar in Distributed Computing, S’19</li>
 </ul></li>
 </ul>
-</div>
 <hr />
 <h1 id="service">Service</h1>
-<div class="blist">
 <ul>
 <li><a href="https://splashcon.org/">OOPSLA ’26</a>, PC (ACM SIGPLAN
 Conference on Object-oriented Programming, Systems, Languages, and
@@ -574,11 +664,11 @@ External Review Committee)</li>
 <li>CPP ’17, PC (ACM Certified Programs and Proofs 2017, Program
 Committee)</li>
 </ul>
-</div>
 <hr />
 <h1 id="team">Team</h1>
 <p>We work together at the Safe and Secure Software (S3) lab.</p>
-<p><img src="images/students/XiaoS.jpg" /></p>
+<img src="images/students/XiaoS.jpg" />
+<ul class="airlist">
 <ul>
 <li><a href="https://xiaoli0614.github.io/">Xiao Li</a>, PhD
 student</li>
@@ -586,29 +676,32 @@ student</li>
 href="companion/sp22">S&amp;P ’22</a>,  <a href="companion/disc23/">DISC
 ’23</a>,  <a href="companion/disc24/">DISC ’24</a></li>
 </ul>
-<!-- -->
+</ul>
 <p><img src="images/students/EricS.jpg" /></p>
+<ul class="airlist">
 <ul>
 <li>Eric Chan, PhD student</li>
 <li>Primary publications: <a href="companion/podc21">PODC ’21</a>,  <a
 href="companion/csf23">CSF ’23</a></li>
 </ul>
-<!-- -->
+</ul>
 <p><img src="images/students/JavadS.jpg" /></p>
+<ul class="airlist">
 <ul>
 <li><a href="https://www.cs.ucr.edu/%7Ejsabe004/">Javad
 Saber-Latibari</a>, PhD student</li>
 <li>Primary publications: <a href="companion/pldi22">PLDI ’22</a></li>
 </ul>
-<!-- -->
+</ul>
 <p><img src="images/students/TejasS.jpg" title="Tejas" /></p>
+<ul class="airlist">
 <ul>
 <li>Tejas Mane, PhD student</li>
 <li>Primary publications: <a href="companion/icde25/">ICDE ’25</a></li>
 </ul>
+</ul>
 <hr />
 <h1 id="other">Other</h1>
-<div class="blist">
 <ul>
 <li>I am from the beautiful city of Kerman where the Prince’s Garden <a
 href="images/PrinceGarden.jpg">1</a>, <a
@@ -624,7 +717,6 @@ href="images/Costume.jpg">Halloween</a> party at MIT.</li>
 feedbacks</a> that we get.</li>
 <li>The <a href="names.html">names</a> of our papers.</li>
 </ul>
-</div>
 <hr />
 <!-- ---------------------------------------------------------------------- -->
 <!-- Markdown notes -->
@@ -640,30 +732,43 @@ To see press html, ctrl+alt+o.
 -->
 <!-- To write bullet lists: -->
 <!--
-<div class="blist">
 - item
- - inner item
- - inner item second
+   - inner item
+   - inner item second
 - item second
-</div>
+-->
+<!-- To write lists without bullets: -->
+<!--
+<ul class="airlist">
+- item
+   - inner item
+   - inner item second
+- item second
+</ul>
 -->
 <!-- To write in green color -->
 <!--
-<div class="emph">
+<p class="emph">
 Text
-</div>
+</p>
 -->
 <!-- To write with fancy font -->
 <!--
-<div class="fancy">
+<p class="fancy">
 Text
-</div>
+</p>
 -->
 <!-- To right-align -->
 <!--
-<div class="right">
+<p class="right">
 Text
-</div>
+</p>
+-->
+<!-- To justify text -->
+<!--
+<p class="justify">
+Text
+</p>
 -->
 <!-- ---------------------------------------------------------------------- -->
 </body>

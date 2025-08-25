@@ -21,9 +21,9 @@ Heterogeneous Clusters</title>
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="../../styling.css" />
+  <script src=../../styling.js></script>
 </head>
 <body>
 <div class="right">
@@ -32,13 +32,16 @@ href="../../index.html#projects">Projects</a> | <a
 href="../../index.html#papers">Papers</a> |</p>
 </div>
 <hr />
+<ul class="airlist">
 <ul>
 <li><strong>Hamava: Fault-tolerant Reconfigurable Geo-Replication on
 Heterogeneous Clusters</strong></li>
 <li>ICDE ’25 (IEEE International Conference on Data Engineering)</li>
 <li>Tejas Mane, Xiao Li, Mohsen Lesani, Mohammad Sadoghi</li>
 </ul>
-<p>Fault-tolerant replicated database systems consume significantly less
+</ul>
+<p class="justify">
+Fault-tolerant replicated database systems consume significantly less
 energy than the compute-intensive proof-of-work blockchain. Thus, they
 are promising technologies for the building blocks that assemble global
 financial infrastructure. To facilitate global scaling, clustered
@@ -58,10 +61,13 @@ instantiate our replication with both HotStuff and BFT-SMaRt.
 Experiments on geo-distributed deployments on Google Cloud demonstrate
 that members of clusters can be reconfigured without affecting
 transaction processing, and that heterogeneity of clusters may
-significantly improve throughput.</p>
+significantly improve throughput.
+</p>
+<ul class="airlist">
 <ul>
 <li>[<a href="ICDE25.pdf">Paper</a>]</li>
 <li>[<a href="paper.bib">BibTex</a>]</li>
+</ul>
 </ul>
 <hr />
 </body>

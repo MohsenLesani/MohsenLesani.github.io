@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find . -type f -name "*.md" -exec sh -c 'echo "Processing $1"; ~/Prog/Command/m2h "$1"' _ {} \;
+
+
+# find . -type f -name "*.md" -exec echo; ~/Prog/Command/m2h {} \;

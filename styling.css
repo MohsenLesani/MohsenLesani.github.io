@@ -58,7 +58,8 @@
 
 html * {
 /*   font-size: 100%; */
-   font-size: 15px;
+/*    font-size: 15px; */
+   font-size: 16px;
    /*  The following hides outside bullets.   */
    /*overflow-y: scroll;*/  
    -webkit-text-size-adjust: 100%;
@@ -70,7 +71,8 @@ body {
    color: #000;
 /*   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; */
    font-family: "Open Sans", sans-serif, Courier;
-   font-size: 15px;
+/*    font-size: 15px; */
+   font-size: 16px;
    line-height: 1.7;
    padding: 1em;
    margin: auto;
@@ -79,21 +81,6 @@ body {
 /*    padding-top: var(--navbar-height); */
 /*    margin-top: 50px; */
 /*    overflow: hidden; /* Important: prevents body scroll */ */
-}
-
-.fancy p {
-  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-  color:  #303C6C;
-  margin: 1em 0;
-}
-
-.emph p {
-   color: green;
-  margin: 1em 0;
-}
-
-.right p {
-   text-align: right
 }
 
 /*.TextStyle {
@@ -151,10 +138,10 @@ a::selection {
 
 p {
   margin: 1em 0;
+/*   margin: 0em 0; */
 }
 
-
-.banner p {
+p.banner {
    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
    color:  #303C6C;
    line-height: 125%;
@@ -164,6 +151,24 @@ p {
    font-size: 1.8em;
 }
 
+p.fancy {
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  color:  #303C6C;
+  margin: 1em 0;
+}
+
+p.emph {
+   color: green;
+  margin: 1em 0;
+}
+
+.right p {
+   text-align: right
+}
+
+p.justify {
+   text-align: justify
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
@@ -175,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 /*   scroll-margin-top: var(--navbar-height); */
 }
 
-h4, h5, h6 {
+h5, h6 {
   font-weight: bold;
 }
 
@@ -188,11 +193,11 @@ h2 {
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 h4 {
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 h5 {
@@ -292,7 +297,8 @@ code.sourceCode[class*="sourceCode"] span {
   position: absolute;
   top: 6px;
   right: 6px;
-  font-size: 14px;
+/*   font-size: 14px; */
+  font-size: 1em;
   cursor: pointer;
   opacity: 0.6;
   user-select: none;
@@ -379,45 +385,24 @@ sub {
   bottom: -0.25em;
 }
 
-ul {
-  margin: 1em 0;
-  padding: 0 0 0 2em;
-  padding-left: 0em;  
-  list-style-type: none;  
-}
+/* ************************************* */
 
 ol {
-/*   margin: 1em 0; */
-/*   padding: 0 0 0 2em; */
-/*   padding-left: 0em;   */
   list-style-position: outside;
-  padding-left: 1.4rem;
+  padding-left: 1.5rem; 
 }
 
-ul ul, ol ol, ol ul, ul ol {
-  margin: .3em 0;
-  padding-left: 1em;
-}
-
-ul li {
+/*ol li, ol li p {
   margin: 0 0 0 0;
   margin-bottom: 0;
   padding-left: 0em;
 }
 
-ol li {
-  margin: 0 0 0 0;
-  margin-bottom: 0;
-  padding-left: 0em;
-}
-
-ul ol li {
-/*   margin: 0 0 0 0; */
-/*   margin-bottom: 0; */
+ul ol li, ul ol li p {
   list-style-type: decimal;   
   list-style-position: outside;
   padding-left: 1.4rem;
-}
+}*/
 
 /* ************************************* */
 /* margin: top | right | bottom | left */
@@ -427,56 +412,136 @@ ul ol li {
 /*    margin-left: 40px; */
 /*    padding-left: 0px;   */
 
-
-.blist ul {
-margin-top: 0;
-/* margin-left: 10px; */
-padding-left: 1rem;
-list-style-type: disc;
-list-style-position: outside;
-/* padding-left: 5rem; */
+/* ************************************* */
+ul {
+   margin-top: 0;
+   padding-left: 1rem;
+   list-style-type: disc;
+/*    list-style-position: outside; */
 }
+
+/*ul li, ul li p {
+  margin: 0 0 0 0;
+  padding-left: 0em;
+}*/
+
+/*ul li:last-child, ul li:last-child p {
+   margin-bottom: 0;
+   background: #ffe5e5;
+}*/
+
+
+/*ul li:last-child, ul li:last-child p {
+   margin-bottom: 1em;
+   background: #ffe5e5;
+}*/
 
 /* margin-left: 40px; */
 
-.blist ul ul {
-margin-top: 0;
-margin-left: 10px;
-list-style-type: disc;
-list-style-position: outside;
-}
-
-/*.blist li {
-display: list-item;
-}*/
-
-/*.blist ul ul li {
-  list-style-type: disc;
-  margin-left: 15px;
+/*ul ul {
+   margin-top: 0;
+   margin-left: 10px;
+   list-style-type: disc;
+   list-style-position: outside;
 }*/
 
 /* ************************************* */
 
-/*.nlist ol li {
-   list-style-type: decimal; 
-   list-style-position: outside;
-}
-
-.nlist ol ul, ol ol {
-  margin: .3em 0;
-  padding-left: 1em;
-}
-
-.nlist ol ul li {
-  margin: 0 0 0 0;
-  margin-bottom: 0;
-   list-style-type: none;  
+/*ul .airlist ul {
+   margin-top: 0
 }*/
 
-li p:last-child {
-  margin-bottom: 0;
-  padding-left: 1em
+/* ************************************* */
+ul.airlist {
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: 1em;
+   margin-left: 0;
 }
+
+ul.airlist > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding: 0;
+  display: contents;   /* removes its visual effect */
+}
+
+ul.airlist li > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding-left: 1em; /* indent true nested lists */
+}
+
+/*ul.airlist ul {
+   list-style: none;
+   padding-left: 1.5em;
+}*/
+/* add indentation for nested lists */
+
+/* When .airlist is inside a normal <li>, add left padding so it respects outer list */
+/*li > .airlist {
+  padding-left: 1.5em;
+}*/
+/* match the outer <ul> indentation */
+
+/* Needed to not have indentation for the top level. */
+/* body > .airlist ul { */
+/* body >  */
+/*   margin-top: 1em; */
+/*airlist ul {
+  padding-left: 0em; 
+  list-style-type: none;
+}*/
+
+/*ul .airlist ul {
+  margin-top: 0;
+  background: #ffe5e5;
+}*/
+
+/*.airlist ul .airlist ul {
+   margin-top: 0;
+   padding-left: 1em;
+}*/
+
+
+/*.airlist ul li ul, .airlist ul li ul p {
+  margin: 0 0 0 0;
+  padding-left: 1em;
+}*/
+
+/*
+.airlist ul li, .airlist ul li p {
+  margin: 0 0 0 0;
+  padding-left: 0em;
+}
+
+.airlist ul li ul li, .airlist ul li ul li p {
+  margin: 0 0 0 0;
+  padding-left: 0em;
+}*/
+
+/*.airlist ul ol li, .airlist ul ol li p {
+  list-style-type: decimal;   
+  list-style-position: outside;
+  padding-left: 1.4rem;
+}
+
+.airlist ol {
+  list-style-position: outside;
+  padding-left: 1.4rem;
+}
+
+.airlist ol li, .airlist ol li p {
+  margin: 0 0 0 0;
+  margin-bottom: 0;
+  padding-left: 0em;
+}*/
+
+/*.airlist ol ul {
+  margin-top: 0
+}*/
+
+/* ************************************* */
 
 dl {
   margin-bottom: 1em;
