@@ -43,13 +43,6 @@ Here are some of our current and past projects:
    - Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency?
    - [S&P'22](companion/sp22/)
    </ul>
-
-- 
-   <ul class="airlist">
-   - **Heterogeneous and reconfigurable secure distributed systems**
-   - How can we replicate online services on untrusted, heterogeneous, and dynamic hosts?
-   - [DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
-   </ul>
    
 - 
    <ul class="airlist">
