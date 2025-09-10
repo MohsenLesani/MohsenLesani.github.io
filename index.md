@@ -17,7 +17,7 @@
 
 ![](images/Mohsen.jpg)
 
-<ul class="airlist">
+<ul class="air">
 - Mohsen Lesani
 - [Associate Professor](https://campusdirectory.ucsc.edu/cd_detail?uid=mlesani)
 - [Computer Science and Engineering Department](https://engineering.ucsc.edu/departments/computer-science-and-engineering/)
@@ -38,70 +38,70 @@ I am an associate professor at the Computer Science and Engineering Department o
 Here are some of our current and past projects:
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Resilient and secure distributed systems**
    - Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency?
    - [S&P'22](companion/sp22/)
    </ul>
    
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Heterogeneous and reconfigurable secure distributed systems**
    - How can we replicate online services on untrusted, heterogeneous, and dynamic hosts?
    - [DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Automatic analysis and synthesis of replicated objects**
    - Given a data type or a database and its integrity properties, how can we automatically decide the optimum hybrid consistency, and synthesize a custom replicated store that guarantees convergence and integrity? How can we accelerate hybrid consistency on message passing, RDMA and FPGA networks?
    - [POPL'19](companion/popl19/),  [CAV'20](companion/cav20/),  [PLDI'22](companion/pldi22/),  [OOPSLA'25](companion/oopsla25/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Verification of distributed systems**
    - How can we modularly build a certified stack of distributed components?
    - [POPL'16](companion/popl16/),  [ICFP'20](companion/icfp20/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Data analytics**
    - Given high-level analytics queries in domain specific languages, how can we automatically optimize and synthesize efficient parallel and distributed workflows?
    - [ICFP'21](companion/icfp21/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Secure exchange**
    - How can we securely and efficiently execute transactions across multiple blockchains?
    - [ICBC'20](companion/icbc20/),  [PODC'21](companion/podc21/),  [CSF'23](companion/csf23/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Machine learning for performance models**
    - Can we learn performance characteristics of data structures and leverage it to synthesize efficient data structures?
    - [MAPL'20](companion/mapl20/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Domain-specific languages and type systems**
    - Can the safety guarantees of type systems carry over to safety of lab-on-a-chip assays?
    - [OOPSLA'18](companion/oopsla18/),  [CACM'21](companion/cacm21/CACM21.pdf)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Automatic fence insertion for concurrent systems**
    - Given high-level required orders between instructions of the concurrent program in each thread, can we optimize and automate the subtle task of fence placement?
    - [OOPSLA'15](companion/oopsla15/),  [PODC'17](companion/podc17/),  [DISC'19](companion/disc19/)
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - **Concurrency programming models, testing and verification**
    - How can we design and implement intuitive, efficient and correct concurrent programming models, and data structures?
    - [PPoPP'11](downloads/Papers/PPoPP11.pdf),  [CONCUR'12](companion/concur12/index.html),  [DISC'13](companion/disc13/index.html),  [DISC'14](companion/disc14/),  [CAV'14](companion/cav14/),  [NFM'19](companion/nfm19/),  [OOPSLA'22](companion/oopsla22/)
@@ -111,7 +111,7 @@ Here are some of our current and past projects:
 # Papers
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hambazi: Spatial Coordination Synthesis for Augmented Reality
    - OOPSLA '25 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
    - Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani
@@ -121,7 +121,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters
    - ICDE '25 (IEEE International Conference on Data Engineering)
    - Tejas Mane, Xiao Li, Mohammad Sadoghi, Mohsen Lesani
@@ -131,7 +131,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - TensorRight: Automated Verification of Tensor Graph Rewrites
    - POPL '25 (ACM SIGPLAN Symposium on Principles of Programming Languages)
    - J. Arora, S. Lu, D. Jain, T. Xu, F Houshmand, P. M. Phothilimthana, M. Lesani, P. Narayanan, K. S. Murthy, R. Bodik, A. Sabne, C Mendis
@@ -140,7 +140,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - BA: Reconfigurable Heterogeneous Quorum Systems (short paper)
    - DISC '24 (The International Symposium on Distributed Computing)
    - Xiao Li, Mohsen Lesani
@@ -148,7 +148,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Vulnerability Flow Type Systems
    - LangSec '24 (Language-theoretic Security and Applications Workshop at the IEEE Security & Privacy Symposium 2024)
    - Mohsen Lesani
@@ -156,7 +156,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Quorum Subsumption for Heterogeneous Quorum Systems
    - DISC '23 (The International Symposium on Distributed Computing)
    - Xiao Li, Eric Chan, Mohsen Lesani
@@ -164,7 +164,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Cross-chain Swaps with Preferences
    - CSF '23 (IEEE Computer Security Foundations Symposium)
    - Eric Chan, Marek Chrobak, Mohsen Lesani
@@ -172,7 +172,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hamband: RDMA Replicated Data Types
    - PLDI '22 (ACM SIGPLAN Conference on Programming Language Design and Implementation)
    - Farzin Houshmand, Javad Saberlatibari, Mohsen Lesani
@@ -180,7 +180,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - C4: Verified Transactional Objects
    - OOPSLA '22 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
    - M. Lesani, L. Xia, A. Kaseorg, C. Bell, A. Chlipala, B. Pierce, S. Zdancewic
@@ -188,7 +188,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hamraz: Resilient Partitioning and Replication
    - S&P '22 (IEEE Symposium on Security and Privacy)
    - Xiao Li, Farzin Houshmand, Mohsen Lesani
@@ -196,7 +196,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Grafs: Declarative Graph Analytics
    - ICFP '21 (ACM SIGPLAN International Conference on Functional Programming)
    - Farzin Houshmand, Mohsen Lesani, Keval Vora
@@ -204,7 +204,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Brief Announcement: Brokering with Hashed Timelock Contracts is NP-Hard
    - PODC '21 (ACM Symposium on Principles of Distributed Computing)
    - Eric Chan, Mohsen Lesani
@@ -212,7 +212,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - BioScript: programming safe chemistry on laboratories-on-a-chip
    - CACM '21 (Communications of the ACM 64, 2, February 2021) 
    - Jason Ott, Tyson Loveless, Chris Curtis, Mohsen Lesani, and Philip Brisk. 2021.
@@ -220,7 +220,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - TLC: Temporal Logic of Distributed Components
    - ICFP '20 (ACM SIGPLAN International Conference on Functional Programming)
    - Jeremiah Griffin, Mohsen Lesani, Narges Shadab, Xizhe Yin
@@ -228,7 +228,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hampa: Solver-aided Recency-Aware Replication
    - CAV '20 (International Conference on Computer-Aided Verification)
    - Xiao Li, Farzin Houshmand, Mohsen Lesani
@@ -236,7 +236,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - UBITect: A Precise and Scalable Method to Detect Use-Before-Initialization bugs in Linux Kernel
    - ESEC/FSE '20 (The ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering)
    - Y. Zhai, Y. Hao, H. Zhang, D. Wang, C. Song, Z. Qian, M. Lesani, S. Krishnamurthy, P. Yu
@@ -244,7 +244,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Cross-Chain Transactions
    - ICBC '20 (IEEE International Conference on Blockchain and Cryptocurrency)
    - Narges Shadab, Farzin Houshmand, Mohsen Lesani
@@ -252,7 +252,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Learning Quantitative Representation Synthesis
    - MAPL '20 (ACM SIGPLAN Machine Learning and Programming Languages Workshop)
    - Mayur Patil, Farzin Houshmand, Mohsen Lesani
@@ -260,7 +260,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Hamsaz: Replication Coordination Analysis and Synthesis
    - POPL '19 (ACM SIGPLAN Symposium on Principles of Programming Languages)
    - Farzin Houshmand, Mohsen Lesani
@@ -268,7 +268,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Polynomial-time Fence Insertion For Structured Programs
    - DISC '19 (The International Symposium on Distributed Computing)
    - Mohammad Taheri, Arash Pourdamghani, Mohsen Lesani
@@ -276,7 +276,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Transaction Protocol Verification with Labeled Synchronization Logic
    - NFM '19 (NASA Formal Methods Symposium)
    - Mohsen Lesani
@@ -284,7 +284,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - BioScript: Programming Safe Chemistry of Laboratories-on-a-Chip
    - OOPSLA '18 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
    - Distinguished paper award
@@ -295,7 +295,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Brief Announcement: Fence Insertion for Straight-line Programs is in P
    - PODC '17 (ACM Symposium on Principles of Distributed Computing)
    - Mohsen Lesani
@@ -303,7 +303,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Chapar: Certified Causally Consistent Distributed Key-Value Stores
    - POPL '16 (ACM SIGPLAN Symposium on Principles of Programming Languages)
    - Mohsen Lesani, Christian J. Bell, Adam Chlipala
@@ -311,7 +311,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Declarative Fence Insertion
    - OOPSLA '15 (ACM SIGPLAN conference on Object-oriented
    Programming, Systems, Languages, and Applications)
@@ -320,7 +320,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - AtomChase: Directed Search towards Atomicity Violations
    - ISSRE '15 (IEEE International Symposium on Software Reliability Engineering)
    - Mahdi Eslamimehr, Mohsen Lesani
@@ -329,7 +329,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Decomposing Opacity
    - DISC '14 (International Symposium on DIStributed Computing), WTTM '13
    - Mohsen Lesani, Jens Palsberg
@@ -337,7 +337,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Automatic Atomicity Verification for Clients of Concurrent Data Structures
    - CAV '14 (International Conference on Computer Aided Verification)
    - Mohsen Lesani, Todd Millstein, Jens Palsberg
@@ -345,7 +345,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - On the Correctness of Transactional Memory Algorithms
    - PhD Dissertation
    - Mohsen Lesani
@@ -353,7 +353,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - MrCrypt: Static Analysis for Secure Cloud Computations
    - OOPSLA '13 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
    - Sai Deep Tetali, Mohsen Lesani, Rupak Majumdar, Todd Millstein
@@ -361,7 +361,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Proving Non-opacity
    - DISC '13 (International Symposium on DIStributed Computing), Transact'13
    - Mohsen Lesani, Jens Palsberg
@@ -369,7 +369,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - A Framework for Formally Verifying Software Transactional Memory Algorithms
    - CONCUR '12  (International Conference on Concurrency Theory)
    - Mohsen Lesani, Victor Luchangco, Mark Moir
@@ -377,7 +377,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Communicating Memory Transactions
    - PPoPP '11 (ACM Principles and Practice of Parallel Programming)
    - Mohsen Lesani, Jens Palsberg
@@ -385,7 +385,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Semantics-preserving Sharing Actors
    - AGERE '13 (ACM Workshop on Programming based on Actors, Agents, and Decentralized Control)
    - Mohsen Lesani, Antonio Lain
@@ -393,7 +393,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Specifying Transactional Memories with Nontransactional Operations
    - WTTM '13  (Workshop on the Theory of Transactional Memory)
    - Mohsen Lesani, Victor Luchangco, Mark Moir
@@ -401,7 +401,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Putting Opacity in its Place
    - WTTM '12  (Workshop on the Theory of Transactional Memory)
    - Mohsen Lesani, Victor Luchangco, Mark Moir
@@ -409,7 +409,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Fuzzy Trust Aggregation And Personalized Trust Inference In Virtual Social Networks
    - Journal of Computational Intelligence 25/2, 2009
    - Mohsen Lesani, Niloufar Montazeri
@@ -417,7 +417,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Aria Language, Towards Agent Orientation Paradigm
    - ICSOFT '08 (International Joint conference on Software Technologies)
    - Mohsen Lesani, Niloufar Montazeri
@@ -425,7 +425,7 @@ Here are some of our current and past projects:
    </ul>
 
 - 
-   <ul class="airlist">
+   <ul class="air">
    - Successful Cooperation between Heterogeneous Fuzzy Q-Learning Agents
    - SMC '04 (IEEE International Conference on Systems, Man, and Cybernetics)
    - Ali Akhavan Bitaghsir, Amir Moghimi, Mohsen Lesani, Mohammad Mehdi Keramati, Majid Nili Ahmadabadi, Babak Nadjar Arabi
@@ -480,28 +480,28 @@ POPL '20, PC (ACM SIGPLAN Symposium on Principles of Programming Languages, Prog
 We work together at the Safe and Secure Software (S3) lab.
 
 ![](images/students/XiaoS.jpg)
-<ul class="airlist">
+<ul class="air">
 - [Xiao Li](https://xiaoli0614.github.io/), PhD student
 - Primary publications: [CAV ’20](companion/cav20),  [S&P ’22](companion/sp22),  [DISC '23](companion/disc23/),  [DISC '24](companion/disc24/)
 </ul>
 
 ![](images/students/EricS.jpg)
 
-<ul class="airlist">
+<ul class="air">
 - Eric Chan, PhD student
 - Primary publications: [PODC ’21](companion/podc21),  [CSF '23](companion/csf23)
 </ul>
 
 ![](images/students/JavadS.jpg)
 
-<ul class="airlist">
+<ul class="air">
 - [Javad Saber-Latibari](https://www.cs.ucr.edu/%7Ejsabe004/), PhD student
 - Primary publications: [PLDI ’22](companion/pldi22)
 </ul>
 
 ![](images/students/TejasS.jpg "Tejas")
 
-<ul class="airlist">
+<ul class="air">
 - Tejas Mane, PhD student
 - Primary publications: [ICDE '25](companion/icde25/)
 </ul>
@@ -543,7 +543,7 @@ To see press html, ctrl+alt+o.
 
 <!-- To write lists without bullets: --> 
 <!--
-<ul class="airlist">
+<ul class="air">
 - item
    - inner item
    - inner item second

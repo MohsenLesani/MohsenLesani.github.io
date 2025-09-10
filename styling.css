@@ -142,7 +142,7 @@ p {
 /*   margin: 0em 0; */
 }
 
-p.banner {
+p.banner, p.title {
    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;   
    color:  #303C6C;
    line-height: 125%;
@@ -152,10 +152,11 @@ p.banner {
    font-size: 1.8em;
 }
 
-p.fancy {
+p.fancy, p.subtitle {
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
   color:  #303C6C;
-  margin: 1em 0;
+/*   margin: 1em 0; */
+  margin-top: 0;
 }
 
 p.emph {
@@ -255,7 +256,6 @@ hr {
   color: #303C6C;
 }
 
-
 pre, code, kbd, samp {
   color: #000;
   font-family: monospace, monospace;
@@ -281,6 +281,7 @@ code.sourceCode[class*="sourceCode"] {
   font-size: 0.95em;
 /*   font-size: inherit; */
   background-color: #f7f7f7;
+  overflow-x: auto;           /* ✅ allows horizontal scrolling */  
 }
 
 /* Make syntax highlighting spans inherit font-size */
@@ -425,6 +426,28 @@ ul.airlist > ul {
 }
 
 ul.airlist li > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding-left: 1em; /* indent true nested lists */
+}
+
+/* To use the name air */
+
+ul.air {
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: 1em;
+   margin-left: 0;
+}
+
+ul.air > ul {
+  list-style: none;
+/*   margin: 0; */
+  padding: 0;
+  display: contents;   /* removes its visual effect */
+}
+
+ul.air li > ul {
   list-style: none;
 /*   margin: 0; */
   padding-left: 1em; /* indent true nested lists */
