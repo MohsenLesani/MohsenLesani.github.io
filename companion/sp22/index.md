@@ -15,6 +15,7 @@ Inter-organizational systems where subsystems with partial trust need to coopera
 - \[[Paper](SP22.pdf)\]
 - \[[Type System Code](https://github.com/XiaoLi0614/Secure_Partition)\]
 - \[[Runtime Code](https://github.com/fhoushmand/bft-library)\]
+- \[[BibTex](paper.bib)\]
 </ul>
 
 ```bibtex
