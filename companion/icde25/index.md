@@ -16,4 +16,20 @@ Fault-tolerant replicated database systems consume significantly less energy tha
 - \[[BibTex](paper.bib)\]
 </ul>
 
+```bibtex
+@INPROCEEDINGS {Hamava25,
+   author = {Mane, Tejas and Li, Xiao and Sadoghi, Mohammad and Lesani, Mohsen },
+   booktitle = {2025 IEEE 41st International Conference on Data Engineering (ICDE) },
+   title = {{Hamava: Fault-Tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters }},
+   year = {2025},
+   ISSN = {2375-026X},
+   pages = {2024-2037},
+   doi = {10.1109/ICDE65448.2025.00154},
+   url = {https://doi.ieeecomputersociety.org/10.1109/ICDE65448.2025.00154},
+   publisher = {IEEE Computer Society},
+   address = {Los Alamitos, CA, USA},
+   month = May 
+}
+```
+
 **************************************************
