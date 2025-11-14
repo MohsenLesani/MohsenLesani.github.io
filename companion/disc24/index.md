@@ -3,20 +3,21 @@
 </div>
 
 **************************************************
-<ul class="airlist">
-- Brief Announcement:
-- **Reconfigurable Heterogeneous Quorum Systems**
-- DISC '24 (The International Symposium on Distributed Computing)
-- Xiao Li, Mohsen Lesani
-</ul>
+Brief Announcement:
+\
+**Reconfigurable Heterogeneous Quorum Systems**
+\
+DISC '24 (The International Symposium on Distributed Computing)
+\
+Xiao Li, Mohsen Lesani
 
 In contrast to proof-of-work replication, Byzantine quorum systems maintain consistency across replicas with higher throughput, modest energy consumption, and deterministic liveness guarantees. If complemented with heterogeneous trust and open membership, they have the potential to serve as blockchains backbone. This paper presents a general model of heterogeneous quorum systems where each participant can declare its own quorums, and captures the consistency, availability and inclusion properties of these systems. In order to support open membership, it then presents reconfiguration protocols for heterogeneous quorum systems including joining and leaving of a process, and adding and removing of a quorum, and further, proves their correctness in the face of Byzantine attacks. The design of the protocols is informed by the trade-offs that the paper proves for the properties that reconfigurations can preserve. The paper further presents a graph characterization of heterogeneous quorum systems, and its application for reconfiguration optimization.
 
-<ul class="airlist">
-- \[[Full Paper](DISC24Full.pdf)\]
-- \[[Paper](DISC24Short.pdf)\]
-- \[[BibTex](paper.bib)\]
-</ul>
+\[[Full Paper](DISC24Full.pdf)\]
+\
+\[[Paper](DISC24Short.pdf)\]
+\
+\[[BibTex](paper.bib)\]
 
 ```bibtex
 @inproceedings{li2024brief,

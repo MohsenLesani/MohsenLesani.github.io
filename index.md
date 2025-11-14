@@ -1,3 +1,7 @@
+<!-----
+title: "Mohsen Lesani"
+----->
+
 <a name="home"></a>
 <div class="navbar">
   | [Home](#home) |
@@ -8,8 +12,6 @@
   [Team](#team) |
   [Other](#other) |
 </div>
-<!-- To pad for the nav bar, add a new line -->
- \
  
 <!-- ********************************************** -->
 <!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
@@ -17,12 +19,12 @@
 
 ![](images/Mohsen.jpg)
 
-<ul class="air">
-- Mohsen Lesani
-- [Associate Professor](https://campusdirectory.ucsc.edu/cd_detail?uid=mlesani)
-- [Computer Science and Engineering Department](https://engineering.ucsc.edu/departments/computer-science-and-engineering/)
-- [University of California, Santa Cruz](https://www.ucsc.edu/)
-</ul>
+<!-- <ul class="air"> -->
+Mohsen Lesani \
+[Associate Professor](https://campusdirectory.ucsc.edu/cd_detail?uid=mlesani) \
+[Computer Science and Engineering Department](https://engineering.ucsc.edu/departments/computer-science-and-engineering/) \
+[University of California, Santa Cruz](https://www.ucsc.edu/)
+<!-- </ul> -->
 
 Contact: mlesani AT ucsc.edu
 
@@ -480,31 +482,32 @@ POPL '20, PC (ACM SIGPLAN Symposium on Principles of Programming Languages, Prog
 We work together at the Safe and Secure Software (S3) lab.
 
 ![](images/students/XiaoS.jpg)
-<ul class="air">
-- [Xiao Li](https://xiaoli0614.github.io/), PhD student
-- Primary publications: [CAV ’20](companion/cav20),  [S&P ’22](companion/sp22),  [DISC '23](companion/disc23/),  [DISC '24](companion/disc24/)
-</ul>
+
+<!-- <ul class="air"> -->
+[Xiao Li](https://xiaoli0614.github.io/), PhD student \
+Primary publications: [CAV ’20](companion/cav20),  [S&P ’22](companion/sp22),  [DISC '23](companion/disc23/),  [DISC '24](companion/disc24/)
+<!-- </ul> -->
 
 ![](images/students/EricS.jpg)
 
-<ul class="air">
-- Eric Chan, PhD student
-- Primary publications: [PODC ’21](companion/podc21),  [CSF '23](companion/csf23)
-</ul>
+<!-- <ul class="air"> -->
+Eric Chan, PhD student \
+Primary publications: [PODC ’21](companion/podc21),  [CSF '23](companion/csf23)
+<!-- </ul> -->
 
 ![](images/students/JavadS.jpg)
 
-<ul class="air">
-- [Javad Saber-Latibari](https://www.cs.ucr.edu/%7Ejsabe004/), PhD student
-- Primary publications: [PLDI ’22](companion/pldi22)
-</ul>
+<!-- <ul class="air"> -->
+[Javad Saber-Latibari](https://www.cs.ucr.edu/%7Ejsabe004/), PhD student \
+Primary publications: [PLDI ’22](companion/pldi22)
+<!-- </ul> -->
 
 ![](images/students/TejasS.jpg "Tejas")
 
-<ul class="air">
-- Tejas Mane, PhD student
-- Primary publications: [ICDE '25](companion/icde25/)
-</ul>
+<!-- <ul class="air"> -->
+Tejas Mane, PhD student \
+Primary publications: [ICDE '25](companion/icde25/)
+<!-- </ul> -->
 
 **********************************************
 # Other
