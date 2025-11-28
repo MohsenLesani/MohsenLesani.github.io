@@ -21,26 +21,86 @@ Reality</title>
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../styling.css" />
   <script src=../../styling.js></script>
 </head>
 <body>
 <div class="right">
-<p>| <a href="../../index.html">Home</a> | <a
-href="../../index.html#projects">Projects</a> | <a
-href="../../index.html#papers">Papers</a> |</p>
+|  <a href="../../index.html">Home</a>  |  <a
+href="../../index.html#projects">Projects</a>  |  <a
+href="../../index.html#papers">Papers</a>  |
 </div>
 <hr />
-<ul class="airlist">
-<ul>
-<li><strong>Hambazi: Spatial Coordination Synthesis for Augmented
-Reality</strong></li>
-<li>OOPSLA ’25 (ACM SIGPLAN conference on Object-oriented Programming,
-Systems, Languages, and Applications)</li>
-<li>Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani</li>
-</ul>
-</ul>
+<p><strong>Hambazi: Spatial Coordination Synthesis for Augmented
+Reality</strong><br />
+OOPSLA ’25 (ACM SIGPLAN conference on Object-oriented Programming,
+Systems, Languages, and Applications)<br />
+Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani</p>
 <p>Augmented reality (AR) seamlessly overlays virtual objects onto the
 real world, enabling an exciting new range of applications. Multiple
 users view and interact with virtual objects, which are replicated and
@@ -68,13 +128,30 @@ show a latency reduction of 30.5-88.4% and a location staleness
 reduction of 35.6-75.6%, compared to three baselines, for varying
 numbers of devices, AR environments, request loads, and network
 conditions.</p>
-<ul class="airlist">
-<ul>
-<li>[<a href="OOPSLA25.pdf">Paper</a>]</li>
-<li>[<a href="Appendix.pdf">Appendix</a>]</li>
-<li>[<a href="paper.bib">BibTex</a>]</li>
-</ul>
-</ul>
+<p>[<a href="OOPSLA25.pdf">Paper</a>]<br />
+[<a href="Appendix.pdf">Appendix</a>]<br />
+[<a href="paper.bib">BibTex</a>]</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">Hambazi25</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">author</span> = {Tsai, Yi-Zhen and Chen, Jiasi and Lesani, Mohsen},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">title</span> = {Hambazi: Spatial Coordination Synthesis for Augmented Reality},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">year</span> = {2025},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">issue_date</span> = {April 2025},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">publisher</span> = {Association for Computing Machinery},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">address</span> = {New York, NY, USA},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">volume</span> = {9},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">number</span> = {OOPSLA1},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">url</span> = {https://doi.org/10.1145/3720425},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">doi</span> = {10.1145/3720425},</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">abstract</span> = {Augmented reality (AR) seamlessly overlays virtual objects onto the real world, enabling an exciting new range of applications. Multiple users view and interact with virtual objects, which are replicated and shown on each user&#39;s display. A key requirement of AR is that the replicas should be quickly updated and converge to the same state; otherwise, users may have laggy or inconsistent views of the virtual object, which negatively affects their experience. A second key requirement is that the movements of virtual objects in space should preserve certain integrity properties either due to physical boundaries in the real world, or privacy and safety preferences of the user. For example, a virtual cup should not sink into a table, or a private virtual whiteboard should stay within an office. The challenge tackled in this paper is the coordination of virtual objects with low latency, spatial integrity properties and convergence. We introduce “well-organized” replicated data types that guarantee these two properties. Importantly, they capture a local notion of conflict that supports more concurrency and lower latency. To implement well-organized virtual objects, we introduce a credit scheme and replication protocol that further facilitate local execution, and prove the protocol&#39;s correctness. Given an AR environment, we automatically derive conflicting actions through constraint solving, and statically instantiate the protocol to synthesize custom coordination. We evaluate our implementation, HAMBAZI, on off-the-shelf Android AR devices and show a latency reduction of 30.5-88.4<span class="ch">\%</span> and a location staleness reduction of 35.6-75.6<span class="ch">\%</span>, compared to three baselines, for varying numbers of devices, AR environments, request loads, and network conditions.},</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">journal</span> = {Proc. ACM Program. Lang.},</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dt">month</span> = <span class="st">apr</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">articleno</span> = {91},</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">numpages</span> = {30},</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">keywords</span> = {Coordination Avoidance, Distributed Coordination, Fault Tolerance, Multi-user Augmented Reality, Well-Organization}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <hr />
 </body>
 </html>
+
+

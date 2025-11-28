@@ -1,21 +1,35 @@
-<div class="right"> 
- | [Home](../../index.html) | [Projects](../../index.html#projects) | [Papers](../../index.html#papers) |
-</div>
+<div class="right"> |&nbsp; [Home](../../index.html) &nbsp;|&nbsp; [Projects](../../index.html#projects) &nbsp;|&nbsp; [Papers](../../index.html#papers) &nbsp;| </div>
 
 **************************************************
-<ul class="airlist">
-- **Hambazi: Spatial Coordination Synthesis for Augmented Reality**
-- OOPSLA '25 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
-- Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani
-</ul>
+**Hambazi: Spatial Coordination Synthesis for Augmented Reality**
+OOPSLA '25 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
+Yi-Zhen Tsai, Jiasi Chen, Mohsen Lesani
 
 Augmented reality (AR) seamlessly overlays virtual objects onto the real world, enabling an exciting new range of applications. Multiple users view and interact with virtual objects, which are replicated and shown on each user's display. A key requirement of AR is that the replicas should be quickly updated and converge to the same state; otherwise, users may have laggy or inconsistent views of the virtual object, which negatively affects their experience. A second key requirement is that the movements of virtual objects in space should preserve certain integrity properties either due to physical boundaries in the real world, or privacy and safety preferences of the user. For example, a virtual cup should not sink into a table, or a private virtual whiteboard should stay within an office. The challenge tackled in this paper is the coordination of virtual objects with low latency, spatial integrity properties and convergence. We introduce “well-organized” replicated data types that guarantee these two properties. Importantly, they capture a local notion of conflict that supports more concurrency and lower latency. To implement well-organized virtual objects, we introduce a credit scheme and replication protocol that further facilitate local execution, and prove the protocol's correctness. Given an AR environment, we automatically derive conflicting actions through constraint solving, and statically instantiate the protocol to synthesize custom coordination. We evaluate our implementation, Hambazi, on off-the-shelf Android AR devices and show a latency reduction of 30.5-88.4% and a location staleness reduction of 35.6-75.6%, compared to three baselines, for varying numbers of devices, AR environments, request loads, and network conditions.
 
+\[[Paper](OOPSLA25.pdf)\]
+\[[Appendix](Appendix.pdf)\]
+\[[BibTex](paper.bib)\]
 
-<ul class="airlist">
-- \[[Paper](OOPSLA25.pdf)\]
-- \[[Appendix](Appendix.pdf)\]
-- \[[BibTex](paper.bib)\]
-</ul>
+```bibtex
+@article{Hambazi25,
+author = {Tsai, Yi-Zhen and Chen, Jiasi and Lesani, Mohsen},
+title = {Hambazi: Spatial Coordination Synthesis for Augmented Reality},
+year = {2025},
+issue_date = {April 2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {9},
+number = {OOPSLA1},
+url = {https://doi.org/10.1145/3720425},
+doi = {10.1145/3720425},
+abstract = {Augmented reality (AR) seamlessly overlays virtual objects onto the real world, enabling an exciting new range of applications. Multiple users view and interact with virtual objects, which are replicated and shown on each user's display. A key requirement of AR is that the replicas should be quickly updated and converge to the same state; otherwise, users may have laggy or inconsistent views of the virtual object, which negatively affects their experience. A second key requirement is that the movements of virtual objects in space should preserve certain integrity properties either due to physical boundaries in the real world, or privacy and safety preferences of the user. For example, a virtual cup should not sink into a table, or a private virtual whiteboard should stay within an office. The challenge tackled in this paper is the coordination of virtual objects with low latency, spatial integrity properties and convergence. We introduce “well-organized” replicated data types that guarantee these two properties. Importantly, they capture a local notion of conflict that supports more concurrency and lower latency. To implement well-organized virtual objects, we introduce a credit scheme and replication protocol that further facilitate local execution, and prove the protocol's correctness. Given an AR environment, we automatically derive conflicting actions through constraint solving, and statically instantiate the protocol to synthesize custom coordination. We evaluate our implementation, HAMBAZI, on off-the-shelf Android AR devices and show a latency reduction of 30.5-88.4\% and a location staleness reduction of 35.6-75.6\%, compared to three baselines, for varying numbers of devices, AR environments, request loads, and network conditions.},
+journal = {Proc. ACM Program. Lang.},
+month = apr,
+articleno = {91},
+numpages = {30},
+keywords = {Coordination Avoidance, Distributed Coordination, Fault Tolerance, Multi-user Augmented Reality, Well-Organization}
+}
+```
 
 **************************************************
