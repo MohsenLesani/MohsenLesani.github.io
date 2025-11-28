@@ -1,22 +1,19 @@
 <!-----
 title: "Mohsen Lesani"
 ----->
+<a name="home"></a> <div class="navbar"> |&nbsp; [Home](#home) &nbsp;|&nbsp; [Projects](#projects) &nbsp;|&nbsp; [Papers](#papers) &nbsp;|&nbsp; [Teaching](#teaching) &nbsp;|&nbsp; [Service](#service) &nbsp;|&nbsp; [Team](#team) &nbsp;|&nbsp; [Other](#other) &nbsp;| </div> 
 
-<a name="home"></a>
-<div class="navbar"> |&nbsp; [Home](#home) &nbsp;|&nbsp; [Projects](#projects) &nbsp;|&nbsp; [Papers](#papers) &nbsp;|&nbsp; [Teaching](#teaching) &nbsp;|&nbsp; [Service](#service) &nbsp;|&nbsp; [Team](#team) &nbsp;|&nbsp; [Other](#other) &nbsp;| </div>
- 
 <!-- ********************************************** -->
 <!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
 <!-- ********************************************** -->
 
+
 ![](images/Mohsen.jpg)
 
-<!-- <ul class="air"> -->
 Mohsen Lesani
 [Associate Professor](https://campusdirectory.ucsc.edu/cd_detail?uid=mlesani)
 [Computer Science and Engineering Department](https://engineering.ucsc.edu/departments/computer-science-and-engineering/)
 [University of California, Santa Cruz](https://www.ucsc.edu/)
-<!-- </ul> -->
 
 Contact: mlesani AT ucsc.edu
 
@@ -32,7 +29,7 @@ I am an associate professor at the Computer Science and Engineering Department o
 Here are some of our current and past projects:
 
 - **Resilient and secure distributed systems**
-Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency? 
+Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency?
 [S&P'22](companion/sp22/)
 
 - **Heterogeneous and reconfigurable secure distributed systems**

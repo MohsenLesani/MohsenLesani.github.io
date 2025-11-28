@@ -1,3 +1,7 @@
+<!-----
+title: "Hambazi: Spatial Coordination Synthesis for Augmented Reality"
+----->
+
 <div class="right"> |&nbsp; [Home](../../index.html) &nbsp;|&nbsp; [Projects](../../index.html#projects) &nbsp;|&nbsp; [Papers](../../index.html#papers) &nbsp;| </div>
 
 **************************************************
