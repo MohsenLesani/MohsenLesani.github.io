@@ -8,7 +8,8 @@ title: "Mohsen Lesani"
 <!-- ********************************************** -->
 
 
-![](images/MohsenSC.jpg)
+<!-- ![](images/MohsenSC.jpg) -->
+![](images/Mohsen.jpg)
 
 Mohsen Lesani
 [Associate Professor](https://campusdirectory.ucsc.edu/cd_detail?uid=mlesani)
