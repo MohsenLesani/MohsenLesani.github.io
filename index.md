@@ -1,7 +1,9 @@
 <!-----
 title: "Mohsen Lesani"
 ----->
-<a name="home"></a> <div class="navbar"> |&nbsp; [Home](#home) &nbsp;|&nbsp; [Projects](#projects) &nbsp;|&nbsp; [Papers](#papers) &nbsp;|&nbsp; [Teaching](#teaching) &nbsp;|&nbsp; [Service](#service) &nbsp;|&nbsp; [Team](#team) &nbsp;|&nbsp; [Other](#other) &nbsp;| </div> 
+<a name="home"></a> <div class="navbar"> [Home](#home) &nbsp;&nbsp; [Projects](#projects) &nbsp;&nbsp; [Papers](#papers) &nbsp;&nbsp; [Teaching](#teaching) &nbsp;&nbsp; [Service](#service) &nbsp;&nbsp; [Team](#team) &nbsp;&nbsp; [Other](#other) </div>
+
+<!--<a name="home"></a> <div class="navbar"> |&nbsp; [Home](#home) &nbsp;|&nbsp; [Projects](#projects) &nbsp;|&nbsp; [Papers](#papers) &nbsp;|&nbsp; [Teaching](#teaching) &nbsp;|&nbsp; [Service](#service) &nbsp;|&nbsp; [Team](#team) &nbsp;|&nbsp; [Other](#other) &nbsp;| </div> -->
 
 <!-- ********************************************** -->
 <!-- | [Home](index.html) | [Projects](#projects) | [Papers](#papers) | [Teaching](#teaching) | [Service](#service) | [Team](#team) | [Other](#other) | -->
