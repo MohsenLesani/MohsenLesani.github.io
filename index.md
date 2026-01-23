@@ -37,7 +37,7 @@ Given resiliency requirements (confidentiality, integrity and especially availab
 
 - **Heterogeneous and reconfigurable secure distributed systems**
 How can we replicate online services on untrusted, heterogeneous, and dynamic hosts?
-[DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/)
+[DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/), DC'26
 
 - **Automatic analysis and synthesis of replicated objects**
 Given a data type or a database and its integrity properties, how can we automatically decide the optimum hybrid consistency, and synthesize a custom replicated store that guarantees convergence and integrity? How can we accelerate hybrid consistency on message passing, RDMA and FPGA networks?
@@ -73,6 +73,10 @@ How can we design and implement intuitive, efficient and correct concurrent prog
 
 **********************************************
 # Papers
+
+- From Abstract to Practical Consensus for Heterogeneous Quorum Systems
+Distributed Computing Journal 2026
+Xiao Li, Eric Chan, Mohsen Lesani
 
 - Hambazi: Spatial Coordination Synthesis for Augmented Reality
 OOPSLA '25 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
