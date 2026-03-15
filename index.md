@@ -37,7 +37,7 @@ Given resiliency requirements (confidentiality, integrity and especially availab
 
 - **Heterogeneous and reconfigurable secure distributed systems**
 How can we replicate online services on untrusted, heterogeneous, and dynamic hosts?
-[DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/), DC'26
+[DISC'23](companion/disc23/),  [DISC'24](companion/disc24/),  [ICDE'25](companion/icde25/),  DC'26
 
 - **Automatic analysis and synthesis of replicated objects**
 Given a data type or a database and its integrity properties, how can we automatically decide the optimum hybrid consistency, and synthesize a custom replicated store that guarantees convergence and integrity? How can we accelerate hybrid consistency on message passing, RDMA and FPGA networks?
@@ -74,7 +74,7 @@ How can we design and implement intuitive, efficient and correct concurrent prog
 **********************************************
 # Papers
 
-- From Abstract to Practical Consensus for Heterogeneous Quorum Systems
+- Satrapy, From Abstract to Practical Consensus for Heterogeneous Quorum Systems
 Distributed Computing Journal 2026
 Xiao Li, Eric Chan, Mohsen Lesani
 
@@ -300,6 +300,7 @@ UCR
 **********************************************
 # Service
 
+- [POPL '27](https://conf.researchr.org/home/POPL-2027), PC (ACM SIGPLAN Symposium on Principles of Programming Languages, Program Committee)
 - [OOPSLA '26](https://splashcon.org/), PC (ACM SIGPLAN Conference on Object-oriented Programming, Systems, Languages, and Applications, Program Committee)
 - [CSF '25](https://csf2025.ieee-security.org/), general co-chair (IEEE Computer Security Foundations Symposium)
 - [PODC '25](https://www.podc.org/podc2025/), PC (The ACM Symposium on Principles of Distributed Computing, Program Committee)
