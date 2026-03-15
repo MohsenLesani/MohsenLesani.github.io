@@ -29,7 +29,7 @@ I am an associate professor at the Computer Science and Engineering Department o
 **********************************************
 # Projects
 
-Here are some of our current and past projects:
+Here are some of our current and past projects: 
 
 - **Resilient and secure distributed systems**
 Given resiliency requirements (confidentiality, integrity and especially availability policies) for an online service, how can we automatically partition, place and replicate it to ensure resiliency?
