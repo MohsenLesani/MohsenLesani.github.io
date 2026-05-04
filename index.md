@@ -41,7 +41,7 @@ How can we replicate online services on untrusted, heterogeneous, and dynamic ho
 
 - **Automatic analysis and synthesis of replicated objects**
 Given a data type or a database and its integrity properties, how can we automatically decide the optimum hybrid consistency, and synthesize a custom replicated store that guarantees convergence and integrity? How can we accelerate hybrid consistency on message passing, RDMA and FPGA networks?
-[POPL'19](companion/popl19/),  [CAV'20](companion/cav20/),  [PLDI'22](companion/pldi22/),  [OOPSLA'25](companion/oopsla25/)
+[POPL'19](companion/popl19/),  [CAV'20](companion/cav20/),  [PLDI'22](companion/pldi22/),  [OOPSLA'25](companion/oopsla25/),  [OOPSLA'26](companion/oopsla26/)
 
 - **Verification of distributed systems**
 How can we modularly build a certified stack of distributed components?
@@ -74,7 +74,12 @@ How can we design and implement intuitive, efficient and correct concurrent prog
 **********************************************
 # Papers
 
-- Satrapy, From Abstract to Practical Consensus for Heterogeneous Quorum Systems
+- Frashokereti: Non-aborting Optimistically Replicated Objects
+OOPSLA '26 (ACM SIGPLAN conference on Object-oriented Programming, Systems, Languages, and Applications)
+Eric Chan, Javad Saberlatibari, Mohsen Lesani
+[Paper](companion/oopsla26/OOPSLA26.pdf), [BibTex](companion/oopsla26/paper.bib), [More](companion/oopsla26/index.html)
+
+- Satrapy: From Abstract to Practical Consensus for Heterogeneous Quorum Systems
 Distributed Computing Journal 2026
 Xiao Li, Eric Chan, Mohsen Lesani
 

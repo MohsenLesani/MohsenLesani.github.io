@@ -1,0 +1,18 @@
+@article{10.1145/3798269,
+author = {Chan, Eric Man and Saberlatibari, Javad and Lesani, Mohsen},
+title = {Frashokereti: Non-aborting Optimistically Replicated Objects},
+year = {2026},
+issue_date = {April 2026},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {10},
+number = {OOPSLA1},
+url = {https://doi.org/10.1145/3798269},
+doi = {10.1145/3798269},
+abstract = {Optimistic replication of objects avoids coordination and brings higher responsiveness and availability. However, when clients issue concurrent operations, conflicts naturally arise which can lead the replicated states to diverge or lose integrity. When conflicts occur, existing approaches resort to pessimism or abortion. This paper characterizes ORDTs (Optimistically Replicated Data Types), objects that can be optimistically replicated with convergence and integrity, and without aborting calls. It shows that ORDTs subsume CRDTs and transformed relational schema, and presents techniques to convert objects to ORDTs. It further proves that optimistic replication for objects that fall out of ORDTs is aborting and NP-Complete. Further, it presents an optimistic replication protocol for ORDTs called Frashokereti.It uses a statically decided order to efficiently order calls. The paper proves that Frashokereti is sound for every ORDT, i.e., Frashokereti is optimistic and non-aborting, and preserves convergence, integrity, and liveness properties. Experimental results show that Frashokereti significantly outperforms previous optimistic protocols.},
+journal = {Proc. ACM Program. Lang.},
+month = apr,
+articleno = {161},
+numpages = {29},
+keywords = {Data replication, optimistic replication}
+}

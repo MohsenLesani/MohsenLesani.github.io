@@ -637,3 +637,34 @@ table td {
 }
 
 
+.header-section-number {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-right: 0.2em;
+}
+
+.header-section-number::after {
+  content: ". ";
+}
+
+/* pull the list up */
+/*p + ul, p + ol {
+  margin-top: -0.5em;
+}
+*/
+
+ul, ol {
+  margin-top: 0;
+}
+
+/*zeroing paragraph margins inside list items:*/
+li > p {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+/*This targets any <p> that is immediately followed by a <ul> or <ol> and removes its bottom margin.*/
+p:has(+ ul), p:has(+ ol) {
+  margin-bottom: 0;
+}
